@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
-		B4E92FF21FEBDDE30021A41D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* ViewController.swift */; };
+		B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* RootViewController.swift */; };
 		B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF31FEBDDE30021A41D /* Main.storyboard */; };
 		B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF61FEBDDE30021A41D /* Assets.xcassets */; };
 		B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF81FEBDDE30021A41D /* LaunchScreen.storyboard */; };
@@ -34,7 +34,7 @@
 /* Begin PBXFileReference section */
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4E92FF11FEBDDE30021A41D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4E92FF11FEBDDE30021A41D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B4E92FF41FEBDDE30021A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4E92FF61FEBDDE30021A41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E92FF91FEBDDE30021A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,12 +98,14 @@
 		B4E92FEE1FEBDDE30021A41D /* Kipalog */ = {
 			isa = PBXGroup;
 			children = (
+				B4E9302A1FECEA810021A41D /* Supporting Files */,
+				B4E930291FECEA6E0021A41D /* View Components */,
+				B4E930281FECEA660021A41D /* Extension */,
+				B4E930271FECEA5E0021A41D /* Model */,
+				B4E930261FECEA550021A41D /* View */,
 				B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */,
-				B4E92FF11FEBDDE30021A41D /* ViewController.swift */,
+				B4E92FF11FEBDDE30021A41D /* RootViewController.swift */,
 				B4E92FF31FEBDDE30021A41D /* Main.storyboard */,
-				B4E92FF61FEBDDE30021A41D /* Assets.xcassets */,
-				B4E92FF81FEBDDE30021A41D /* LaunchScreen.storyboard */,
-				B4E92FFB1FEBDDE30021A41D /* Info.plist */,
 			);
 			path = Kipalog;
 			sourceTree = "<group>";
@@ -130,6 +132,44 @@
 				B4E930151FECE5F10021A41D /* RxTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4E930261FECEA550021A41D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4E930271FECEA5E0021A41D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B4E930281FECEA660021A41D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B4E930291FECEA6E0021A41D /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
+		B4E9302A1FECEA810021A41D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4E92FF81FEBDDE30021A41D /* LaunchScreen.storyboard */,
+				B4E92FFB1FEBDDE30021A41D /* Info.plist */,
+				B4E92FF61FEBDDE30021A41D /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4E92FF21FEBDDE30021A41D /* ViewController.swift in Sources */,
+				B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */,
 				B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +459,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Kipalog/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Kipalog/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipalog;
@@ -439,7 +479,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Kipalog/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Kipalog/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipalog;
