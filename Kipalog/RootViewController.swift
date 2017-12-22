@@ -7,13 +7,17 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+
+    private func setup() {
+        let tabBarController = CustomTabBarViewController()
+        embed(tabBarController, to: view)
     }
 
 }

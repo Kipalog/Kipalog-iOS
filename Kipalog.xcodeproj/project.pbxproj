@@ -19,6 +19,13 @@
 		B4E9301A1FECE5F20021A41D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930131FECE5F10021A41D /* RxCocoa.framework */; };
 		B4E9301B1FECE5F20021A41D /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930141FECE5F10021A41D /* Himotoki.framework */; };
 		B4E9301D1FECE5F20021A41D /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930161FECE5F20021A41D /* RxBlocking.framework */; };
+		B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9302B1FECFA130021A41D /* CustomTabBarViewController.swift */; };
+		B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9302E1FECFB510021A41D /* FeedViewController.swift */; };
+		B4E930321FECFC2C0021A41D /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930311FECFC2C0021A41D /* LogsViewController.swift */; };
+		B4E930351FECFC6C0021A41D /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930341FECFC6C0021A41D /* EditorViewController.swift */; };
+		B4E930381FECFC9D0021A41D /* NotificationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930371FECFC9D0021A41D /* NotificationListViewController.swift */; };
+		B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */; };
+		B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,13 @@
 		B4E930151FECE5F10021A41D /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		B4E930161FECE5F20021A41D /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		B4E930211FECE84D0021A41D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B4E9302B1FECFA130021A41D /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
+		B4E9302E1FECFB510021A41D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		B4E930311FECFC2C0021A41D /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		B4E930341FECFC6C0021A41D /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		B4E930371FECFC9D0021A41D /* NotificationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListViewController.swift; sourceTree = "<group>"; };
+		B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +151,12 @@
 		B4E930261FECEA550021A41D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4E9303E1FED03760021A41D /* TabBar */,
+				B4E930391FECFCAE0021A41D /* Profile */,
+				B4E930361FECFC7C0021A41D /* Notifications */,
+				B4E930331FECFC5B0021A41D /* Editor */,
+				B4E930301FECFB710021A41D /* Logs */,
+				B4E9302D1FECFB3B0021A41D /* Feed */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +171,7 @@
 		B4E930281FECEA660021A41D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -170,6 +191,54 @@
 				B4E92FF61FEBDDE30021A41D /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4E9302D1FECFB3B0021A41D /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				B4E9302E1FECFB510021A41D /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		B4E930301FECFB710021A41D /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				B4E930311FECFC2C0021A41D /* LogsViewController.swift */,
+			);
+			path = Logs;
+			sourceTree = "<group>";
+		};
+		B4E930331FECFC5B0021A41D /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				B4E930341FECFC6C0021A41D /* EditorViewController.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		B4E930361FECFC7C0021A41D /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				B4E930371FECFC9D0021A41D /* NotificationListViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		B4E930391FECFCAE0021A41D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B4E9303E1FED03760021A41D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B4E9302B1FECFA130021A41D /* CustomTabBarViewController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,8 +368,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */,
+				B4E930321FECFC2C0021A41D /* LogsViewController.swift in Sources */,
+				B4E930351FECFC6C0021A41D /* EditorViewController.swift in Sources */,
 				B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */,
 				B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */,
+				B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */,
+				B4E930381FECFC9D0021A41D /* NotificationListViewController.swift in Sources */,
+				B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */,
+				B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
