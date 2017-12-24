@@ -1,5 +1,5 @@
 //
-//  NotificationListViewController.swift
+//  NotificationsViewController.swift
 //  Kipalog
 //
 //  Created by DTVD on 2017/12/22.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class NotificationListViewController: UICollectionViewController {
+class NotificationsViewController: UICollectionViewController, TabConvertible {
+    let barTitle = "Notifications"
+    let barImageName = "Notifications"
 
     override func viewDidLoad() {
         super.viewDidLoad()

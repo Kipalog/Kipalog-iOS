@@ -8,7 +8,9 @@
 
 import UIKit
 
-class LogsViewController: UICollectionViewController {
+class LogsViewController: UICollectionViewController, TabConvertible {
+    let barTitle = "Logs"
+    let barImageName = "Logs"
 
     override func viewDidLoad() {
         super.viewDidLoad()

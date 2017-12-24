@@ -8,7 +8,9 @@
 
 import UIKit
 
-class EditorViewController: UICollectionViewController {
+class EditorViewController: UICollectionViewController, TabConvertible {
+    let barTitle = "Editor"
+    let barImageName = "Editor"
 
     override func viewDidLoad() {
         super.viewDidLoad()
