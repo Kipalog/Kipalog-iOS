@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F042FFA016BAC7AA441 /* TabConvertible.swift */; };
+		202F33FA9B21E4B24F799FA7 /* PostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F36EE2EF8F054234446EF /* PostStatus.swift */; };
+		202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3A28DF09562234A617FD /* FeedViewModel.swift */; };
+		202F39B0DF308A8FD56478C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3383342247840583E038 /* Post.swift */; };
 		202F3B0A81604DD63D8D87C4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F34AD997061A4CD3F12BF /* UIColor+Extension.swift */; };
 		202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3EAD2A255E28C066B118 /* UIView+Extension.swift */; };
+		202F3FA362509F1E286C7C3F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AD3196A52B89B0D5F1D /* User.swift */; };
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
 		B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* RootViewController.swift */; };
 		B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF31FEBDDE30021A41D /* Main.storyboard */; };
@@ -29,6 +33,9 @@
 		B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */; };
 		B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */; };
 		B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */; };
+		B4E930401FEFB93C0021A41D /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E9303F1FEFB93C0021A41D /* FeedCell.xib */; };
+		B4E930421FEFB9AF0021A41D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930411FEFB9AF0021A41D /* FeedCell.swift */; };
+		B4E930441FEFCBE40021A41D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930431FEFCBE40021A41D /* Kingfisher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		202F3383342247840583E038 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		202F34AD997061A4CD3F12BF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		202F36EE2EF8F054234446EF /* PostStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostStatus.swift; sourceTree = "<group>"; };
+		202F3A28DF09562234A617FD /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		202F3AD3196A52B89B0D5F1D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		202F3EAD2A255E28C066B118 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		202F3F042FFA016BAC7AA441 /* TabConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabConvertible.swift; sourceTree = "<group>"; };
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +81,9 @@
 		B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		B4E9303F1FEFB93C0021A41D /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		B4E930411FEFB9AF0021A41D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		B4E930431FEFCBE40021A41D /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E930441FEFCBE40021A41D /* Kingfisher.framework in Frameworks */,
 				B4E930171FECE5F20021A41D /* RxSwift.framework in Frameworks */,
 				B4E930181FECE5F20021A41D /* APIKit.framework in Frameworks */,
 				B4E930191FECE5F20021A41D /* Result.framework in Frameworks */,
@@ -142,6 +157,7 @@
 		B4E9300F1FECE5F10021A41D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4E930431FEFCBE40021A41D /* Kingfisher.framework */,
 				B4E930211FECE84D0021A41D /* XCTest.framework */,
 				B4E930111FECE5F10021A41D /* APIKit.framework */,
 				B4E930141FECE5F10021A41D /* Himotoki.framework */,
@@ -170,6 +186,9 @@
 		B4E930271FECEA5E0021A41D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				202F3383342247840583E038 /* Post.swift */,
+				202F3AD3196A52B89B0D5F1D /* User.swift */,
+				202F36EE2EF8F054234446EF /* PostStatus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,6 +224,9 @@
 			isa = PBXGroup;
 			children = (
 				B4E9302E1FECFB510021A41D /* FeedViewController.swift */,
+				B4E9303F1FEFB93C0021A41D /* FeedCell.xib */,
+				B4E930411FEFB9AF0021A41D /* FeedCell.swift */,
+				202F3A28DF09562234A617FD /* FeedViewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -335,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
+				B4E930401FEFB93C0021A41D /* FeedCell.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
 				B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */,
 			);
@@ -363,6 +386,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 			);
@@ -378,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */,
+				B4E930421FEFB9AF0021A41D /* FeedCell.swift in Sources */,
 				B4E930321FECFC2C0021A41D /* LogsViewController.swift in Sources */,
 				B4E930351FECFC6C0021A41D /* EditorViewController.swift in Sources */,
 				B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */,
@@ -389,6 +414,10 @@
 				202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */,
 				202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */,
 				202F3B0A81604DD63D8D87C4 /* UIColor+Extension.swift in Sources */,
+				202F39B0DF308A8FD56478C9 /* Post.swift in Sources */,
+				202F3FA362509F1E286C7C3F /* User.swift in Sources */,
+				202F33FA9B21E4B24F799FA7 /* PostStatus.swift in Sources */,
+				202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
