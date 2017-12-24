@@ -9,12 +9,10 @@
 import UIKit
 
 class EditorViewController: UICollectionViewController, TabConvertible {
-    let barTitle = "Editor"
     let barImageName = "Editor"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = UIColor.green
     }
 
 }

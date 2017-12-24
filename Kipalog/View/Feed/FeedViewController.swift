@@ -9,12 +9,10 @@
 import UIKit
 
 class FeedViewController: UICollectionViewController, TabConvertible {
-    let barTitle = "Feed"
     let barImageName = "Feed"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = UIColor.brown
     }
 
 }

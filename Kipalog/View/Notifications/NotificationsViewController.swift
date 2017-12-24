@@ -9,12 +9,10 @@
 import UIKit
 
 class NotificationsViewController: UICollectionViewController, TabConvertible {
-    let barTitle = "Notifications"
     let barImageName = "Notifications"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = UIColor.blue
     }
 
 }

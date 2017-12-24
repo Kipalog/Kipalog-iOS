@@ -1,5 +1,5 @@
 //
-//  TabBarPlugable.swift
+//  TabConvertible.swift
 //  Kipalog
 // 
 //  Created by DTVD on 2017/12/24.
@@ -9,7 +9,6 @@
 import UIKit
 
 protocol TabConvertible {
-    var barTitle: String { get }
     var barImageName: String { get }
     func buildTabController() -> UIViewController
 }
@@ -17,8 +16,8 @@ protocol TabConvertible {
 extension TabConvertible where Self: UIViewController {
     func buildTabController() -> UIViewController {
         let navController = UINavigationController(rootViewController: self)
-        navController.tabBarItem.title = barTitle
         navController.tabBarItem.image = UIImage(named: barImageName)
+        navController.tabBarItem.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
         return navController
     }
 }

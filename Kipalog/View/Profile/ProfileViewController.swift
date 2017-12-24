@@ -9,12 +9,10 @@
 import UIKit
 
 class ProfileViewController: UICollectionViewController, TabConvertible {
-    let barTitle = "Profile"
     let barImageName = "Profile"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = UIColor.red
     }
 
 }
