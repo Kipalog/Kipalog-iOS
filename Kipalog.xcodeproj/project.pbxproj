@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F042FFA016BAC7AA441 /* TabConvertible.swift */; };
+		202F3B0A81604DD63D8D87C4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F34AD997061A4CD3F12BF /* UIColor+Extension.swift */; };
 		202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3EAD2A255E28C066B118 /* UIView+Extension.swift */; };
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
 		B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* RootViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		202F34AD997061A4CD3F12BF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		202F3EAD2A255E28C066B118 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		202F3F042FFA016BAC7AA441 /* TabConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabConvertible.swift; sourceTree = "<group>"; };
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 			children = (
 				B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */,
 				202F3EAD2A255E28C066B118 /* UIView+Extension.swift */,
+				202F34AD997061A4CD3F12BF /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */,
 				202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */,
 				202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */,
+				202F3B0A81604DD63D8D87C4 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

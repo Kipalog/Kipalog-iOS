@@ -27,5 +27,7 @@ class CustomTabBarViewController: UITabBarController {
             notificationsViewController.buildTabController(),
             profileViewController.buildTabController()
         ]
+
+        tabBar.tintColor = UIColor.kipalog.masterColor
     }
 }
