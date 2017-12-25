@@ -22,7 +22,7 @@ class FeedViewModel {
             Post(
                 status: .publish,
                 title: "Less hay Sass",
-                content: "Less hay Sass ra đời đánh dấu bước tiến hoá của CSS, mang đến sự tán thưởng trong cộng đồng front-end developer và đem lại tiện dụng ...",
+                detail: "Less hay Sass ra đời đánh dấu bước tiến hoá của CSS, mang đến sự tán thưởng trong cộng đồng front-end developer và đem lại tiện dụng ...",
                 author: User(
                     id: "1",
                     name: "Vu Nhat Minh",

@@ -11,6 +11,6 @@ import Foundation
 struct Post {
     let status: PostStatus
     let title: String
-    let content: String
+    let detail: String
     let author: User
 }

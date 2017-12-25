@@ -70,6 +70,7 @@ extension FeedViewController {
             let post = posts[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! FeedCell
             cell.title.text = post.title
+            cell.detail.text = post.detail
             if let url = post.author.avatarUrl {
                 cell.avatar.kf.setImage(
                     with: url,

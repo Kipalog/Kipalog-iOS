@@ -11,7 +11,8 @@ import UIKit
 class FeedCell: UICollectionViewCell {
 
     @IBOutlet weak var avatar: UIImageView!
-    @IBOutlet weak var title: UITextView!
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var detail: UILabel!
     @IBOutlet weak var containerWidthConstraint: NSLayoutConstraint!
 
     override func awakeFromNib() {
