@@ -33,9 +33,9 @@
 		B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */; };
 		B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */; };
 		B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */; };
-		B4E930401FEFB93C0021A41D /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E9303F1FEFB93C0021A41D /* FeedCell.xib */; };
-		B4E930421FEFB9AF0021A41D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930411FEFB9AF0021A41D /* FeedCell.swift */; };
 		B4E930441FEFCBE40021A41D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930431FEFCBE40021A41D /* Kingfisher.framework */; };
+		B4E930471FF0E7540021A41D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930451FF0E7540021A41D /* FeedCell.swift */; };
+		B4E930481FF0E7540021A41D /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E930461FF0E7540021A41D /* FeedCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,9 +81,9 @@
 		B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		B4E9303F1FEFB93C0021A41D /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
-		B4E930411FEFB9AF0021A41D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		B4E930431FEFCBE40021A41D /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		B4E930451FF0E7540021A41D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		B4E930461FF0E7540021A41D /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,9 +224,9 @@
 			isa = PBXGroup;
 			children = (
 				B4E9302E1FECFB510021A41D /* FeedViewController.swift */,
-				B4E9303F1FEFB93C0021A41D /* FeedCell.xib */,
-				B4E930411FEFB9AF0021A41D /* FeedCell.swift */,
 				202F3A28DF09562234A617FD /* FeedViewModel.swift */,
+				B4E930451FF0E7540021A41D /* FeedCell.swift */,
+				B4E930461FF0E7540021A41D /* FeedCell.xib */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -357,7 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
-				B4E930401FEFB93C0021A41D /* FeedCell.xib in Resources */,
+				B4E930481FF0E7540021A41D /* FeedCell.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
 				B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */,
 			);
@@ -402,8 +402,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */,
-				B4E930421FEFB9AF0021A41D /* FeedCell.swift in Sources */,
 				B4E930321FECFC2C0021A41D /* LogsViewController.swift in Sources */,
+				B4E930471FF0E7540021A41D /* FeedCell.swift in Sources */,
 				B4E930351FECFC6C0021A41D /* EditorViewController.swift in Sources */,
 				B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */,
 				B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */,
