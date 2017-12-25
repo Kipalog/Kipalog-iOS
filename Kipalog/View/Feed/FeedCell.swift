@@ -18,7 +18,7 @@ class FeedCell: UICollectionViewCell {
         super.awakeFromNib()
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
         let screenWidth = UIScreen.main.bounds.size.width
-        containerWidthConstraint.constant = screenWidth - 24
+        containerWidthConstraint.constant = screenWidth
     }
 
 }

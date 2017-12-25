@@ -13,43 +13,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FeedCell" customModule="Kipalog" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="500" height="60"/>
+            <rect key="frame" x="0.0" y="0.0" width="500" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="500" height="60"/>
+                <rect key="frame" x="0.0" y="0.0" width="500" height="80"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jL6-wh-qEt">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="80"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P1c-xe-Zuw" userLabel="Avatar">
-                                <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                <rect key="frame" x="10" y="10" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="DMG-lc-GbO"/>
-                                    <constraint firstAttribute="height" constant="40" id="JFh-Zi-8xl"/>
+                                    <constraint firstAttribute="width" constant="60" id="DMG-lc-GbO"/>
+                                    <constraint firstAttribute="height" constant="60" id="JFh-Zi-8xl"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
+                                        <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rhJ-JN-YxP" userLabel="Title">
-                                <rect key="frame" x="60" y="15" width="430" height="30"/>
+                                <rect key="frame" x="80" y="10" width="410" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="wGg-jW-qHG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="wGg-jW-qHG"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="430" minY="60" maxX="30" maxY="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rhJ-JN-YxP" firstAttribute="top" secondItem="Iht-B4-139" secondAttribute="top" constant="15" id="5K9-Qf-HPb"/>
+                            <constraint firstItem="rhJ-JN-YxP" firstAttribute="top" secondItem="Iht-B4-139" secondAttribute="top" constant="10" id="5K9-Qf-HPb"/>
                             <constraint firstItem="rhJ-JN-YxP" firstAttribute="trailing" secondItem="Iht-B4-139" secondAttribute="trailing" constant="-10" id="AuH-Qy-eRF"/>
-                            <constraint firstItem="rhJ-JN-YxP" firstAttribute="bottom" secondItem="Iht-B4-139" secondAttribute="bottom" constant="-15" id="IGO-Q7-MVX"/>
+                            <constraint firstItem="rhJ-JN-YxP" firstAttribute="bottom" secondItem="Iht-B4-139" secondAttribute="bottom" constant="-10" id="IGO-Q7-MVX"/>
                             <constraint firstItem="rhJ-JN-YxP" firstAttribute="leading" secondItem="P1c-xe-Zuw" secondAttribute="trailing" constant="10" id="KjY-TF-ase"/>
                             <constraint firstItem="P1c-xe-Zuw" firstAttribute="leading" secondItem="Iht-B4-139" secondAttribute="leading" constant="10" id="b3h-ss-Q1C"/>
                             <constraint firstAttribute="width" constant="500" id="eoM-2Q-uLq"/>
