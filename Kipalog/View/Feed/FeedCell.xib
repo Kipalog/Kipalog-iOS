@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -34,29 +39,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgQ-lK-gOT" userLabel="Title">
-                                <rect key="frame" x="80" y="10" width="410" height="20"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Less hay Sass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgQ-lK-gOT" userLabel="Title">
+                                <rect key="frame" x="80" y="10" width="410" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.70980392156862748" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bt-Pv-izA" userLabel="Detail">
-                                <rect key="frame" x="80" y="40" width="410" height="100"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bt-Pv-izA" userLabel="Detail">
+                                <rect key="frame" x="80" y="35.5" width="410" height="99.5"/>
+                                <string key="text">Less hay Sass ra đời đánh dấu bước tiến hoá của CSS, mang đến sự tán thưởng trong cộng đồng front-end developer và đem lại tiện dụng ...</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQY-u3-rKS" userLabel="Seperator">
+                                <rect key="frame" x="10" y="149" width="490" height="1"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="xMc-PC-baj"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="CdV-Jk-fqs"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Iht-B4-139" firstAttribute="trailing" secondItem="nQY-u3-rKS" secondAttribute="trailing" id="4S5-qf-qDh"/>
                             <constraint firstItem="3Bt-Pv-izA" firstAttribute="leading" secondItem="P1c-xe-Zuw" secondAttribute="trailing" constant="10" id="CPW-lS-tPr"/>
-                            <constraint firstItem="3Bt-Pv-izA" firstAttribute="top" secondItem="fgQ-lK-gOT" secondAttribute="bottom" constant="10" id="H5L-IX-APW"/>
+                            <constraint firstItem="3Bt-Pv-izA" firstAttribute="top" secondItem="fgQ-lK-gOT" secondAttribute="bottom" constant="5" id="H5L-IX-APW"/>
+                            <constraint firstItem="nQY-u3-rKS" firstAttribute="leading" secondItem="Iht-B4-139" secondAttribute="leading" constant="10" id="OVc-ag-dGc"/>
                             <constraint firstItem="fgQ-lK-gOT" firstAttribute="top" secondItem="Iht-B4-139" secondAttribute="top" constant="10" id="TKD-tD-tNU"/>
                             <constraint firstItem="P1c-xe-Zuw" firstAttribute="leading" secondItem="Iht-B4-139" secondAttribute="leading" constant="10" id="b3h-ss-Q1C"/>
+                            <constraint firstItem="Iht-B4-139" firstAttribute="bottom" secondItem="nQY-u3-rKS" secondAttribute="bottom" id="cfh-jV-SQB"/>
                             <constraint firstAttribute="width" constant="500" id="eoM-2Q-uLq"/>
                             <constraint firstItem="P1c-xe-Zuw" firstAttribute="top" secondItem="Iht-B4-139" secondAttribute="top" constant="10" id="lUe-Hy-7bj"/>
                             <constraint firstItem="Iht-B4-139" firstAttribute="trailing" secondItem="fgQ-lK-gOT" secondAttribute="trailing" constant="10" id="pSj-vU-iLn"/>
-                            <constraint firstItem="Iht-B4-139" firstAttribute="bottom" secondItem="3Bt-Pv-izA" secondAttribute="bottom" constant="10" id="phx-Rn-rNh"/>
+                            <constraint firstItem="Iht-B4-139" firstAttribute="bottom" secondItem="3Bt-Pv-izA" secondAttribute="bottom" constant="15" id="phx-Rn-rNh"/>
                             <constraint firstItem="fgQ-lK-gOT" firstAttribute="leading" secondItem="P1c-xe-Zuw" secondAttribute="trailing" constant="10" id="vN5-BP-X33"/>
                             <constraint firstItem="Iht-B4-139" firstAttribute="trailing" secondItem="3Bt-Pv-izA" secondAttribute="trailing" constant="10" id="vNk-LL-cyn"/>
                         </constraints>

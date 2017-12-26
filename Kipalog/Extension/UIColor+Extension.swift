@@ -12,6 +12,9 @@ struct KipalogTheme {
     static var masterColor: UIColor {
         return UIColor(red: 44/255, green: 71/255, blue: 98/255, alpha: 1)
     }
+    static var tearColor: UIColor {
+        return UIColor(red: 0/255, green: 181/255, blue: 173/255, alpha: 1)
+    }
 }
 
 extension UIColor {
