@@ -33,6 +33,7 @@ class FeedViewController: UICollectionViewController, TabConvertible {
     private func setupView() {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+            layout.scrollDirection = .vertical
         }
     }
 

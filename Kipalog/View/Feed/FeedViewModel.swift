@@ -48,11 +48,47 @@ class FeedViewModel {
                 title: "Cách cài đặt Docker trên Digital Ocean",
                 detail: "Docker - dịch vụ mới nhưng cũng không mới, kết hợp với một IaaS mới nổi tạo nên cơn sốt trong các công ty startup ...",
                 author: User(
-                    id: "1",
+                    id: "3",
                     name: "Bui Hong Ha",
                     email: "habuihong@gmail.com",
                     handleName: "telescreen",
                     avatarUrl: URL(string: "https://avatars.githubusercontent.com/u/181202?v=3")
+                )
+            ),
+            Post(
+                status: .publish,
+                title: "OpenCV cơ bản đến nâng cao",
+                detail: "Làm khoa học về xử lỹ hình ảnh, chắc hẳn bạn không thể không biết đến Python và OpenCV. Trong bài biết này mình xin trình bày ngắn gọn về ...",
+                author: User(
+                    id: "4",
+                    name: "Viet Nguyen Hoang",
+                    email: "vietnguyenhoang@gmail.com",
+                    handleName: "vietnguyen",
+                    avatarUrl: URL(string: "https://avatars.githubusercontent.com/u/2935719")
+                )
+            ),
+            Post(
+                status: .publish,
+                title: "Tạo FlatUI Button trên Android theo phong cách IOS",
+                detail: "Ở bài viết này tôi sẽ hướng dẫn các tạo những button có phong cách của FlatUI trên IOS. Sự kết hợp giữa ...",
+                author: User(
+                    id: "5",
+                    name: "Hoang Le Van",
+                    email: "hoanglevan@gmail.com",
+                    handleName: "hoangchay",
+                    avatarUrl: URL(string: "https://pbs.twimg.com/profile_images/378800000054639404/705e424771d095d926406eb6d5dc40b9.jpeg")
+                )
+            ),
+            Post(
+                status: .publish,
+                title: "Phân tích và tiếp cận bài toán Quy hoạch động",
+                detail: "Với sự hỗ trợ của anh (Link) (là dân competitive programming thứ thiệt (Link)] ) cùng với các anh em trong nhóm algorithm (Link)] của (Link), mình ...",
+                author: User(
+                    id: "6",
+                    name: "Huy Tran",
+                    email: "huytran@gmail.com",
+                    handleName: "huytran",
+                    avatarUrl: URL(string: "https://pbs.twimg.com/media/C1OsxXCWgAEy1F_.png")
                 )
             ),
         ])

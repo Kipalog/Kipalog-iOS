@@ -13,12 +13,11 @@ class CustomTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let layout = UICollectionViewFlowLayout()
-        let feedViewController = FeedViewController(collectionViewLayout: layout)
-        let logsViewController = LogsViewController(collectionViewLayout: layout)
-        let editorViewController = EditorViewController(collectionViewLayout: layout)
-        let notificationsViewController = NotificationsViewController(collectionViewLayout: layout)
-        let profileViewController = ProfileViewController(collectionViewLayout: layout)
+        let feedViewController = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let logsViewController = LogsViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let editorViewController = EditorViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let notificationsViewController = NotificationsViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let profileViewController = ProfileViewController(collectionViewLayout: UICollectionViewFlowLayout())
 
         viewControllers = [
             feedViewController.buildTabController(),
