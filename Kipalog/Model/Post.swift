@@ -13,4 +13,5 @@ struct Post {
     let title: String
     let detail: String
     let author: User
+    let meta: PostMeta
 }

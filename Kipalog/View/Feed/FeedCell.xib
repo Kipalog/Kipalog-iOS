@@ -34,41 +34,94 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Less hay Sass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgQ-lK-gOT" userLabel="Title">
-                                <rect key="frame" x="60" y="15" width="430" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.70980392156862748" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgQ-lK-gOT" userLabel="Title">
+                                <rect key="frame" x="60" y="15" width="430" height="24.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Title">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.70980392156862748" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Montserrat-SemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bt-Pv-izA" userLabel="Detail">
-                                <rect key="frame" x="60" y="40.5" width="430" height="94.5"/>
-                                <string key="text">Less hay Sass ra đời đánh dấu bước tiến hoá của CSS, mang đến sự tán thưởng trong cộng đồng front-end developer và đem lại tiện dụng ...</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bt-Pv-izA" userLabel="Detail">
+                                <rect key="frame" x="60" y="44.5" width="430" height="67.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Very long detail">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="15" name="SFUIText-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQY-u3-rKS" userLabel="Seperator">
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQY-u3-rKS" userLabel="Seperator">
                                 <rect key="frame" x="10" y="149" width="490" height="1"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="xMc-PC-baj"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="CdV-Jk-fqs"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="166" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U87-AI-1Ow" userLabel="Kipalog Count">
+                                <rect key="frame" x="60" y="120" width="21" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="guJ-g6-PQR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Log" translatesAutoresizingMaskIntoConstraints="NO" id="U1v-wz-PMd" userLabel="Kipalog Icon">
+                                <rect key="frame" x="83" y="121.5" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="Erb-63-A4z"/>
+                                    <constraint firstAttribute="width" constant="12" id="j8g-Oz-AlR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2j-7g-Dvi" userLabel="Comment Count">
+                                <rect key="frame" x="100" y="120" width="8" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="g4O-Jh-DBm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comment" translatesAutoresizingMaskIntoConstraints="NO" id="guM-Si-XN5" userLabel="Comment Icon">
+                                <rect key="frame" x="111" y="122" width="11" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="Ota-fQ-SLL"/>
+                                    <constraint firstAttribute="height" constant="11" id="Qt3-1G-deD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="U1v-wz-PMd" firstAttribute="centerY" secondItem="U87-AI-1Ow" secondAttribute="centerY" id="0sc-mF-P4P"/>
                             <constraint firstItem="Iht-B4-139" firstAttribute="trailing" secondItem="nQY-u3-rKS" secondAttribute="trailing" id="4S5-qf-qDh"/>
                             <constraint firstItem="3Bt-Pv-izA" firstAttribute="leading" secondItem="P1c-xe-Zuw" secondAttribute="trailing" constant="10" id="CPW-lS-tPr"/>
                             <constraint firstItem="3Bt-Pv-izA" firstAttribute="top" secondItem="fgQ-lK-gOT" secondAttribute="bottom" constant="5" id="H5L-IX-APW"/>
+                            <constraint firstItem="guM-Si-XN5" firstAttribute="centerY" secondItem="y2j-7g-Dvi" secondAttribute="centerY" id="IwF-NA-PcD"/>
                             <constraint firstItem="nQY-u3-rKS" firstAttribute="leading" secondItem="Iht-B4-139" secondAttribute="leading" constant="10" id="OVc-ag-dGc"/>
                             <constraint firstItem="fgQ-lK-gOT" firstAttribute="top" secondItem="Iht-B4-139" secondAttribute="top" constant="15" id="TKD-tD-tNU"/>
+                            <constraint firstItem="guM-Si-XN5" firstAttribute="leading" secondItem="y2j-7g-Dvi" secondAttribute="trailing" constant="3" id="Y5Y-dy-Xft"/>
+                            <constraint firstItem="y2j-7g-Dvi" firstAttribute="leading" secondItem="U1v-wz-PMd" secondAttribute="trailing" constant="5" id="Yuu-C2-o2P"/>
+                            <constraint firstItem="Iht-B4-139" firstAttribute="bottom" secondItem="U87-AI-1Ow" secondAttribute="bottom" constant="15" id="at3-NP-ffv"/>
                             <constraint firstItem="P1c-xe-Zuw" firstAttribute="leading" secondItem="Iht-B4-139" secondAttribute="leading" constant="10" id="b3h-ss-Q1C"/>
                             <constraint firstItem="Iht-B4-139" firstAttribute="bottom" secondItem="nQY-u3-rKS" secondAttribute="bottom" id="cfh-jV-SQB"/>
                             <constraint firstAttribute="width" constant="500" id="eoM-2Q-uLq"/>
+                            <constraint firstItem="U1v-wz-PMd" firstAttribute="leading" secondItem="U87-AI-1Ow" secondAttribute="trailing" constant="2" id="gCi-LO-toF"/>
                             <constraint firstItem="P1c-xe-Zuw" firstAttribute="top" secondItem="Iht-B4-139" secondAttribute="top" constant="15" id="lUe-Hy-7bj"/>
                             <constraint firstItem="Iht-B4-139" firstAttribute="trailing" secondItem="fgQ-lK-gOT" secondAttribute="trailing" constant="10" id="pSj-vU-iLn"/>
-                            <constraint firstItem="Iht-B4-139" firstAttribute="bottom" secondItem="3Bt-Pv-izA" secondAttribute="bottom" constant="15" id="phx-Rn-rNh"/>
+                            <constraint firstItem="U87-AI-1Ow" firstAttribute="top" secondItem="3Bt-Pv-izA" secondAttribute="bottom" constant="8" id="pcL-xb-Gfa"/>
+                            <constraint firstItem="U87-AI-1Ow" firstAttribute="leading" secondItem="3Bt-Pv-izA" secondAttribute="leading" id="qPa-aD-c60"/>
+                            <constraint firstItem="y2j-7g-Dvi" firstAttribute="centerY" secondItem="U87-AI-1Ow" secondAttribute="centerY" id="rji-e4-SET"/>
                             <constraint firstItem="fgQ-lK-gOT" firstAttribute="leading" secondItem="P1c-xe-Zuw" secondAttribute="trailing" constant="10" id="vN5-BP-X33"/>
                             <constraint firstItem="Iht-B4-139" firstAttribute="trailing" secondItem="3Bt-Pv-izA" secondAttribute="trailing" constant="10" id="vNk-LL-cyn"/>
                         </constraints>
@@ -85,11 +138,17 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="avatar" destination="P1c-xe-Zuw" id="3hI-oe-apg"/>
+                <outlet property="commentCount" destination="y2j-7g-Dvi" id="3zP-sk-dJM"/>
                 <outlet property="containerWidthConstraint" destination="eoM-2Q-uLq" id="NNs-Zg-Piv"/>
                 <outlet property="detail" destination="3Bt-Pv-izA" id="ueF-W6-hDD"/>
+                <outlet property="kipalogCount" destination="U87-AI-1Ow" id="TXE-aP-oZr"/>
                 <outlet property="title" destination="fgQ-lK-gOT" id="w71-K4-3CL"/>
             </connections>
             <point key="canvasLocation" x="-90" y="336"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Comment" width="50" height="50"/>
+        <image name="Log" width="30" height="30"/>
+    </resources>
 </document>
