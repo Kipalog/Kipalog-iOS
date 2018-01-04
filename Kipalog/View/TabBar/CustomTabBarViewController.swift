@@ -14,14 +14,14 @@ class CustomTabBarViewController: UITabBarController {
         super.viewDidLoad()
 
         let feedViewController = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        let logsViewController = LogsViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let searchViewController = SearchViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let editorViewController = EditorViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let notificationsViewController = NotificationsViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let profileViewController = ProfileViewController(collectionViewLayout: UICollectionViewFlowLayout())
 
         viewControllers = [
             feedViewController.buildTabController(),
-            logsViewController.buildTabController(),
+            searchViewController.buildTabController(),
             editorViewController.buildTabController(),
             notificationsViewController.buildTabController(),
             profileViewController.buildTabController()

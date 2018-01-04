@@ -32,7 +32,7 @@
 		B4E9301D1FECE5F20021A41D /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930161FECE5F20021A41D /* RxBlocking.framework */; };
 		B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9302B1FECFA130021A41D /* CustomTabBarViewController.swift */; };
 		B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9302E1FECFB510021A41D /* FeedViewController.swift */; };
-		B4E930321FECFC2C0021A41D /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930311FECFC2C0021A41D /* LogsViewController.swift */; };
+		B4E930321FECFC2C0021A41D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930311FECFC2C0021A41D /* SearchViewController.swift */; };
 		B4E930351FECFC6C0021A41D /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930341FECFC6C0021A41D /* EditorViewController.swift */; };
 		B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */; };
 		B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */; };
@@ -84,7 +84,7 @@
 		B4E930211FECE84D0021A41D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		B4E9302B1FECFA130021A41D /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		B4E9302E1FECFB510021A41D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		B4E930311FECFC2C0021A41D /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		B4E930311FECFC2C0021A41D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B4E930341FECFC6C0021A41D /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 				B4E930391FECFCAE0021A41D /* Profile */,
 				B4E930361FECFC7C0021A41D /* Notifications */,
 				B4E930331FECFC5B0021A41D /* Editor */,
-				B4E930301FECFB710021A41D /* Logs */,
+				B4E930301FECFB710021A41D /* Search */,
 				B4E9302D1FECFB3B0021A41D /* Feed */,
 			);
 			path = View;
@@ -251,12 +251,12 @@
 			path = Feed;
 			sourceTree = "<group>";
 		};
-		B4E930301FECFB710021A41D /* Logs */ = {
+		B4E930301FECFB710021A41D /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				B4E930311FECFC2C0021A41D /* LogsViewController.swift */,
+				B4E930311FECFC2C0021A41D /* SearchViewController.swift */,
 			);
-			path = Logs;
+			path = Search;
 			sourceTree = "<group>";
 		};
 		B4E930331FECFC5B0021A41D /* Editor */ = {
@@ -424,7 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */,
-				B4E930321FECFC2C0021A41D /* LogsViewController.swift in Sources */,
+				B4E930321FECFC2C0021A41D /* SearchViewController.swift in Sources */,
 				B4E930471FF0E7540021A41D /* FeedCell.swift in Sources */,
 				B4E930351FECFC6C0021A41D /* EditorViewController.swift in Sources */,
 				B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */,

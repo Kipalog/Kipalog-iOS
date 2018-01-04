@@ -1,5 +1,5 @@
 //
-//  LogsViewController.swift
+//  SearchViewController.swift
 //  Kipalog
 //
 //  Created by DTVD on 2017/12/22.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class LogsViewController: UICollectionViewController, TabConvertible {
-    let barImageName = "Logs"
+class SearchViewController: UICollectionViewController, TabConvertible {
+    let barImageName = "Search"
 
     override func viewDidLoad() {
         super.viewDidLoad()
