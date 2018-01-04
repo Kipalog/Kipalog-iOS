@@ -26,6 +26,7 @@ class FeedViewController: UICollectionViewController, TabConvertible {
         super.viewDidLoad()
         collectionView.register(UINib.init(nibName: "FeedCell", bundle: nil), forCellWithReuseIdentifier: dataSource.cellId)
         collectionView.backgroundColor = UIColor.white
+        navigationItem.title = "Kipalog"
         binding()
         setupView()
     }
