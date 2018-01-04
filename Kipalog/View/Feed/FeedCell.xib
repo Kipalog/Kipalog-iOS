@@ -35,7 +35,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgQ-lK-gOT" userLabel="Title">
-                                <rect key="frame" x="60" y="15" width="430" height="24.5"/>
+                                <rect key="frame" x="60" y="12" width="430" height="24.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Title">
                                         <attributes>
@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bt-Pv-izA" userLabel="Detail">
-                                <rect key="frame" x="60" y="44.5" width="430" height="67.5"/>
+                                <rect key="frame" x="60" y="41.5" width="430" height="70.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Very long detail">
                                         <attributes>
@@ -109,7 +109,7 @@
                             <constraint firstItem="3Bt-Pv-izA" firstAttribute="top" secondItem="fgQ-lK-gOT" secondAttribute="bottom" constant="5" id="H5L-IX-APW"/>
                             <constraint firstItem="guM-Si-XN5" firstAttribute="centerY" secondItem="y2j-7g-Dvi" secondAttribute="centerY" id="IwF-NA-PcD"/>
                             <constraint firstItem="nQY-u3-rKS" firstAttribute="leading" secondItem="Iht-B4-139" secondAttribute="leading" constant="10" id="OVc-ag-dGc"/>
-                            <constraint firstItem="fgQ-lK-gOT" firstAttribute="top" secondItem="Iht-B4-139" secondAttribute="top" constant="15" id="TKD-tD-tNU"/>
+                            <constraint firstItem="fgQ-lK-gOT" firstAttribute="top" secondItem="Iht-B4-139" secondAttribute="top" constant="12" id="TKD-tD-tNU"/>
                             <constraint firstItem="guM-Si-XN5" firstAttribute="leading" secondItem="y2j-7g-Dvi" secondAttribute="trailing" constant="3" id="Y5Y-dy-Xft"/>
                             <constraint firstItem="y2j-7g-Dvi" firstAttribute="leading" secondItem="U1v-wz-PMd" secondAttribute="trailing" constant="5" id="Yuu-C2-o2P"/>
                             <constraint firstItem="Iht-B4-139" firstAttribute="bottom" secondItem="U87-AI-1Ow" secondAttribute="bottom" constant="15" id="at3-NP-ffv"/>
