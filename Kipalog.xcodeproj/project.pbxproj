@@ -19,6 +19,8 @@
 		202F3FA362509F1E286C7C3F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AD3196A52B89B0D5F1D /* User.swift */; };
 		B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */; };
 		B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */; };
+		B48C59081FFE729F00C6E0E4 /* AuthorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */; };
+		B48C590A1FFE72EF00C6E0E4 /* AuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */; };
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
 		B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* RootViewController.swift */; };
 		B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF31FEBDDE30021A41D /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VNF-ProximaNovaCond-Regular.ttf"; sourceTree = "<group>"; };
+		B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorCell.xib; sourceTree = "<group>"; };
+		B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCell.swift; sourceTree = "<group>"; };
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4E92FF11FEBDDE30021A41D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 				202F3A28DF09562234A617FD /* FeedViewModel.swift */,
 				B4E930451FF0E7540021A41D /* FeedCell.swift */,
 				B4E930461FF0E7540021A41D /* FeedCell.xib */,
+				B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */,
+				B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48C59081FFE729F00C6E0E4 /* AuthorCell.xib in Resources */,
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B4E930481FF0E7540021A41D /* FeedCell.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
@@ -435,6 +442,7 @@
 				B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */,
 				B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */,
 				B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */,
+				B48C590A1FFE72EF00C6E0E4 /* AuthorCell.swift in Sources */,
 				B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */,
 				202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */,
 				202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */,
