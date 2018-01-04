@@ -27,7 +27,7 @@ class FeedCell: UICollectionViewCell {
     var post: Post? {
         didSet {
             title.text = post?.title
-            title.setLineSpacing(3)
+            title.setLineSpacing(2)
 
             detail.text = post?.detail
             detail.setLineSpacing(3)
