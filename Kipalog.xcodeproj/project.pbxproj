@@ -21,8 +21,8 @@
 		B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */; };
 		B48C59081FFE729F00C6E0E4 /* AuthorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */; };
 		B48C590A1FFE72EF00C6E0E4 /* AuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */; };
-		B48C590C1FFE74F400C6E0E4 /* HotAuthor.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthor.xib */; };
-		B48C590E1FFE771500C6E0E4 /* HotAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C590D1FFE771500C6E0E4 /* HotAuthor.swift */; };
+		B48C590C1FFE74F400C6E0E4 /* HotAuthorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */; };
+		B48C590E1FFE771500C6E0E4 /* HotAuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */; };
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
 		B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* RootViewController.swift */; };
 		B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF31FEBDDE30021A41D /* Main.storyboard */; };
@@ -72,8 +72,8 @@
 		B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VNF-ProximaNovaCond-Regular.ttf"; sourceTree = "<group>"; };
 		B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorCell.xib; sourceTree = "<group>"; };
 		B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCell.swift; sourceTree = "<group>"; };
-		B48C590B1FFE74F400C6E0E4 /* HotAuthor.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthor.xib; sourceTree = "<group>"; };
-		B48C590D1FFE771500C6E0E4 /* HotAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotAuthor.swift; sourceTree = "<group>"; };
+		B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthorView.xib; sourceTree = "<group>"; };
+		B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotAuthorView.swift; sourceTree = "<group>"; };
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4E92FF11FEBDDE30021A41D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -259,8 +259,8 @@
 				B4E930461FF0E7540021A41D /* FeedCell.xib */,
 				B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */,
 				B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */,
-				B48C590B1FFE74F400C6E0E4 /* HotAuthor.xib */,
-				B48C590D1FFE771500C6E0E4 /* HotAuthor.swift */,
+				B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */,
+				B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -395,7 +395,7 @@
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B4E930481FF0E7540021A41D /* FeedCell.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
-				B48C590C1FFE74F400C6E0E4 /* HotAuthor.xib in Resources */,
+				B48C590C1FFE74F400C6E0E4 /* HotAuthorView.xib in Resources */,
 				B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */,
 				B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */,
 				B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */,
@@ -460,7 +460,7 @@
 				202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */,
 				202F3D836B47508A17CA28DD /* PostMeta.swift in Sources */,
 				202F39DBD504021624EBE12F /* UILabel+Extension.swift in Sources */,
-				B48C590E1FFE771500C6E0E4 /* HotAuthor.swift in Sources */,
+				B48C590E1FFE771500C6E0E4 /* HotAuthorView.swift in Sources */,
 				202F31EAD5D8124BAC4E03C7 /* CustomNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

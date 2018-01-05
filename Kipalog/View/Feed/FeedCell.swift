@@ -17,6 +17,8 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet weak var commentCount: UILabel!
     @IBOutlet weak var containerWidthConstraint: NSLayoutConstraint!
 
+    static let identifier = "FeedCell"
+
     override func awakeFromNib() {
         super.awakeFromNib()
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
