@@ -35,15 +35,16 @@ class FeedViewController: UICollectionViewController, TabConvertible {
 
         collectionView.backgroundColor = UIColor.white
         navigationItem.title = "Kipalog"
+        setupLayout()
         binding()
-        setupView()
     }
 
-    private func setupView() {
+    private func setupLayout() {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
             layout.scrollDirection = .vertical
             layout.minimumLineSpacing = 0.0
+            layout.headerReferenceSize = CGSize(width: self.view.bounds.width, height: 120)
         }
     }
 
@@ -82,19 +83,17 @@ extension FeedViewController {
             cell.post = post
             return cell
         }
-    }
-}
 
-extension FeedViewController {
-    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        guard kind == UICollectionElementKindSectionHeader else { return UICollectionReusableView() }
-        guard let hotAuthorHeader = collectionView.dequeueReusableSupplementaryView(
-            ofKind: UICollectionElementKindSectionHeader,
-            withReuseIdentifier: HotAuthorView.identifier,
-            for: indexPath
-        ) as? HotAuthorView else {
-            fatalError("Could not find proper header")
+        func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+            guard kind == UICollectionElementKindSectionHeader else { return UICollectionReusableView() }
+            guard let hotAuthorHeader = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionElementKindSectionHeader,
+                withReuseIdentifier: HotAuthorView.identifier,
+                for: indexPath
+            ) as? HotAuthorView else {
+                fatalError("Could not find proper header")
+            }
+            return hotAuthorHeader
         }
-        return hotAuthorHeader
     }
 }
