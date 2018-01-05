@@ -30,9 +30,10 @@ class HotAuthorView: UICollectionReusableView, UICollectionViewDelegate {
 
     private func setupLayout() {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+            layout.estimatedItemSize = CGSize(width: 70, height: 80)
             layout.scrollDirection = .horizontal
-            layout.minimumLineSpacing = 0.0
+            layout.minimumLineSpacing = 0
+            layout.minimumInteritemSpacing = 0
         }
     }
 
@@ -46,11 +47,18 @@ class HotAuthorView: UICollectionReusableView, UICollectionViewDelegate {
                 avatarUrl: URL(string: "https://pbs.twimg.com/media/C1OsxXCWgAEy1F_.png")
             ),
             User(
-                id: "5",
-                name: "Hoang Le Van",
-                email: "hoanglevan@gmail.com",
-                handleName: "hoangchay",
-                avatarUrl: URL(string: "https://pbs.twimg.com/profile_images/378800000054639404/705e424771d095d926406eb6d5dc40b9.jpeg")
+                id: "2",
+                name: "Do Xuan Huy",
+                email: "huydx@gmail.com",
+                handleName: "huydx",
+                avatarUrl: URL(string: "https://orig05.deviantart.net/a1df/f/2011/112/8/f/nyan_cat_gif_by_kodiakpaws-d3emqu1.gif")
+            ),
+            User(
+                id: "3",
+                name: "Bui Hong Ha",
+                email: "habuihong@gmail.com",
+                handleName: "telescreen",
+                avatarUrl: URL(string: "https://avatars.githubusercontent.com/u/181202?v=3")
             ),
             User(
                 id: "1",
@@ -99,13 +107,5 @@ extension HotAuthorView {
 extension HotAuthorView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 70, height: 80)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
     }
 }

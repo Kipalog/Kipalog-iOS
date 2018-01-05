@@ -44,7 +44,7 @@ class FeedViewController: UICollectionViewController, TabConvertible {
             layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
             layout.scrollDirection = .vertical
             layout.minimumLineSpacing = 0.0
-            layout.headerReferenceSize = CGSize(width: self.view.bounds.width, height: 120)
+            layout.headerReferenceSize = CGSize(width: self.view.bounds.width, height: 110)
         }
     }
 
