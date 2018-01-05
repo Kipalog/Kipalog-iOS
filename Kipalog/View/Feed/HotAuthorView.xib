@@ -13,11 +13,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view alpha="0.94999999999999996" contentMode="scaleToFill" id="iN0-l3-epB" userLabel="View" customClass="HotAuthorView" customModule="Kipalog" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="500" height="110"/>
+            <rect key="frame" x="0.0" y="0.0" width="500" height="111"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tác giả nổi bật" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSP-8L-Raw">
-                    <rect key="frame" x="10" y="5" width="82.5" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tác giả bài viết hay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSP-8L-Raw">
+                    <rect key="frame" x="10" y="5" width="108" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="t4f-99-HP7"/>
                     </constraints>
@@ -27,7 +27,7 @@
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="SNQ-OM-crO">
                     <rect key="frame" x="0.0" y="30" width="500" height="80"/>
-                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="JZB-ri-pbv"/>
                     </constraints>
@@ -38,13 +38,25 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s18-vm-czq" userLabel="Seperator">
+                    <rect key="frame" x="10" y="110" width="490" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="nCp-T8-bJR"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="qVY-El-iB7"/>
+                </view>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="rSP-8L-Raw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="9nV-nX-PXK"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SNQ-OM-crO" secondAttribute="bottom" id="Bte-M7-Gam"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SNQ-OM-crO" secondAttribute="bottom" constant="1" id="Bte-M7-Gam"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="s18-vm-czq" secondAttribute="bottom" id="LeG-H7-hBA"/>
                 <constraint firstItem="rSP-8L-Raw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="NQl-59-Y4g"/>
                 <constraint firstItem="SNQ-OM-crO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="VhV-vI-HuF"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SNQ-OM-crO" secondAttribute="trailing" id="gbC-cJ-I3I"/>
+                <constraint firstItem="s18-vm-czq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="mR9-HR-eNc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s18-vm-czq" secondAttribute="trailing" id="x5t-nY-6dj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

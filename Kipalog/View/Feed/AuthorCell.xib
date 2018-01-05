@@ -16,6 +16,25 @@
             <rect key="frame" x="0.0" y="0.0" width="70" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ata-ee-77V" userLabel="Circle">
+                    <rect key="frame" x="8" y="8" width="54" height="54"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="Agy-ZM-cI7"/>
+                        <constraint firstAttribute="width" constant="54" id="L2Z-n8-l3t"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="26"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.0" green="0.70980392160000005" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ym6-rN-956">
                     <rect key="frame" x="10" y="10" width="50" height="50"/>
                     <constraints>
@@ -26,6 +45,9 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="25"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MiQ-vm-1o8">
@@ -35,13 +57,15 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="MiQ-vm-1o8" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="54B-Mr-x82"/>
                 <constraint firstItem="MiQ-vm-1o8" firstAttribute="top" secondItem="Ym6-rN-956" secondAttribute="bottom" constant="3" id="8Gj-x0-AwW"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ym6-rN-956" secondAttribute="trailing" constant="10" id="Krc-XN-iTX"/>
                 <constraint firstItem="Ym6-rN-956" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="aQM-Lk-j3N"/>
+                <constraint firstItem="ata-ee-77V" firstAttribute="centerY" secondItem="Ym6-rN-956" secondAttribute="centerY" id="edi-2Z-OJg"/>
                 <constraint firstItem="MiQ-vm-1o8" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="qd5-6O-iuo"/>
+                <constraint firstItem="ata-ee-77V" firstAttribute="centerX" secondItem="Ym6-rN-956" secondAttribute="centerX" id="rup-WN-Xge"/>
                 <constraint firstItem="Ym6-rN-956" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="yu0-sh-BO5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
