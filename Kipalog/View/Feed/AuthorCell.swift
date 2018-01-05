@@ -13,9 +13,23 @@ class AuthorCell: UICollectionViewCell {
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var name: UILabel!
 
+    static let identifier = "AuthorCell"
+
     override func awakeFromNib() {
         super.awakeFromNib()
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    var author: User? {
+        didSet {
+            name.text = author?.name
+            if let url = author?.avatarUrl {
+                avatar.kf.setImage(
+                    with: url,
+                    options: [.transition(.fade(0.25))]
+                )
+            }
+        }
     }
 
 }
