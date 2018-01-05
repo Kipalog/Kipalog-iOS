@@ -24,6 +24,8 @@ class HotAuthorView: UICollectionReusableView, UICollectionViewDelegate {
             UINib(nibName: AuthorCell.identifier, bundle: nil),
             forCellWithReuseIdentifier: AuthorCell.identifier
         )
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
         setupLayout()
         binding()
     }
@@ -67,6 +69,20 @@ class HotAuthorView: UICollectionReusableView, UICollectionViewDelegate {
                 handleName: "orakaro",
                 avatarUrl: URL(string: "https://pbs.twimg.com/profile_images/494654050776780802/hrlxd8Jh.png")
             ),
+            User(
+                id: "4",
+                name: "Viet Nguyen Hoang",
+                email: "vietnguyenhoang@gmail.com",
+                handleName: "vietnguyen",
+                avatarUrl: URL(string: "https://avatars.githubusercontent.com/u/2935719")
+            ),
+            User(
+                id: "5",
+                name: "Hoang Le Van",
+                email: "hoanglevan@gmail.com",
+                handleName: "hoangchay",
+                avatarUrl: URL(string: "https://pbs.twimg.com/profile_images/378800000054639404/705e424771d095d926406eb6d5dc40b9.jpeg")
+            )
         ])
         loadedData
             .drive(collectionView.rx.items(dataSource: dataSource))
