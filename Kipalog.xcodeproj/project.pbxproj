@@ -142,6 +142,42 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		B48C5917200268EB00C6E0E4 /* AuthorCell */ = {
+			isa = PBXGroup;
+			children = (
+				B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */,
+				B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */,
+			);
+			path = AuthorCell;
+			sourceTree = "<group>";
+		};
+		B48C5918200268F800C6E0E4 /* FeedCell */ = {
+			isa = PBXGroup;
+			children = (
+				B4E930451FF0E7540021A41D /* FeedCell.swift */,
+				B4E930461FF0E7540021A41D /* FeedCell.xib */,
+			);
+			path = FeedCell;
+			sourceTree = "<group>";
+		};
+		B48C59192002690600C6E0E4 /* HotAuthorView */ = {
+			isa = PBXGroup;
+			children = (
+				B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */,
+				B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */,
+			);
+			path = HotAuthorView;
+			sourceTree = "<group>";
+		};
+		B48C591A2002692C00C6E0E4 /* FeedTimeline */ = {
+			isa = PBXGroup;
+			children = (
+				B4E9302E1FECFB510021A41D /* FeedViewController.swift */,
+				202F3A28DF09562234A617FD /* FeedViewModel.swift */,
+			);
+			path = FeedTimeline;
+			sourceTree = "<group>";
+		};
 		B4E92FE31FEBDDE30021A41D = {
 			isa = PBXGroup;
 			children = (
@@ -257,14 +293,10 @@
 		B4E9302D1FECFB3B0021A41D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				B4E9302E1FECFB510021A41D /* FeedViewController.swift */,
-				202F3A28DF09562234A617FD /* FeedViewModel.swift */,
-				B4E930451FF0E7540021A41D /* FeedCell.swift */,
-				B4E930461FF0E7540021A41D /* FeedCell.xib */,
-				B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */,
-				B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */,
-				B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */,
-				B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */,
+				B48C591A2002692C00C6E0E4 /* FeedTimeline */,
+				B48C59192002690600C6E0E4 /* HotAuthorView */,
+				B48C5918200268F800C6E0E4 /* FeedCell */,
+				B48C5917200268EB00C6E0E4 /* AuthorCell */,
 				B48C591320025DFC00C6E0E4 /* Home.storyboard */,
 				B48C59152002602100C6E0E4 /* HomeViewController.swift */,
 			);

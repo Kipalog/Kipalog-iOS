@@ -11,6 +11,9 @@ import UIKit
 class HomeViewController: UIViewController, TabConvertible {
     let barImageName: String = "Feed"
 
+    @IBOutlet weak var menuControl: UIView!
+    @IBOutlet weak var timelineContainerView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
