@@ -15,7 +15,25 @@ class HotAuthorView: UICollectionReusableView, UICollectionViewDelegate {
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
 
+    @IBOutlet var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.commonInit()
+    }
+
+    private func commonInit() {
+        Bundle.main.loadNibNamed("HotAuthorView", owner: self, options: nil)
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        addSubview(contentView)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
