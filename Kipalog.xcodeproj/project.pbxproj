@@ -40,7 +40,6 @@
 		B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9302B1FECFA130021A41D /* CustomTabBarViewController.swift */; };
 		B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9302E1FECFB510021A41D /* FeedViewController.swift */; };
 		B4E930321FECFC2C0021A41D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930311FECFC2C0021A41D /* SearchViewController.swift */; };
-		B4E930351FECFC6C0021A41D /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930341FECFC6C0021A41D /* EditorViewController.swift */; };
 		B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */; };
 		B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */; };
 		B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */; };
@@ -99,7 +98,6 @@
 		B4E9302B1FECFA130021A41D /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
 		B4E9302E1FECFB510021A41D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B4E930311FECFC2C0021A41D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		B4E930341FECFC6C0021A41D /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -243,7 +241,6 @@
 				B4E9303E1FED03760021A41D /* TabBar */,
 				B4E930391FECFCAE0021A41D /* Profile */,
 				B4E930361FECFC7C0021A41D /* Notifications */,
-				B4E930331FECFC5B0021A41D /* Editor */,
 				B4E930301FECFB710021A41D /* Search */,
 				B4E9302D1FECFB3B0021A41D /* Feed */,
 			);
@@ -309,14 +306,6 @@
 				B4E930311FECFC2C0021A41D /* SearchViewController.swift */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		B4E930331FECFC5B0021A41D /* Editor */ = {
-			isa = PBXGroup;
-			children = (
-				B4E930341FECFC6C0021A41D /* EditorViewController.swift */,
-			);
-			path = Editor;
 			sourceTree = "<group>";
 		};
 		B4E930361FECFC7C0021A41D /* Notifications */ = {
@@ -482,7 +471,6 @@
 				B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */,
 				B4E930321FECFC2C0021A41D /* SearchViewController.swift in Sources */,
 				B4E930471FF0E7540021A41D /* FeedCell.swift in Sources */,
-				B4E930351FECFC6C0021A41D /* EditorViewController.swift in Sources */,
 				B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */,
 				B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */,
 				B43FC596200370F200344483 /* SecondaryHeaderView.swift in Sources */,
