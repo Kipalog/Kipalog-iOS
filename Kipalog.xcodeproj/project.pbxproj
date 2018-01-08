@@ -24,7 +24,8 @@
 		B48C590C1FFE74F400C6E0E4 /* HotAuthorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */; };
 		B48C590E1FFE771500C6E0E4 /* HotAuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */; };
 		B48C591420025DFC00C6E0E4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48C591320025DFC00C6E0E4 /* Home.storyboard */; };
-		B48C59162002602100C6E0E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59152002602100C6E0E4 /* HomeViewController.swift */; };
+		B48C591C20033B2D00C6E0E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C591B20033B2D00C6E0E4 /* HomeViewController.swift */; };
+		B48C591E20033CA600C6E0E4 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48C591D20033CA600C6E0E4 /* Feed.storyboard */; };
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
 		B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* RootViewController.swift */; };
 		B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF31FEBDDE30021A41D /* Main.storyboard */; };
@@ -77,7 +78,8 @@
 		B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthorView.xib; sourceTree = "<group>"; };
 		B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotAuthorView.swift; sourceTree = "<group>"; };
 		B48C591320025DFC00C6E0E4 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		B48C59152002602100C6E0E4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B48C591B20033B2D00C6E0E4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B48C591D20033CA600C6E0E4 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4E92FF11FEBDDE30021A41D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -169,13 +171,14 @@
 			path = HotAuthorView;
 			sourceTree = "<group>";
 		};
-		B48C591A2002692C00C6E0E4 /* FeedTimeline */ = {
+		B48C591A2002692C00C6E0E4 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				B4E9302E1FECFB510021A41D /* FeedViewController.swift */,
 				202F3A28DF09562234A617FD /* FeedViewModel.swift */,
+				B48C591D20033CA600C6E0E4 /* Feed.storyboard */,
 			);
-			path = FeedTimeline;
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		B4E92FE31FEBDDE30021A41D = {
@@ -245,7 +248,7 @@
 				B4E930361FECFC7C0021A41D /* Notifications */,
 				B4E930331FECFC5B0021A41D /* Editor */,
 				B4E930301FECFB710021A41D /* Search */,
-				B4E9302D1FECFB3B0021A41D /* Feed */,
+				B4E9302D1FECFB3B0021A41D /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,17 +293,17 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B4E9302D1FECFB3B0021A41D /* Feed */ = {
+		B4E9302D1FECFB3B0021A41D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				B48C591A2002692C00C6E0E4 /* FeedTimeline */,
+				B48C591B20033B2D00C6E0E4 /* HomeViewController.swift */,
+				B48C591320025DFC00C6E0E4 /* Home.storyboard */,
+				B48C591A2002692C00C6E0E4 /* Feed */,
 				B48C59192002690600C6E0E4 /* HotAuthorView */,
 				B48C5918200268F800C6E0E4 /* FeedCell */,
 				B48C5917200268EB00C6E0E4 /* AuthorCell */,
-				B48C591320025DFC00C6E0E4 /* Home.storyboard */,
-				B48C59152002602100C6E0E4 /* HomeViewController.swift */,
 			);
-			path = Feed;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		B4E930301FECFB710021A41D /* Search */ = {
@@ -429,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48C591E20033CA600C6E0E4 /* Feed.storyboard in Resources */,
 				B48C59081FFE729F00C6E0E4 /* AuthorCell.xib in Resources */,
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B48C591420025DFC00C6E0E4 /* Home.storyboard in Resources */,
@@ -485,7 +489,7 @@
 				B4E930351FECFC6C0021A41D /* EditorViewController.swift in Sources */,
 				B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */,
 				B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */,
-				B48C59162002602100C6E0E4 /* HomeViewController.swift in Sources */,
+				B48C591C20033B2D00C6E0E4 /* HomeViewController.swift in Sources */,
 				B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */,
 				B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */,
 				B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */,

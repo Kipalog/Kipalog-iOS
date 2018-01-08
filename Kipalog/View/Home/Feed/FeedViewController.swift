@@ -28,10 +28,6 @@ class FeedViewController: UICollectionViewController, TabConvertible {
             UINib(nibName: FeedCell.identifier, bundle: nil),
             forCellWithReuseIdentifier: FeedCell.identifier
         )
-        collectionView.register(
-            UINib(nibName: HotAuthorView.identifier, bundle: nil),
-            forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
-            withReuseIdentifier: HotAuthorView.identifier)
 
         collectionView.backgroundColor = UIColor.white
         navigationItem.title = "Kipalog"
@@ -44,7 +40,6 @@ class FeedViewController: UICollectionViewController, TabConvertible {
             layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
             layout.scrollDirection = .vertical
             layout.minimumLineSpacing = 0.0
-            layout.headerReferenceSize = CGSize(width: self.view.bounds.width, height: 110)
         }
     }
 
@@ -84,16 +79,5 @@ extension FeedViewController {
             return cell
         }
 
-        func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-            guard kind == UICollectionElementKindSectionHeader else { return UICollectionReusableView() }
-            guard let hotAuthorHeader = collectionView.dequeueReusableSupplementaryView(
-                ofKind: UICollectionElementKindSectionHeader,
-                withReuseIdentifier: HotAuthorView.identifier,
-                for: indexPath
-            ) as? HotAuthorView else {
-                fatalError("Could not find proper header")
-            }
-            return hotAuthorHeader
-        }
     }
 }

@@ -13,17 +13,19 @@ class CustomTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let storyboard = UIStoryboard(name: "Home", bundle: nil)
-        let homeViewController = storyboard.instantiateInitialViewController() as! HomeViewController
+//        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+//        let homeViewController = storyboard.instantiateInitialViewController() as! HomeViewController
 
-//        let feedViewController = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let storyboard = UIStoryboard(name: "Feed", bundle: nil)
+        let feedViewController = storyboard.instantiateInitialViewController() as! FeedViewController
+
         let searchViewController = SearchViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let editorViewController = EditorViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let notificationsViewController = NotificationsViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let profileViewController = ProfileViewController(collectionViewLayout: UICollectionViewFlowLayout())
 
         viewControllers = [
-            homeViewController.buildTabController(),
+            feedViewController.buildTabController(),
             searchViewController.buildTabController(),
             editorViewController.buildTabController(),
             notificationsViewController.buildTabController(),

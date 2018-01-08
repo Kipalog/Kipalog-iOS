@@ -24,36 +24,25 @@
                                     <constraint firstAttribute="height" constant="110" id="xTJ-uW-dMK"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-5E-VJP" userLabel="Menu Control">
-                                <rect key="frame" x="0.0" y="130" width="375" height="40"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.24313725489999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Edk-gM-Fpl"/>
-                                </constraints>
-                            </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0O-mS-1Yh">
-                                <rect key="frame" x="0.0" y="170" width="375" height="497"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBJ-8n-PeY">
+                                <rect key="frame" x="0.0" y="130" width="375" height="537"/>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3eb-5E-VJP" firstAttribute="leading" secondItem="tVP-bP-ROZ" secondAttribute="leading" id="0xH-P6-j37"/>
-                            <constraint firstItem="f0O-mS-1Yh" firstAttribute="leading" secondItem="tVP-bP-ROZ" secondAttribute="leading" id="IPL-sv-wUa"/>
                             <constraint firstItem="nmq-nI-J8d" firstAttribute="top" secondItem="tVP-bP-ROZ" secondAttribute="top" id="Lu7-nI-g2a"/>
+                            <constraint firstItem="vBJ-8n-PeY" firstAttribute="top" secondItem="nmq-nI-J8d" secondAttribute="bottom" id="N3n-Np-3cH"/>
                             <constraint firstItem="tVP-bP-ROZ" firstAttribute="trailing" secondItem="nmq-nI-J8d" secondAttribute="trailing" id="QCI-rQ-pxG"/>
-                            <constraint firstItem="f0O-mS-1Yh" firstAttribute="top" secondItem="3eb-5E-VJP" secondAttribute="bottom" id="QoF-aG-ixk"/>
-                            <constraint firstItem="tVP-bP-ROZ" firstAttribute="trailing" secondItem="f0O-mS-1Yh" secondAttribute="trailing" id="X8H-0H-WtE"/>
                             <constraint firstItem="nmq-nI-J8d" firstAttribute="leading" secondItem="tVP-bP-ROZ" secondAttribute="leading" id="YhZ-JU-HHW"/>
-                            <constraint firstItem="3eb-5E-VJP" firstAttribute="top" secondItem="nmq-nI-J8d" secondAttribute="bottom" id="a4h-Dt-rZk"/>
-                            <constraint firstItem="tVP-bP-ROZ" firstAttribute="bottom" secondItem="f0O-mS-1Yh" secondAttribute="bottom" id="cVD-Qa-zSy"/>
+                            <constraint firstItem="vBJ-8n-PeY" firstAttribute="bottom" secondItem="tVP-bP-ROZ" secondAttribute="bottom" id="g0M-cD-bMw"/>
                             <constraint firstItem="nmq-nI-J8d" firstAttribute="width" secondItem="Sdn-Al-FhP" secondAttribute="width" id="gbg-FD-4XP"/>
-                            <constraint firstItem="tVP-bP-ROZ" firstAttribute="trailing" secondItem="3eb-5E-VJP" secondAttribute="trailing" id="pH8-k1-wgW"/>
+                            <constraint firstItem="tVP-bP-ROZ" firstAttribute="trailing" secondItem="vBJ-8n-PeY" secondAttribute="trailing" id="q9K-tv-lcI"/>
+                            <constraint firstItem="vBJ-8n-PeY" firstAttribute="leading" secondItem="tVP-bP-ROZ" secondAttribute="leading" id="uu5-20-j5V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tVP-bP-ROZ"/>
                     </view>
                     <connections>
-                        <outlet property="menuControl" destination="3eb-5E-VJP" id="Fsq-Q3-EGl"/>
-                        <outlet property="timelineContainerView" destination="f0O-mS-1Yh" id="sME-Ny-RC1"/>
+                        <outlet property="feedContainer" destination="vBJ-8n-PeY" id="f0c-2k-Esx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOW-sR-GHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
