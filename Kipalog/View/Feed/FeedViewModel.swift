@@ -73,23 +73,10 @@ class FeedViewModel {
             ),
             Post(
                 status: .publish,
-                title: "Tạo FlatUI Button trên Android theo phong cách IOS",
-                detail: "Ở bài viết này tôi sẽ hướng dẫn các tạo những button có phong cách của FlatUI trên IOS. Sự kết hợp giữa ...",
-                author: User(
-                    id: "5",
-                    name: "Hoang Le Van",
-                    email: "hoanglevan@gmail.com",
-                    handleName: "hoangchay",
-                    avatarUrl: URL(string: "https://pbs.twimg.com/profile_images/378800000054639404/705e424771d095d926406eb6d5dc40b9.jpeg")
-                ),
-                meta: PostMeta(kipalogCount: 11, commentCount: 16)
-            ),
-            Post(
-                status: .publish,
                 title: "Phân tích và tiếp cận bài toán Quy hoạch động",
                 detail: "Với sự hỗ trợ của anh (Link) (là dân competitive programming thứ thiệt (Link)] ) cùng với các anh em trong nhóm algorithm (Link)] của (Link), mình ...",
                 author: User(
-                    id: "6",
+                    id: "5",
                     name: "Huy Tran",
                     email: "huytran@gmail.com",
                     handleName: "huytran",
