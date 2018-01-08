@@ -129,6 +129,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B43FC58F2003703300344483 /* FeedCell */ = {
+			isa = PBXGroup;
+			children = (
+				B4E930451FF0E7540021A41D /* FeedCell.swift */,
+				B4E930461FF0E7540021A41D /* FeedCell.xib */,
+			);
+			path = FeedCell;
+			sourceTree = "<group>";
+		};
+		B43FC5902003703E00344483 /* AuthorCell */ = {
+			isa = PBXGroup;
+			children = (
+				B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */,
+				B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */,
+			);
+			path = AuthorCell;
+			sourceTree = "<group>";
+		};
+		B43FC5912003704A00344483 /* HotAuthorView */ = {
+			isa = PBXGroup;
+			children = (
+				B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */,
+				B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */,
+			);
+			path = HotAuthorView;
+			sourceTree = "<group>";
+		};
 		B45942EE1FFD33E200A30A08 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,14 +280,11 @@
 		B4E9302D1FECFB3B0021A41D /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				B43FC5912003704A00344483 /* HotAuthorView */,
+				B43FC5902003703E00344483 /* AuthorCell */,
+				B43FC58F2003703300344483 /* FeedCell */,
 				B4E9302E1FECFB510021A41D /* FeedViewController.swift */,
 				202F3A28DF09562234A617FD /* FeedViewModel.swift */,
-				B4E930451FF0E7540021A41D /* FeedCell.swift */,
-				B4E930461FF0E7540021A41D /* FeedCell.xib */,
-				B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */,
-				B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */,
-				B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */,
-				B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
