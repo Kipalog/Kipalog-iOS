@@ -20,8 +20,7 @@ class HomeViewController: UIViewController, TabConvertible {
     }
 
     private func embedContainer() {
-        let storyboard = UIStoryboard(name: "Feed", bundle: nil)
-        let feedViewController = storyboard.instantiateInitialViewController() as! FeedViewController
+        let feedViewController = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
         embed(feedViewController, to: feedContainer)
     }
 
