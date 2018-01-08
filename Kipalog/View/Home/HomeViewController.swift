@@ -15,6 +15,11 @@ class HomeViewController: UIViewController, TabConvertible {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Kipalog"
+        embedContainer()
+    }
+
+    private func embedContainer() {
         let storyboard = UIStoryboard(name: "Feed", bundle: nil)
         let feedViewController = storyboard.instantiateInitialViewController() as! FeedViewController
         embed(feedViewController, to: feedContainer)

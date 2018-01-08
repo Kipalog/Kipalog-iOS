@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HotAuthorView: UICollectionReusableView, UICollectionViewDelegate {
+class HotAuthorView: UIView, UICollectionViewDelegate {
     static let identifier = "HotAuthorView"
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()

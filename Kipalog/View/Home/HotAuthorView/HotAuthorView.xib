@@ -65,6 +65,7 @@
                 <constraint firstItem="rSP-8L-Raw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="9nV-nX-PXK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="s18-vm-czq" secondAttribute="bottom" id="LeG-H7-hBA"/>
                 <constraint firstItem="SNQ-OM-crO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="VhV-vI-HuF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SNQ-OM-crO" secondAttribute="bottom" constant="5" id="WPN-ei-PDt"/>
                 <constraint firstItem="rSP-8L-Raw" firstAttribute="leading" secondItem="P4R-RO-9CU" secondAttribute="trailing" constant="5" id="azD-n2-NG7"/>
                 <constraint firstItem="P4R-RO-9CU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="bdH-jc-gcS"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SNQ-OM-crO" secondAttribute="trailing" id="gbC-cJ-I3I"/>

@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmq-nI-J8d" customClass="HotAuthorView" customModule="Kipalog" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDq-xP-fXm" userLabel="Hot Author" customClass="HotAuthorView" customModule="Kipalog" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="xTJ-uW-dMK"/>
+                                    <constraint firstAttribute="height" constant="110" id="3Hb-Te-0an"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBJ-8n-PeY">
@@ -30,13 +30,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nmq-nI-J8d" firstAttribute="top" secondItem="tVP-bP-ROZ" secondAttribute="top" id="Lu7-nI-g2a"/>
-                            <constraint firstItem="vBJ-8n-PeY" firstAttribute="top" secondItem="nmq-nI-J8d" secondAttribute="bottom" id="N3n-Np-3cH"/>
-                            <constraint firstItem="tVP-bP-ROZ" firstAttribute="trailing" secondItem="nmq-nI-J8d" secondAttribute="trailing" id="QCI-rQ-pxG"/>
-                            <constraint firstItem="nmq-nI-J8d" firstAttribute="leading" secondItem="tVP-bP-ROZ" secondAttribute="leading" id="YhZ-JU-HHW"/>
+                            <constraint firstItem="vBJ-8n-PeY" firstAttribute="top" secondItem="hDq-xP-fXm" secondAttribute="bottom" id="IhB-Mp-uFx"/>
+                            <constraint firstItem="tVP-bP-ROZ" firstAttribute="top" secondItem="hDq-xP-fXm" secondAttribute="top" id="aBe-6d-r6H"/>
                             <constraint firstItem="vBJ-8n-PeY" firstAttribute="bottom" secondItem="tVP-bP-ROZ" secondAttribute="bottom" id="g0M-cD-bMw"/>
-                            <constraint firstItem="nmq-nI-J8d" firstAttribute="width" secondItem="Sdn-Al-FhP" secondAttribute="width" id="gbg-FD-4XP"/>
                             <constraint firstItem="tVP-bP-ROZ" firstAttribute="trailing" secondItem="vBJ-8n-PeY" secondAttribute="trailing" id="q9K-tv-lcI"/>
+                            <constraint firstItem="hDq-xP-fXm" firstAttribute="leading" secondItem="tVP-bP-ROZ" secondAttribute="leading" id="qdl-48-6hR"/>
+                            <constraint firstItem="tVP-bP-ROZ" firstAttribute="trailing" secondItem="hDq-xP-fXm" secondAttribute="trailing" id="uYY-HC-IHQ"/>
                             <constraint firstItem="vBJ-8n-PeY" firstAttribute="leading" secondItem="tVP-bP-ROZ" secondAttribute="leading" id="uu5-20-j5V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tVP-bP-ROZ"/>
