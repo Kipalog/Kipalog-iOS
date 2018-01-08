@@ -16,7 +16,9 @@ class HotAuthorView: UICollectionReusableView, UICollectionViewDelegate {
     private let disposeBag = DisposeBag()
 
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var sectionLabel: UILabel!
+    @IBOutlet weak var sectionIcon: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
 

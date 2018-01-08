@@ -92,6 +92,8 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="collectionView" destination="SNQ-OM-crO" id="mTg-I3-6vp"/>
+                <outlet property="sectionIcon" destination="ldp-sW-zaB" id="AYx-bF-OHf"/>
+                <outlet property="sectionLabel" destination="CqV-Va-vkh" id="Hwu-5S-eKn"/>
             </connections>
             <point key="canvasLocation" x="103" y="762.5"/>
         </view>

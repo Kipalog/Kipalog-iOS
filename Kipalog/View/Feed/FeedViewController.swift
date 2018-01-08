@@ -31,7 +31,13 @@ class FeedViewController: UICollectionViewController, TabConvertible {
         collectionView.register(
             UINib(nibName: HotAuthorView.identifier, bundle: nil),
             forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
-            withReuseIdentifier: HotAuthorView.identifier)
+            withReuseIdentifier: HotAuthorView.identifier
+        )
+        collectionView.register(
+            UINib(nibName: SecondaryHeaderView.identifier, bundle: nil),
+            forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+            withReuseIdentifier: SecondaryHeaderView.identifier
+        )
 
         collectionView.backgroundColor = UIColor.white
         navigationItem.title = "Kipalog"
@@ -44,7 +50,6 @@ class FeedViewController: UICollectionViewController, TabConvertible {
             layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
             layout.scrollDirection = .vertical
             layout.minimumLineSpacing = 0.0
-            layout.headerReferenceSize = CGSize(width: self.view.bounds.width, height: 135)
         }
     }
 
@@ -70,7 +75,7 @@ extension FeedViewController {
         }
 
         func numberOfSections(in collectionView: UICollectionView) -> Int {
-            return 1
+            return 3
         }
 
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -86,14 +91,64 @@ extension FeedViewController {
 
         func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
             guard kind == UICollectionElementKindSectionHeader else { return UICollectionReusableView() }
-            guard let hotAuthorHeader = collectionView.dequeueReusableSupplementaryView(
-                ofKind: UICollectionElementKindSectionHeader,
-                withReuseIdentifier: HotAuthorView.identifier,
-                for: indexPath
-            ) as? HotAuthorView else {
-                fatalError("Could not find proper header")
+
+            let labelTitle: String
+            let iconName: String
+            switch indexPath.section {
+            case 0:
+                labelTitle = "Bài viết hay"
+                iconName = "Trophy"
+            case 1:
+                labelTitle = "Bài viét mới"
+                iconName = "New"
+            case 2:
+                labelTitle = "#TIL"
+                iconName = "TIL"
+            default:
+                labelTitle = ""
+                iconName = ""
             }
-            return hotAuthorHeader
+
+
+            switch indexPath.section {
+            case 0:
+                guard let hotAuthorHeader = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: UICollectionElementKindSectionHeader,
+                    withReuseIdentifier: HotAuthorView.identifier,
+                    for: indexPath
+                ) as? HotAuthorView else {
+                    fatalError("Could not find proper header")
+                }
+                hotAuthorHeader.sectionLabel.text = labelTitle
+                hotAuthorHeader.sectionIcon.image = UIImage(named: iconName)
+                return hotAuthorHeader
+            default:
+                guard let secondaryHeader = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: UICollectionElementKindSectionHeader,
+                    withReuseIdentifier: SecondaryHeaderView.identifier,
+                    for: indexPath
+                ) as? SecondaryHeaderView else {
+                    fatalError("Could not find proper header")
+                }
+                secondaryHeader.sectionLabel.text = labelTitle
+                secondaryHeader.sectionIcon.image = UIImage(named: iconName)
+                return secondaryHeader
+            }
+
         }
+    }
+}
+
+extension FeedViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let width = view.bounds.width
+        let height: CGFloat
+        switch section {
+        case 0:
+            height = 135
+        default:
+            height = 25
+        }
+        return CGSize(width: width, height: height)
     }
 }
