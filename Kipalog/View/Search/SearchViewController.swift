@@ -24,6 +24,10 @@ class SearchViewController: UICollectionViewController, TabConvertible {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = UIColor.white
+        collectionView.register(
+            UINib(nibName: FeedCell.identifier, bundle: nil),
+            forCellWithReuseIdentifier: FeedCell.identifier
+        )
         navigationItem.title = "Kipalog"
         setupSearchBar()
         binding()
