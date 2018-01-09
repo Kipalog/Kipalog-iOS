@@ -18,7 +18,9 @@ class SearchViewController: UICollectionViewController, TabConvertible {
         set { super.collectionView = newValue }
     }
 
+    private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
+    private var viewModel: SearchViewModel!
     private let searchInput = PublishRelay<String?>()
 
     override func viewDidLoad() {
@@ -30,13 +32,21 @@ class SearchViewController: UICollectionViewController, TabConvertible {
         )
         navigationItem.title = "Kipalog"
         setupSearchBar()
+        setupLayout()
         binding()
     }
 
+    private func setupLayout() {
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+            layout.scrollDirection = .vertical
+            layout.minimumLineSpacing = 0.0
+        }
+    }
     private func setupSearchBar() {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = true
+        searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Tìm kiếm"
         searchController.searchBar.barStyle = .black
         searchController.searchBar.tintColor = UIColor.white
@@ -50,15 +60,18 @@ class SearchViewController: UICollectionViewController, TabConvertible {
     }
 
     private func binding() {
-        searchInput.asSignal()
+        let searchText = searchInput.asSignal()
             .flatMap{ input -> Signal<String> in
-                guard let text = input, !text.isEmpty else { return Signal.empty() }
+                guard let text = input else { return Signal.empty() }
                 return Signal.just(text)
             }
             .debounce(0.5)
-            .emit(onNext: { text in
-                print(text)
-            })
+
+        viewModel = SearchViewModel(searchText: searchText)
+
+        viewModel.dataSource
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }
 
@@ -67,5 +80,35 @@ class SearchViewController: UICollectionViewController, TabConvertible {
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         searchInput.accept(searchController.searchBar.text)
+    }
+}
+
+extension SearchViewController{
+    final private class DataSource: NSObject, RxCollectionViewDataSourceType, UICollectionViewDataSource {
+        typealias Element = SearchViewModel.DataSource
+
+        private(set) var posts: [Post] = []
+
+        func collectionView(_ collectionView: UICollectionView, observedEvent: Event<Element>) {
+            if case .next(let element) = observedEvent {
+                posts = element.posts
+                collectionView.reloadData()
+            }
+        }
+
+        func numberOfSections(in collectionView: UICollectionView) -> Int {
+            return 1
+        }
+
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return posts.count
+        }
+
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let post = posts[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCell.identifier, for: indexPath) as! FeedCell
+            cell.post = post
+            return cell
+        }
     }
 }

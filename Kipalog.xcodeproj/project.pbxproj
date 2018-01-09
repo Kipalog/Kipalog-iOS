@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		202F31EAD5D8124BAC4E03C7 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */; };
 		202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F042FFA016BAC7AA441 /* TabConvertible.swift */; };
+		202F338408780D975FB6A477 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F327B527400FE47603ECD /* SearchViewModel.swift */; };
 		202F33FA9B21E4B24F799FA7 /* PostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F36EE2EF8F054234446EF /* PostStatus.swift */; };
 		202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3A28DF09562234A617FD /* FeedViewModel.swift */; };
 		202F39B0DF308A8FD56478C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3383342247840583E038 /* Post.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		202F327B527400FE47603ECD /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		202F3383342247840583E038 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		202F34AD997061A4CD3F12BF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		202F36EE2EF8F054234446EF /* PostStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostStatus.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				B4E930311FECFC2C0021A41D /* SearchViewController.swift */,
+				202F327B527400FE47603ECD /* SearchViewModel.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 				202F39DBD504021624EBE12F /* UILabel+Extension.swift in Sources */,
 				B48C590E1FFE771500C6E0E4 /* HotAuthorView.swift in Sources */,
 				202F31EAD5D8124BAC4E03C7 /* CustomNavigationViewController.swift in Sources */,
+				202F338408780D975FB6A477 /* SearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
