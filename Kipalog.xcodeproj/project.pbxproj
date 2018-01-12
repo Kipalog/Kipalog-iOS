@@ -19,8 +19,6 @@
 		202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3EAD2A255E28C066B118 /* UIView+Extension.swift */; };
 		202F3D836B47508A17CA28DD /* PostMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F2CE8D0903AD4184C5B /* PostMeta.swift */; };
 		202F3FA362509F1E286C7C3F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AD3196A52B89B0D5F1D /* User.swift */; };
-		B43FC594200370DE00344483 /* SecondaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B43FC593200370DE00344483 /* SecondaryHeaderView.xib */; };
-		B43FC596200370F200344483 /* SecondaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43FC595200370F200344483 /* SecondaryHeaderView.swift */; };
 		B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */; };
 		B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */; };
 		B47089642007559A00443FAA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47089632007559A00443FAA /* Home.storyboard */; };
@@ -75,8 +73,6 @@
 		202F3F042FFA016BAC7AA441 /* TabConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabConvertible.swift; sourceTree = "<group>"; };
 		202F3F2CE8D0903AD4184C5B /* PostMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostMeta.swift; sourceTree = "<group>"; };
 		202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
-		B43FC593200370DE00344483 /* SecondaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondaryHeaderView.xib; sourceTree = "<group>"; };
-		B43FC595200370F200344483 /* SecondaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryHeaderView.swift; sourceTree = "<group>"; };
 		B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VNF-ProximaNovaCond-Regular.ttf"; sourceTree = "<group>"; };
 		B47089632007559A00443FAA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -164,15 +160,6 @@
 				B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */,
 			);
 			path = HotAuthorView;
-			sourceTree = "<group>";
-		};
-		B43FC592200370C500344483 /* SecondaryHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				B43FC593200370DE00344483 /* SecondaryHeaderView.xib */,
-				B43FC595200370F200344483 /* SecondaryHeaderView.swift */,
-			);
-			path = SecondaryHeaderView;
 			sourceTree = "<group>";
 		};
 		B45942EE1FFD33E200A30A08 /* Fonts */ = {
@@ -309,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				B47089622007558000443FAA /* Feed */,
-				B43FC592200370C500344483 /* SecondaryHeaderView */,
 				B43FC5912003704A00344483 /* HotAuthorView */,
 				B43FC5902003703E00344483 /* AuthorCell */,
 				B43FC58F2003703300344483 /* FeedCell */,
@@ -440,7 +426,6 @@
 			files = (
 				B48C59081FFE729F00C6E0E4 /* AuthorCell.xib in Resources */,
 				B47089642007559A00443FAA /* Home.storyboard in Resources */,
-				B43FC594200370DE00344483 /* SecondaryHeaderView.xib in Resources */,
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B4E930481FF0E7540021A41D /* FeedCell.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
@@ -494,7 +479,6 @@
 				B4E930471FF0E7540021A41D /* FeedCell.swift in Sources */,
 				B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */,
 				B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */,
-				B43FC596200370F200344483 /* SecondaryHeaderView.swift in Sources */,
 				B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */,
 				B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */,
 				B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */,

@@ -25,11 +25,8 @@ class HomeViewController: UIViewController, TabConvertible {
     @IBOutlet weak var newPostsContainer: UIView!
     @IBOutlet weak var tilPostsContainer: UIView!
 
-    enum Tab: Int {
-        case top
-        case new
-        case til
-    }
+    typealias Tab = FeedViewController.Tab
+
     private var scrollViews: [Tab: UIScrollView] = [:]
     private let disposeBag = DisposeBag()
 
@@ -41,15 +38,15 @@ class HomeViewController: UIViewController, TabConvertible {
     }
 
     private func setupEmbeddedContainer() {
-        let topPostsViewController = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let topPostsViewController = FeedViewController(.top)
         embed(topPostsViewController, to: topPostsContainer)
         scrollViews[.top] = topPostsViewController.collectionView
 
-        let newPostsViewController = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let newPostsViewController = FeedViewController(.new)
         embed(newPostsViewController, to: newPostsContainer)
         scrollViews[.top] = newPostsViewController.collectionView
 
-        let tilPostsViewController = FeedViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let tilPostsViewController = FeedViewController(.til)
         embed(tilPostsViewController, to: tilPostsContainer)
         scrollViews[.top] = tilPostsViewController.collectionView
     }

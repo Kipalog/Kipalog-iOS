@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view alpha="0.94999999999999996" contentMode="scaleToFill" id="iN0-l3-epB" userLabel="View" customClass="HotAuthorView" customModule="Kipalog" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="500" height="135"/>
+            <rect key="frame" x="0.0" y="0.0" width="500" height="110"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Author" translatesAutoresizingMaskIntoConstraints="NO" id="P4R-RO-9CU" userLabel="Author">
@@ -53,53 +53,29 @@
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="qVY-El-iB7"/>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bài viết hay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqV-Va-vkh">
-                    <rect key="frame" x="27" y="115" width="65" height="20"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20" id="1d1-Pd-kWY"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Trophy" translatesAutoresizingMaskIntoConstraints="NO" id="ldp-sW-zaB" userLabel="Trophy">
-                    <rect key="frame" x="10" y="119" width="12" height="12"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="12" id="OGg-Ot-sLE"/>
-                        <constraint firstAttribute="width" constant="12" id="q9r-Ah-8BP"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="SNQ-OM-crO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="25" id="7rz-zh-JOT"/>
                 <constraint firstItem="rSP-8L-Raw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="9nV-nX-PXK"/>
                 <constraint firstItem="s18-vm-czq" firstAttribute="top" secondItem="SNQ-OM-crO" secondAttribute="bottom" constant="4" id="AoR-du-G4y"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CqV-Va-vkh" secondAttribute="bottom" id="JpN-iM-3ur"/>
-                <constraint firstItem="CqV-Va-vkh" firstAttribute="top" secondItem="s18-vm-czq" secondAttribute="bottom" constant="5" id="K14-zF-P1p"/>
-                <constraint firstItem="ldp-sW-zaB" firstAttribute="top" secondItem="s18-vm-czq" secondAttribute="bottom" constant="9" id="RG0-C7-n7i"/>
                 <constraint firstItem="SNQ-OM-crO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="VhV-vI-HuF"/>
                 <constraint firstItem="rSP-8L-Raw" firstAttribute="leading" secondItem="P4R-RO-9CU" secondAttribute="trailing" constant="5" id="azD-n2-NG7"/>
                 <constraint firstItem="P4R-RO-9CU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="bdH-jc-gcS"/>
-                <constraint firstItem="CqV-Va-vkh" firstAttribute="leading" secondItem="ldp-sW-zaB" secondAttribute="trailing" constant="5" id="dSF-9E-kT4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SNQ-OM-crO" secondAttribute="trailing" id="gbC-cJ-I3I"/>
                 <constraint firstItem="P4R-RO-9CU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="9" id="hI1-l3-4ow"/>
                 <constraint firstItem="s18-vm-czq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="mR9-HR-eNc"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="s18-vm-czq" secondAttribute="trailing" id="x5t-nY-6dj"/>
-                <constraint firstItem="ldp-sW-zaB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="xzE-06-TCI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="collectionView" destination="SNQ-OM-crO" id="mTg-I3-6vp"/>
-                <outlet property="sectionIcon" destination="ldp-sW-zaB" id="AYx-bF-OHf"/>
-                <outlet property="sectionLabel" destination="CqV-Va-vkh" id="Hwu-5S-eKn"/>
             </connections>
             <point key="canvasLocation" x="103" y="762.5"/>
         </view>
     </objects>
     <resources>
         <image name="Author" width="30" height="30"/>
-        <image name="Trophy" width="30" height="30"/>
     </resources>
 </document>
