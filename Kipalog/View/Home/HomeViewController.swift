@@ -44,11 +44,11 @@ class HomeViewController: UIViewController, TabConvertible {
 
         let newPostsViewController = FeedViewController(.new)
         embed(newPostsViewController, to: newPostsContainer)
-        scrollViews[.top] = newPostsViewController.collectionView
+        scrollViews[.new] = newPostsViewController.collectionView
 
         let tilPostsViewController = FeedViewController(.til)
         embed(tilPostsViewController, to: tilPostsContainer)
-        scrollViews[.top] = tilPostsViewController.collectionView
+        scrollViews[.til] = tilPostsViewController.collectionView
     }
 
     private func binding() {
@@ -57,7 +57,7 @@ class HomeViewController: UIViewController, TabConvertible {
             .startWith(0.0)
             .asSignal(onErrorSignalWith: .empty())
 
-        let selectedTab = scrollProgress
+        let scrolledTab = scrollProgress
             .flatMap{ progress -> Signal<Tab> in
                 let tilRange = CGFloat(0.66)...
                 let newRange = CGFloat(0.33)...CGFloat(0.66)
@@ -75,7 +75,7 @@ class HomeViewController: UIViewController, TabConvertible {
             }
             .distinctUntilChanged()
 
-        selectedTab
+        scrolledTab
             .emit(onNext: { [unowned self] tab in
                 for (index, button) in self.buttons.enumerated() {
                     let isSelected = index == tab.rawValue
@@ -104,6 +104,18 @@ class HomeViewController: UIViewController, TabConvertible {
             .map { [unowned self] in CGFloat($0.rawValue) * self.generalScrollView.frame.width }
             .filter { [unowned self] in self.generalScrollView.contentOffset.x != $0 }
             .emit(onNext: { [unowned self] in self.generalScrollView.setContentOffset(CGPoint(x: $0, y: 0.0), animated: true)})
+            .disposed(by: disposeBag)
+
+        Signal.merge(scrolledTab, tappedTab)
+            .distinctUntilChanged()
+            .emit(onNext: { [unowned self] tab in
+                for view in self.scrollViews {
+                    view.value.scrollsToTop = false
+                }
+                if let view = self.scrollViews[tab] {
+                    view.scrollsToTop = true
+                }
+            })
             .disposed(by: disposeBag)
     }
 }
