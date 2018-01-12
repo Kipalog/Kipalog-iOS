@@ -99,16 +99,16 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOL-BS-MYx">
-                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ypc-rt-1M8" userLabel="Top Posts Container">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqy-Ba-2RE" userLabel="New Posts Container">
-                                        <rect key="frame" x="375" y="0.0" width="375" height="607"/>
+                                        <rect key="frame" x="375" y="0.0" width="375" height="597"/>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fM1-i5-xqx" userLabel="TIL Posts Container">
-                                        <rect key="frame" x="750" y="0.0" width="375" height="607"/>
+                                        <rect key="frame" x="750" y="0.0" width="375" height="597"/>
                                     </containerView>
                                 </subviews>
                                 <constraints>
@@ -135,7 +135,7 @@
                         <constraints>
                             <constraint firstItem="MOL-BS-MYx" firstAttribute="leading" secondItem="XSs-5G-Fa8" secondAttribute="leading" id="3VC-cw-wha"/>
                             <constraint firstItem="XSs-5G-Fa8" firstAttribute="top" secondItem="ygS-ZS-XCt" secondAttribute="top" id="FrB-Yh-OtR"/>
-                            <constraint firstItem="MOL-BS-MYx" firstAttribute="top" secondItem="ygS-ZS-XCt" secondAttribute="bottom" id="H6x-GI-AF1"/>
+                            <constraint firstItem="MOL-BS-MYx" firstAttribute="top" secondItem="ygS-ZS-XCt" secondAttribute="bottom" constant="10" id="H6x-GI-AF1"/>
                             <constraint firstItem="ygS-ZS-XCt" firstAttribute="leading" secondItem="XSs-5G-Fa8" secondAttribute="leading" id="HJF-8b-tZC"/>
                             <constraint firstItem="XSs-5G-Fa8" firstAttribute="trailing" secondItem="MOL-BS-MYx" secondAttribute="trailing" id="fXv-Xc-nXl"/>
                             <constraint firstItem="XSs-5G-Fa8" firstAttribute="trailing" secondItem="ygS-ZS-XCt" secondAttribute="trailing" id="rua-g4-p0h"/>
