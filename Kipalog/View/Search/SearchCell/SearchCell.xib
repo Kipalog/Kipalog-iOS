@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SearchCell" customModule="Kipalog" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="500" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQU-us-Q1U">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="150"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRs-tO-jM1" userLabel="Avatar">
+                                <rect key="frame" x="10" y="15" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="WcW-d3-hIb"/>
+                                    <constraint firstAttribute="height" constant="40" id="d4s-nh-sGc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MN-ag-JUZ" userLabel="Title">
+                                <rect key="frame" x="60" y="12" width="430" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Title">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.70980392156862748" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Ubuntu-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-4g-GYW" userLabel="Detail">
+                                <rect key="frame" x="60" y="37" width="430" height="75"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Very long detail">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="15" name="SFUIText-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.10000000149011612" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqP-Uc-2MV" userLabel="Seperator">
+                                <rect key="frame" x="10" y="149" width="490" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="R4C-Ve-MXS"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="ore-qF-ln9"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="166" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1P-kc-lvp" userLabel="Kipalog Count">
+                                <rect key="frame" x="60" y="120" width="21" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="RSm-uM-r8Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Log" translatesAutoresizingMaskIntoConstraints="NO" id="XLG-O5-eCw" userLabel="Kipalog Icon">
+                                <rect key="frame" x="83" y="121.5" width="12" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="12" id="0d0-0R-WzN"/>
+                                    <constraint firstAttribute="height" constant="12" id="gyq-Bx-d1z"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZf-Ih-rt6" userLabel="Comment Count">
+                                <rect key="frame" x="100" y="120" width="8" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="7tQ-3D-gA2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Comment" translatesAutoresizingMaskIntoConstraints="NO" id="SbE-yj-LSS" userLabel="Comment Icon">
+                                <rect key="frame" x="111" y="122" width="11" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="PbF-yx-UYo"/>
+                                    <constraint firstAttribute="height" constant="11" id="wNS-jQ-dBW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6MN-ag-JUZ" firstAttribute="top" secondItem="BQU-us-Q1U" secondAttribute="top" constant="12" id="0i1-fh-MRE"/>
+                            <constraint firstItem="bqP-Uc-2MV" firstAttribute="leading" secondItem="BQU-us-Q1U" secondAttribute="leading" constant="10" id="1p8-BT-xuf"/>
+                            <constraint firstItem="m1P-kc-lvp" firstAttribute="leading" secondItem="HzI-4g-GYW" secondAttribute="leading" id="3Wi-oA-KVa"/>
+                            <constraint firstItem="nRs-tO-jM1" firstAttribute="leading" secondItem="BQU-us-Q1U" secondAttribute="leading" constant="10" id="6Dn-bP-xSh"/>
+                            <constraint firstAttribute="trailing" secondItem="6MN-ag-JUZ" secondAttribute="trailing" constant="10" id="AI9-dD-oOL"/>
+                            <constraint firstItem="6MN-ag-JUZ" firstAttribute="leading" secondItem="nRs-tO-jM1" secondAttribute="trailing" constant="10" id="EOP-fl-lA9"/>
+                            <constraint firstItem="nRs-tO-jM1" firstAttribute="top" secondItem="BQU-us-Q1U" secondAttribute="top" constant="15" id="FKj-Rv-6tc"/>
+                            <constraint firstAttribute="trailing" secondItem="bqP-Uc-2MV" secondAttribute="trailing" id="ILz-gv-aom"/>
+                            <constraint firstItem="XLG-O5-eCw" firstAttribute="leading" secondItem="m1P-kc-lvp" secondAttribute="trailing" constant="2" id="JK0-PZ-6fw"/>
+                            <constraint firstItem="HzI-4g-GYW" firstAttribute="leading" secondItem="nRs-tO-jM1" secondAttribute="trailing" constant="10" id="Lsc-Lv-gm1"/>
+                            <constraint firstAttribute="width" constant="500" id="OJM-Ue-596"/>
+                            <constraint firstItem="oZf-Ih-rt6" firstAttribute="centerY" secondItem="m1P-kc-lvp" secondAttribute="centerY" id="OXA-Qp-KLZ"/>
+                            <constraint firstItem="SbE-yj-LSS" firstAttribute="leading" secondItem="oZf-Ih-rt6" secondAttribute="trailing" constant="3" id="OnB-p2-XwL"/>
+                            <constraint firstItem="oZf-Ih-rt6" firstAttribute="leading" secondItem="XLG-O5-eCw" secondAttribute="trailing" constant="5" id="UCq-6O-UcT"/>
+                            <constraint firstItem="m1P-kc-lvp" firstAttribute="top" secondItem="HzI-4g-GYW" secondAttribute="bottom" constant="8" id="VR2-G4-xzx"/>
+                            <constraint firstItem="XLG-O5-eCw" firstAttribute="centerY" secondItem="m1P-kc-lvp" secondAttribute="centerY" id="Zi0-hO-EFH"/>
+                            <constraint firstItem="HzI-4g-GYW" firstAttribute="top" secondItem="6MN-ag-JUZ" secondAttribute="bottom" constant="5" id="gXi-Yb-Q97"/>
+                            <constraint firstAttribute="bottom" secondItem="bqP-Uc-2MV" secondAttribute="bottom" id="jsT-vH-NKh"/>
+                            <constraint firstAttribute="bottom" secondItem="m1P-kc-lvp" secondAttribute="bottom" constant="15" id="l59-A4-2d5"/>
+                            <constraint firstItem="SbE-yj-LSS" firstAttribute="centerY" secondItem="oZf-Ih-rt6" secondAttribute="centerY" id="qH1-I5-DEh"/>
+                            <constraint firstAttribute="trailing" secondItem="HzI-4g-GYW" secondAttribute="trailing" constant="10" id="rOu-Mi-GQJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dwm-6l-lTy"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="BQU-us-Q1U" secondAttribute="trailing" id="CaE-Rv-tJZ"/>
+                <constraint firstItem="BQU-us-Q1U" firstAttribute="bottom" secondItem="ZTg-uK-7eu" secondAttribute="bottom" id="f6Y-cC-iK4"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="BQU-us-Q1U" secondAttribute="top" id="pfg-IM-21m"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="leading" secondItem="BQU-us-Q1U" secondAttribute="leading" id="v09-8x-hj4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="avatar" destination="nRs-tO-jM1" id="wBP-6H-PAq"/>
+                <outlet property="commentCount" destination="oZf-Ih-rt6" id="a10-2i-PoG"/>
+                <outlet property="containerWidthConstraint" destination="OJM-Ue-596" id="nmx-2O-b2O"/>
+                <outlet property="detail" destination="HzI-4g-GYW" id="fYp-uw-E96"/>
+                <outlet property="kipalogCount" destination="m1P-kc-lvp" id="CFT-eY-LR8"/>
+                <outlet property="title" destination="6MN-ag-JUZ" id="3ZX-Yo-dzD"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Comment" width="50" height="50"/>
+        <image name="Log" width="30" height="30"/>
+    </resources>
+</document>

@@ -27,8 +27,8 @@ class SearchViewController: UICollectionViewController, TabConvertible {
         super.viewDidLoad()
         collectionView.backgroundColor = UIColor.white
         collectionView.register(
-            UINib(nibName: FeedCell.identifier, bundle: nil),
-            forCellWithReuseIdentifier: FeedCell.identifier
+            UINib(nibName: SearchCell.identifier, bundle: nil),
+            forCellWithReuseIdentifier: SearchCell.identifier
         )
         navigationItem.title = "Kipalog"
         setupSearchBar()
@@ -106,7 +106,7 @@ extension SearchViewController{
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let post = posts[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCell.identifier, for: indexPath) as! FeedCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCell.identifier, for: indexPath) as! SearchCell
             cell.post = post
             return cell
         }
