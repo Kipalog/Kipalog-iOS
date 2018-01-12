@@ -94,6 +94,20 @@ class HomeViewController: UIViewController, TabConvertible {
                 self.borderViewOriginX.constant = self.generalScrollView.frame.width * progress
             })
             .disposed(by: disposeBag)
+
+
+        let tappedTab = ControlEvent.merge(
+            topPostsButton.rx.tap.map{ _ in Tab.top },
+            newPostsButton.rx.tap.map{ _ in Tab.new },
+            tilPostsButton.rx.tap.map{ _ in Tab.til }
+        )
+            .asSignal(onErrorSignalWith: .empty())
+
+        tappedTab
+            .map { [unowned self] in CGFloat($0.rawValue) * self.generalScrollView.frame.width }
+            .filter { [unowned self] in self.generalScrollView.contentOffset.x != $0 }
+            .emit(onNext: { [unowned self] in self.generalScrollView.setContentOffset(CGPoint(x: $0, y: 0.0), animated: true)})
+            .disposed(by: disposeBag)
     }
 }
 
