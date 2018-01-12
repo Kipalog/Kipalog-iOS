@@ -27,13 +27,15 @@ class FeedViewController: UICollectionViewController, TabConvertible {
         case new
         case til
     }
+    private var tab: Tab = .top
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 
-    init(_ tab: Tab) {
+    init(_ startTab: Tab) {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
+        tab = startTab
     }
 
     override func viewDidLoad() {
@@ -118,13 +120,10 @@ extension FeedViewController {
 extension FeedViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         let width = view.bounds.width
-        let height: CGFloat
-        switch section {
-        case 0:
-            height = 110
-        default:
-            height = 0
+        let height: CGFloat = 120
+        if section == 0 && tab == .top {
+            return CGSize(width: width, height: height)
         }
-        return CGSize(width: width, height: height)
+        return CGSize.zero
     }
 }
