@@ -30,7 +30,7 @@ class SearchViewController: UICollectionViewController, TabConvertible {
             UINib(nibName: SearchCell.identifier, bundle: nil),
             forCellWithReuseIdentifier: SearchCell.identifier
         )
-        navigationItem.title = "Kipalog"
+        navigationItem.title = "Tìm kiếm"
         setupSearchBar()
         setupLayout()
         binding()
@@ -47,7 +47,7 @@ class SearchViewController: UICollectionViewController, TabConvertible {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Tìm kiếm"
+        searchController.searchBar.placeholder = "Nhập từ khoá"
         searchController.searchBar.barStyle = .black
         searchController.searchBar.tintColor = UIColor.white
         if #available(iOS 11.0, *) {
