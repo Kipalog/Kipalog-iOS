@@ -11,8 +11,7 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
-class FeedViewController: UICollectionViewController, TabConvertible {
-    let barImageName = "Feed"
+class FeedViewController: UICollectionViewController {
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
     private let viewModel = FeedViewModel()
