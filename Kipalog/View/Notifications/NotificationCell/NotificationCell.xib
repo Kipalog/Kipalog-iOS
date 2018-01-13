@@ -35,7 +35,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvf-tp-MoL" userLabel="Info">
-                                <rect key="frame" x="70" y="10" width="410" height="50"/>
+                                <rect key="frame" x="70" y="10" width="410" height="55"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
@@ -68,7 +68,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="500" id="85q-FQ-5Dc" userLabel="Container Width Constraint"/>
-                            <constraint firstItem="zOK-JZ-j5t" firstAttribute="top" secondItem="Lvf-tp-MoL" secondAttribute="bottom" constant="10" id="CDm-ud-DLA"/>
+                            <constraint firstItem="zOK-JZ-j5t" firstAttribute="top" secondItem="Lvf-tp-MoL" secondAttribute="bottom" constant="5" id="CDm-ud-DLA"/>
                             <constraint firstItem="Lvf-tp-MoL" firstAttribute="top" secondItem="qHM-gl-cjk" secondAttribute="top" id="DRn-e5-r50"/>
                             <constraint firstAttribute="bottom" secondItem="zOK-JZ-j5t" secondAttribute="bottom" constant="10" id="EXQ-HJ-QTq"/>
                             <constraint firstAttribute="trailing" secondItem="Lvf-tp-MoL" secondAttribute="trailing" constant="20" id="G0d-Pf-ZPx"/>
@@ -77,6 +77,7 @@
                             <constraint firstItem="qHM-gl-cjk" firstAttribute="top" secondItem="0WG-LI-vem" secondAttribute="top" constant="10" id="RNB-f6-bvE"/>
                             <constraint firstAttribute="trailing" secondItem="7bi-6f-dsm" secondAttribute="trailing" id="bsc-g2-UzZ"/>
                             <constraint firstItem="qHM-gl-cjk" firstAttribute="leading" secondItem="0WG-LI-vem" secondAttribute="leading" constant="10" id="h3J-Mg-KPn"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="jxD-hW-j3Z"/>
                             <constraint firstAttribute="bottom" secondItem="7bi-6f-dsm" secondAttribute="bottom" id="pfb-B1-AbA"/>
                             <constraint firstItem="Lvf-tp-MoL" firstAttribute="leading" secondItem="qHM-gl-cjk" secondAttribute="trailing" constant="10" id="sch-Wj-qEK"/>
                         </constraints>
@@ -92,7 +93,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="avatar" destination="qHM-gl-cjk" id="cnf-G8-cBl"/>
+                <outlet property="baseView" destination="0WG-LI-vem" id="xBW-vg-o2b"/>
                 <outlet property="containerWidthConstraint" destination="85q-FQ-5Dc" id="9ql-TI-CD8"/>
+                <outlet property="contentView" destination="0WG-LI-vem" id="gy0-1g-esh"/>
                 <outlet property="dateLabel" destination="zOK-JZ-j5t" id="MXz-DA-FZD"/>
                 <outlet property="infoLabel" destination="Lvf-tp-MoL" id="VMP-BU-rhq"/>
             </connections>

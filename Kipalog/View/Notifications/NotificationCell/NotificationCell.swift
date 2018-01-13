@@ -14,6 +14,7 @@ class NotificationCell: UICollectionViewCell {
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var containerWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var baseView: UIView!
     
     static let identifier = "NotificationCell"
 
@@ -50,6 +51,10 @@ class NotificationCell: UICollectionViewCell {
                 with: notification.user.avatar_url_path,
                 options: [.transition(.fade(0.25))]
             )
+
+            if notification.status != .checked {
+                baseView.backgroundColor = UIColor.kipalog.greyColor
+            }
         }
     }
 
