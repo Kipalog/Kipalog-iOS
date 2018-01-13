@@ -26,14 +26,30 @@ class NotificationCell: UICollectionViewCell {
 
     var notification: Notification? {
         didSet {
-            infoLabel.text = notification.map{ $0.user.name + " " + $0.message + " " + $0.info }
-            dateLabel.text = notification?.createdAt
-            if let url = notification?.user.avatar_url_path {
-                avatar.kf.setImage(
-                    with: url,
-                    options: [.transition(.fade(0.25))]
-                )
-            }
+            guard let notification = notification else { return }
+            let userNameText = NSMutableAttributedString(string: notification.user.name, attributes: [
+                NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)
+            ])
+
+            let messageText = NSMutableAttributedString(string: " " + notification.message + " ", attributes: [
+                NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)
+            ])
+
+            let infoText = NSMutableAttributedString(string: notification.info, attributes: [
+                NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)
+            ])
+
+            let labelText = userNameText
+            labelText.append(messageText)
+            labelText.append(infoText)
+
+            infoLabel.attributedText = labelText
+            dateLabel.text = notification.createdAt
+
+            avatar.kf.setImage(
+                with: notification.user.avatar_url_path,
+                options: [.transition(.fade(0.25))]
+            )
         }
     }
 
