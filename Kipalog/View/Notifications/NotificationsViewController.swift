@@ -27,9 +27,6 @@ class NotificationsViewController: UICollectionViewController, TabConvertible {
             UINib(nibName: NotificationCell.identifier, bundle: nil),
             forCellWithReuseIdentifier: NotificationCell.identifier
         )
-        if let tabBarItems = AppDelegate.rootTabBarController?.tabBar.items {
-            tabBarItems[2].badgeValue = "3"
-        }
         collectionView.backgroundColor = UIColor.white
         navigationItem.title = "Thông báo"
         setupLayout()
@@ -45,6 +42,15 @@ class NotificationsViewController: UICollectionViewController, TabConvertible {
     }
 
     private func binding() {
+        rx.viewWillAppear
+            .asSignal(onErrorSignalWith: .empty())
+            .emit(onNext: { _ in
+                if let tabBarItems = AppDelegate.rootTabBarController?.tabBar.items {
+                    tabBarItems[2].badgeValue = nil
+                }
+            })
+            .disposed(by: disposeBag)
+
         viewModel.dataSource
             .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)

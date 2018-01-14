@@ -28,5 +28,9 @@ class CustomTabBarViewController: UITabBarController {
         ]
 
         tabBar.tintColor = UIColor.kipalog.masterColor
+
+        if let tabBarItems = tabBar.items {
+            tabBarItems[2].badgeValue = "3"
+        }
     }
 }

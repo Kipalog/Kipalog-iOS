@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     static var rootTabBarController: CustomTabBarViewController? {
-        return rootViewController.contentViewController as? CustomTabBarViewController
+        return rootViewController.contentViewController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
