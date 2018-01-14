@@ -27,6 +27,9 @@ class NotificationsViewController: UICollectionViewController, TabConvertible {
             UINib(nibName: NotificationCell.identifier, bundle: nil),
             forCellWithReuseIdentifier: NotificationCell.identifier
         )
+        if let tabBarItems = AppDelegate.rootTabBarController?.tabBar.items {
+            tabBarItems[2].badgeValue = "3"
+        }
         collectionView.backgroundColor = UIColor.white
         navigationItem.title = "Thông báo"
         setupLayout()

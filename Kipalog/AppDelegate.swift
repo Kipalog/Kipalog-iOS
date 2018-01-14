@@ -13,11 +13,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UIApplication.shared.statusBarStyle = .lightContent
         return true
+    }
+
+    static var rootViewController: RootViewController {
+        guard
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+            let rootViewController = appDelegate.window?.rootViewController as? RootViewController
+        else {
+            fatalError("Unexpected appDelegate \(String(describing: UIApplication.shared.delegate))")
+        }
+        return rootViewController
+    }
+
+    static var rootTabBarController: CustomTabBarViewController? {
+        return rootViewController.contentViewController as? CustomTabBarViewController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

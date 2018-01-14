@@ -10,6 +10,8 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    private(set) var contentViewController: CustomTabBarViewController?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -17,6 +19,7 @@ class RootViewController: UIViewController {
 
     private func setup() {
         let tabBarController = CustomTabBarViewController()
+        contentViewController = tabBarController
         embed(tabBarController, to: view)
     }
 
