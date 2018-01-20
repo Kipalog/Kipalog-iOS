@@ -11,16 +11,25 @@ import UIKit
 class ProfileViewController: UITableViewController, TabConvertible {
     let barImageName = "Profile"
 
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var kipalogLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var viewLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Hồ sơ cá nhân"
+        avatar.kf.setImage(
+            with: URL(string: "https://s3-ap-southeast-1.amazonaws.com/kipalog.com/dtkycrfm2t_hrlxd8Jh.png")!,
+            options: [.transition(.fade(0.25))]
+        )
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
-    }
+}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+extension ProfileViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-
 }
