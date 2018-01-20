@@ -33,6 +33,8 @@
 		B48C590A1FFE72EF00C6E0E4 /* AuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */; };
 		B48C590C1FFE74F400C6E0E4 /* HotAuthorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */; };
 		B48C590E1FFE771500C6E0E4 /* HotAuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */; };
+		B4C1FCDF2012E53100D73FEC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */; };
+		B4C1FCE12012E55F00D73FEC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C1FCE02012E55F00D73FEC /* Profile.storyboard */; };
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
 		B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* RootViewController.swift */; };
 		B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF31FEBDDE30021A41D /* Main.storyboard */; };
@@ -49,7 +51,6 @@
 		B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9302E1FECFB510021A41D /* FeedViewController.swift */; };
 		B4E930321FECFC2C0021A41D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930311FECFC2C0021A41D /* SearchViewController.swift */; };
 		B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */; };
-		B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */; };
 		B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */; };
 		B4E930441FEFCBE40021A41D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930431FEFCBE40021A41D /* Kingfisher.framework */; };
 		B4E930471FF0E7540021A41D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930451FF0E7540021A41D /* FeedCell.swift */; };
@@ -93,6 +94,8 @@
 		B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCell.swift; sourceTree = "<group>"; };
 		B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthorView.xib; sourceTree = "<group>"; };
 		B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotAuthorView.swift; sourceTree = "<group>"; };
+		B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B4C1FCE02012E55F00D73FEC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4E92FF11FEBDDE30021A41D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +118,6 @@
 		B4E9302E1FECFB510021A41D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		B4E930311FECFC2C0021A41D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
-		B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B4E930431FEFCBE40021A41D /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		B4E930451FF0E7540021A41D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -208,6 +210,13 @@
 				B464A0722008E8B000DAB1D0 /* SearchCell.xib */,
 			);
 			path = SearchCell;
+			sourceTree = "<group>";
+		};
+		B4C1FCE22013093000D73FEC /* ProfileHeader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileHeader;
 			sourceTree = "<group>";
 		};
 		B4E92FE31FEBDDE30021A41D = {
@@ -359,7 +368,9 @@
 		B4E930391FECFCAE0021A41D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				B4E9303A1FECFCBF0021A41D /* ProfileViewController.swift */,
+				B4C1FCE22013093000D73FEC /* ProfileHeader */,
+				B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */,
+				B4C1FCE02012E55F00D73FEC /* Profile.storyboard */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -464,6 +475,7 @@
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B4E930481FF0E7540021A41D /* FeedCell.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
+				B4C1FCE12012E55F00D73FEC /* Profile.storyboard in Resources */,
 				B464A0742008E8B000DAB1D0 /* SearchCell.xib in Resources */,
 				B48C590C1FFE74F400C6E0E4 /* HotAuthorView.xib in Resources */,
 				B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */,
@@ -517,7 +529,6 @@
 				B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */,
 				B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */,
 				B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */,
-				B4E9303B1FECFCBF0021A41D /* ProfileViewController.swift in Sources */,
 				B48C590A1FFE72EF00C6E0E4 /* AuthorCell.swift in Sources */,
 				B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */,
 				B4708966200755AB00443FAA /* HomeViewController.swift in Sources */,
@@ -529,6 +540,7 @@
 				202F3FA362509F1E286C7C3F /* User.swift in Sources */,
 				202F33FA9B21E4B24F799FA7 /* PostStatus.swift in Sources */,
 				202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */,
+				B4C1FCDF2012E53100D73FEC /* ProfileViewController.swift in Sources */,
 				202F3D836B47508A17CA28DD /* PostMeta.swift in Sources */,
 				B464A0772009F49900DAB1D0 /* NotificationCell.swift in Sources */,
 				202F39DBD504021624EBE12F /* UILabel+Extension.swift in Sources */,
