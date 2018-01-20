@@ -16,13 +16,17 @@ class ProfileViewController: UITableViewController, TabConvertible {
     @IBOutlet weak var kipalogLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var viewLabel: UILabel!
+    @IBOutlet weak var orgAvatar: UIImageView!
+    @IBOutlet weak var orgName: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Hồ sơ cá nhân"
         avatar.kf.setImage(
-            with: URL(string: "https://s3-ap-southeast-1.amazonaws.com/kipalog.com/dtkycrfm2t_hrlxd8Jh.png")!,
-            options: [.transition(.fade(0.25))]
+            with: URL(string: "https://s3-ap-southeast-1.amazonaws.com/kipalog.com/dtkycrfm2t_hrlxd8Jh.png")!
+        )
+        orgAvatar.kf.setImage(
+            with: URL(string: "https://ktmt.github.io/images/logo.jpg")!
         )
     }
 
