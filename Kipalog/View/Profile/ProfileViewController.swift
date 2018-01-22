@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ProfileViewController: UITableViewController, TabConvertible {
     let barImageName = "Profile"
@@ -75,6 +77,8 @@ class ProfileViewController: UITableViewController, TabConvertible {
 
 extension ProfileViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = FollowerListViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

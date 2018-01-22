@@ -1,20 +1,19 @@
 //
-//  NotificationsViewController.swift
+//  FollowerListViewController.swift
 //  Kipalog
 //
-//  Created by DTVD on 2017/12/22.
-//  Copyright © 2017 Kipalog. All rights reserved.
+//  Created by DTVD on 2018/01/22.
+//  Copyright © 2018 Kipalog. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 import RxCocoa
 
-class NotificationsViewController: UICollectionViewController, TabConvertible {
-    let barImageName = "Notifications"
+class FollowerListViewController: UICollectionViewController {
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
-    private let viewModel = NotificationViewModel()
+    private let viewModel = FollowerListViewModel()
 
     override var collectionView: UICollectionView! {
         get { return super.collectionView }
@@ -24,11 +23,9 @@ class NotificationsViewController: UICollectionViewController, TabConvertible {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(
-            UINib(nibName: NotificationCell.identifier, bundle: nil),
-            forCellWithReuseIdentifier: NotificationCell.identifier
-        )
+            UINib(nibName: FollowerCell.identifier, bundle: nil),
+            forCellWithReuseIdentifier: FollowerCell.identifier)
         collectionView.backgroundColor = UIColor.white
-        navigationItem.title = "Thông báo"
         setupLayout()
         binding()
     }
@@ -42,30 +39,22 @@ class NotificationsViewController: UICollectionViewController, TabConvertible {
     }
 
     private func binding() {
-        rx.viewWillAppear
-            .asSignal(onErrorSignalWith: .empty())
-            .emit(onNext: { _ in
-                if let tabBarItems = AppDelegate.rootTabBarController?.tabBar.items {
-                    tabBarItems[2].badgeValue = nil
-                }
-            })
-            .disposed(by: disposeBag)
-
         viewModel.dataSource
             .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }
+
 }
 
-extension NotificationsViewController {
+extension FollowerListViewController {
     final private class DataSource: NSObject, RxCollectionViewDataSourceType, UICollectionViewDataSource {
-        typealias Element = NotificationViewModel.DataSource
+        typealias Element = FollowerListViewModel.DataSource
 
-        private(set) var notifications: [Notification] = []
+        private(set) var users: [User] = []
 
         func collectionView(_ collectionView: UICollectionView, observedEvent: Event<Element>) {
             if case .next(let element) = observedEvent {
-                notifications = element.notifications
+                users = element.users
                 collectionView.reloadData()
             }
         }
@@ -75,13 +64,13 @@ extension NotificationsViewController {
         }
 
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return notifications.count
+            return users.count
         }
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let notification = notifications[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NotificationCell.identifier, for: indexPath) as! NotificationCell
-            cell.notification = notification
+            let user = users[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.identifier, for: indexPath) as! FollowerCell
+            cell.user = user
             return cell
         }
     }
