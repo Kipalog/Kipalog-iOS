@@ -22,6 +22,7 @@
 		202F3D836B47508A17CA28DD /* PostMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F2CE8D0903AD4184C5B /* PostMeta.swift */; };
 		202F3E5A719F8098956BD8FB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3483187E43DDFBD084AF /* Notification.swift */; };
 		202F3FA362509F1E286C7C3F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AD3196A52B89B0D5F1D /* User.swift */; };
+		B449CDEF2015DE870085F3F5 /* ProfileHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B449CDEE2015DE870085F3F5 /* ProfileHeader.xib */; };
 		B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */; };
 		B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */; };
 		B464A0732008E8B000DAB1D0 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0712008E8B000DAB1D0 /* SearchCell.swift */; };
@@ -84,6 +85,7 @@
 		202F3F042FFA016BAC7AA441 /* TabConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabConvertible.swift; sourceTree = "<group>"; };
 		202F3F2CE8D0903AD4184C5B /* PostMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostMeta.swift; sourceTree = "<group>"; };
 		202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
+		B449CDEE2015DE870085F3F5 /* ProfileHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeader.xib; sourceTree = "<group>"; };
 		B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VNF-ProximaNovaCond-Regular.ttf"; sourceTree = "<group>"; };
 		B464A0712008E8B000DAB1D0 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		B4C1FCE22013093000D73FEC /* ProfileHeader */ = {
 			isa = PBXGroup;
 			children = (
+				B449CDEE2015DE870085F3F5 /* ProfileHeader.xib */,
 			);
 			path = ProfileHeader;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				B48C590C1FFE74F400C6E0E4 /* HotAuthorView.xib in Resources */,
 				B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */,
 				B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */,
+				B449CDEF2015DE870085F3F5 /* ProfileHeader.xib in Resources */,
 				B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
