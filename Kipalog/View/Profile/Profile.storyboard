@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TzL-j8-YyU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TzL-j8-YyU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,10 +21,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dt1-gk-jIY" userLabel="Cicrle">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dt1-gk-jIY" userLabel="Cicrle">
                                     <rect key="frame" x="135" y="68" width="104" height="104"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="104" id="Ke2-bI-A4x"/>
+                                        <constraint firstAttribute="height" constant="104" id="mDm-Z3-XYw"/>
+                                    </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                             <real key="value" value="52"/>
@@ -173,6 +176,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="RlP-h2-3jE" firstAttribute="leading" secondItem="L1i-2o-JHu" secondAttribute="leading" constant="5" id="1Rg-9P-78y"/>
+                                <constraint firstItem="dt1-gk-jIY" firstAttribute="centerX" secondItem="WFT-91-sOY" secondAttribute="centerX" id="6Cy-Yz-sxs"/>
                                 <constraint firstItem="a4D-im-1RR" firstAttribute="top" secondItem="Olw-oj-UkW" secondAttribute="top" id="7Sp-Vi-fJu"/>
                                 <constraint firstItem="WFT-91-sOY" firstAttribute="centerX" secondItem="L1i-2o-JHu" secondAttribute="centerX" id="ECA-Oq-4II"/>
                                 <constraint firstItem="7Rp-6L-uMh" firstAttribute="centerX" secondItem="L1i-2o-JHu" secondAttribute="centerX" id="GoB-Cq-Q1h"/>
@@ -182,6 +186,7 @@
                                 <constraint firstItem="Olw-oj-UkW" firstAttribute="width" secondItem="a4D-im-1RR" secondAttribute="width" id="cvA-nb-c18"/>
                                 <constraint firstItem="Olw-oj-UkW" firstAttribute="top" secondItem="RlP-h2-3jE" secondAttribute="top" id="dZ9-9B-7ux"/>
                                 <constraint firstItem="a4D-im-1RR" firstAttribute="leading" secondItem="Olw-oj-UkW" secondAttribute="trailing" id="eNd-I2-Oo0"/>
+                                <constraint firstItem="dt1-gk-jIY" firstAttribute="centerY" secondItem="WFT-91-sOY" secondAttribute="centerY" id="icp-jj-9iL"/>
                                 <constraint firstAttribute="trailing" secondItem="a4D-im-1RR" secondAttribute="trailing" constant="5" id="jp9-NI-SBy"/>
                                 <constraint firstItem="RlP-h2-3jE" firstAttribute="top" secondItem="7Rp-6L-uMh" secondAttribute="bottom" constant="10" id="n94-0U-Unf"/>
                                 <constraint firstItem="RlP-h2-3jE" firstAttribute="width" secondItem="Olw-oj-UkW" secondAttribute="width" id="nrD-Jd-Vc6"/>
