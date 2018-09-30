@@ -29,15 +29,15 @@ class NotificationCell: UICollectionViewCell {
         didSet {
             guard let notification = notification else { return }
             let userNameText = NSMutableAttributedString(string: notification.user.name, attributes: [
-                NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
             ])
 
             let messageText = NSMutableAttributedString(string: " " + notification.message + " ", attributes: [
-                NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14)
             ])
 
             let infoText = NSMutableAttributedString(string: notification.info, attributes: [
-                NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14)
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
             ])
 
             let labelText = userNameText

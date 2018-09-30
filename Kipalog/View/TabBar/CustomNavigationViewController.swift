@@ -19,8 +19,8 @@ class CustomNavigationViewController: UINavigationController {
         navigationBar.tintColor = UIColor.white
         navigationBar.isTranslucent = false
         navigationBar.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: UIColor.white,
-            NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20, weight: .bold)
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .bold)
         ]
     }
 }

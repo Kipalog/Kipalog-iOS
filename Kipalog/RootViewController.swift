@@ -17,6 +17,10 @@ class RootViewController: UIViewController {
         setup()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     private func setup() {
         let tabBarController = CustomTabBarViewController()
         contentViewController = tabBarController

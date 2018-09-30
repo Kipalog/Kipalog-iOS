@@ -45,7 +45,7 @@ class FeedViewController: UICollectionViewController {
         )
         collectionView.register(
             UINib(nibName: HotAuthorView.identifier, bundle: nil),
-            forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: HotAuthorView.identifier
         )
 
@@ -101,9 +101,9 @@ extension FeedViewController {
 
         func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
             guard indexPath.section == 0,
-                  kind == UICollectionElementKindSectionHeader,
+                  kind == UICollectionView.elementKindSectionHeader,
                   let hotAuthorHeader = collectionView.dequeueReusableSupplementaryView(
-                      ofKind: UICollectionElementKindSectionHeader,
+                      ofKind: UICollectionView.elementKindSectionHeader,
                       withReuseIdentifier: HotAuthorView.identifier,
                       for: indexPath
                   ) as? HotAuthorView

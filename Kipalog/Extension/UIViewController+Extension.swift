@@ -14,8 +14,8 @@ extension UIViewController {
     func embed(_ childViewController: UIViewController, to parentView: UIView) {
         childViewController.view.frame = parentView.bounds
         parentView.addSubview(childViewController.view)
-        addChildViewController(childViewController)
-        childViewController.didMove(toParentViewController: self)
+        addChild(childViewController)
+        childViewController.didMove(toParent: self)
     }
 
     func kickOffViewDidLoad() {
