@@ -1,4 +1,4 @@
 github "onevcat/Kingfisher"              ~> 4.0.0
 github "ikesyo/Himotoki"                 ~> 3.1.0
-github "ishkawa/APIKit"                  ~> 3.1.2
+github "ishkawa/APIKit"                  ~> 4.0.0
 github "ReactiveX/RxSwift"               ~> 4.2.0
