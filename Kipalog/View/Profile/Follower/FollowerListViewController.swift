@@ -32,7 +32,7 @@ class FollowerListViewController: UICollectionViewController {
 
     private func setupLayout() {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.estimatedItemSize = CGSize(width: 1.0, height: 1.0)
+            layout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width, height: 60)
             layout.scrollDirection = .vertical
             layout.minimumLineSpacing = 0.0
         }
