@@ -99,7 +99,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="U1v-wz-PMd" firstAttribute="centerY" secondItem="U87-AI-1Ow" secondAttribute="centerY" id="0sc-mF-P4P"/>
                             <constraint firstAttribute="trailing" secondItem="nQY-u3-rKS" secondAttribute="trailing" id="4S5-qf-qDh"/>
@@ -107,6 +107,7 @@
                             <constraint firstItem="3Bt-Pv-izA" firstAttribute="top" secondItem="fgQ-lK-gOT" secondAttribute="bottom" constant="5" id="H5L-IX-APW"/>
                             <constraint firstItem="guM-Si-XN5" firstAttribute="centerY" secondItem="y2j-7g-Dvi" secondAttribute="centerY" id="IwF-NA-PcD"/>
                             <constraint firstItem="nQY-u3-rKS" firstAttribute="leading" secondItem="jL6-wh-qEt" secondAttribute="leading" constant="10" id="OVc-ag-dGc"/>
+                            <constraint firstAttribute="height" constant="150" id="T1X-HJ-x6k"/>
                             <constraint firstItem="fgQ-lK-gOT" firstAttribute="top" secondItem="jL6-wh-qEt" secondAttribute="top" constant="12" id="TKD-tD-tNU"/>
                             <constraint firstItem="guM-Si-XN5" firstAttribute="leading" secondItem="y2j-7g-Dvi" secondAttribute="trailing" constant="3" id="Y5Y-dy-Xft"/>
                             <constraint firstItem="y2j-7g-Dvi" firstAttribute="leading" secondItem="U1v-wz-PMd" secondAttribute="trailing" constant="5" id="Yuu-C2-o2P"/>
