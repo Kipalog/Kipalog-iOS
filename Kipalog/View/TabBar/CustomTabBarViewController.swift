@@ -19,8 +19,7 @@ class CustomTabBarViewController: UITabBarController {
         let searchViewController = SearchViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let notificationsViewController = NotificationsViewController(collectionViewLayout: UICollectionViewFlowLayout())
 
-        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        let profileViewController = profileStoryboard.instantiateInitialViewController() as! ProfileViewController
+        let profileViewController = ProfileViewController.make()
 
         viewControllers = [
             homeViewController.buildTabController(),

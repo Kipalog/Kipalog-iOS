@@ -40,8 +40,8 @@
 		B48C590A1FFE72EF00C6E0E4 /* AuthorCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59091FFE72EF00C6E0E4 /* AuthorCellViewController.swift */; };
 		B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */; };
 		B48C590E1FFE771500C6E0E4 /* HotAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C590D1FFE771500C6E0E4 /* HotAuthorViewController.swift */; };
+		B495B6B021DA5AAE00AF4ECB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B495B6AF21DA5AAE00AF4ECB /* ProfileViewController.xib */; };
 		B4C1FCDF2012E53100D73FEC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */; };
-		B4C1FCE12012E55F00D73FEC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C1FCE02012E55F00D73FEC /* Profile.storyboard */; };
 		B4E238D121DA003900B9E4E3 /* FeedCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E238D021DA003900B9E4E3 /* FeedCellViewController.swift */; };
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
 		B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* RootViewController.swift */; };
@@ -108,8 +108,8 @@
 		B48C59091FFE72EF00C6E0E4 /* AuthorCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCellViewController.swift; sourceTree = "<group>"; };
 		B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthorViewController.xib; sourceTree = "<group>"; };
 		B48C590D1FFE771500C6E0E4 /* HotAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotAuthorViewController.swift; sourceTree = "<group>"; };
+		B495B6AF21DA5AAE00AF4ECB /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		B4C1FCE02012E55F00D73FEC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B4E238D021DA003900B9E4E3 /* FeedCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewController.swift; sourceTree = "<group>"; };
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -407,7 +407,7 @@
 			children = (
 				B4C1FCE22013093000D73FEC /* Follower */,
 				B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */,
-				B4C1FCE02012E55F00D73FEC /* Profile.storyboard */,
+				B495B6AF21DA5AAE00AF4ECB /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -508,6 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B495B6B021DA5AAE00AF4ECB /* ProfileViewController.xib in Resources */,
 				B464A0782009F49900DAB1D0 /* NotificationCellViewController.xib in Resources */,
 				B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */,
 				B47089642007559A00443FAA /* Home.storyboard in Resources */,
@@ -515,7 +516,6 @@
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B4E930481FF0E7540021A41D /* FeedCellViewController.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
-				B4C1FCE12012E55F00D73FEC /* Profile.storyboard in Resources */,
 				B464A0742008E8B000DAB1D0 /* SearchCellViewController.xib in Resources */,
 				B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */,
 				B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */,
