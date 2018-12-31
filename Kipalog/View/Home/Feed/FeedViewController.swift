@@ -35,14 +35,12 @@ class FeedViewController: UICollectionViewController {
     init(_ startTab: Tab) {
         super.init(collectionViewLayout: UICollectionViewFlowLayout())
         tab = startTab
+        dataSource.set(parent: self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(
-            UINib(nibName: FeedCell.identifier, bundle: nil),
-            forCellWithReuseIdentifier: FeedCell.identifier
-        )
+        CollectionViewCell<FeedCellViewController, FeedViewController>.register(to: collectionView)
         collectionView.register(
             UINib(nibName: HotAuthorView.identifier, bundle: nil),
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -76,6 +74,11 @@ extension FeedViewController {
         typealias Element = FeedViewModel.DataSource
 
         private(set) var posts: [Post] = []
+        private weak var parent: FeedViewController?
+
+        fileprivate func set(parent: FeedViewController) {
+            self.parent = parent
+        }
 
         func collectionView(_ collectionView: UICollectionView, observedEvent: Event<Element>) {
             if case .next(let element) = observedEvent {
@@ -94,8 +97,8 @@ extension FeedViewController {
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let post = posts[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCell.identifier, for: indexPath) as! FeedCell
-            cell.post = post
+            let cell = CollectionViewCell<FeedCellViewController, FeedViewController>.deque(from: collectionView, for: indexPath, parentViewController: parent!)
+            cell.contentViewController?.post = post
             return cell
         }
 

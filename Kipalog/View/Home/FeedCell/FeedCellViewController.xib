@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedCellViewController" customModule="Kipalog" customModuleProvider="target">
+            <connections>
+                <outlet property="avatar" destination="iIk-0S-Btf" id="Axq-ce-f7C"/>
+                <outlet property="commentCount" destination="w5F-0K-T8a" id="l92-Hv-whR"/>
+                <outlet property="containerWidthConstraint" destination="rvG-NC-Ad7" id="Ek3-wj-Wv2"/>
+                <outlet property="detail" destination="sUs-ga-Ebu" id="Zfe-q3-B4J"/>
+                <outlet property="kipalogCount" destination="3IK-N3-5Vb" id="5Pa-bs-n3M"/>
+                <outlet property="postTitle" destination="i0M-0n-DlI" id="XeD-ag-qZd"/>
+                <outlet property="view" destination="iBV-84-xYg" id="UfN-q8-3np"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBV-84-xYg">
+            <rect key="frame" x="0.0" y="0.0" width="500" height="150"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIk-0S-Btf" userLabel="Avatar">
+                    <rect key="frame" x="10" y="15" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="AQ1-Xt-lpR"/>
+                        <constraint firstAttribute="width" constant="40" id="EaJ-oP-Weh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-0n-DlI" userLabel="PostTitle">
+                    <rect key="frame" x="60" y="12" width="430" height="24.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Title">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.70980392156862748" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="17" name="Montserrat-SemiBold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUs-ga-Ebu" userLabel="Detail">
+                    <rect key="frame" x="60" y="41.5" width="430" height="70.5"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Very long detail">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="15" name="SFUIText-Regular"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="3" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view alpha="0.10000000149011612" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sK-Aj-g4d" userLabel="Seperator">
+                    <rect key="frame" x="10" y="149" width="490" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="xXr-RX-k38"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="166" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IK-N3-5Vb" userLabel="Kipalog Count">
+                    <rect key="frame" x="60" y="120" width="21" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="yZl-i6-KMd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Log" translatesAutoresizingMaskIntoConstraints="NO" id="Lbb-66-4iX" userLabel="Kipalog Icon">
+                    <rect key="frame" x="83" y="121.5" width="12" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="12" id="WxP-Id-Hkv"/>
+                        <constraint firstAttribute="height" constant="12" id="c61-bB-fgD"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5F-0K-T8a" userLabel="Comment Count">
+                    <rect key="frame" x="100" y="120" width="8" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="5DZ-h3-Nlf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Comment" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-B1-drZ" userLabel="Comment Icon">
+                    <rect key="frame" x="111" y="122" width="11" height="11"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="11" id="THZ-aB-NAY"/>
+                        <constraint firstAttribute="width" constant="11" id="eAp-zK-iUk"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="w5F-0K-T8a" firstAttribute="centerY" secondItem="3IK-N3-5Vb" secondAttribute="centerY" id="12w-e4-E6W"/>
+                <constraint firstItem="Lbb-66-4iX" firstAttribute="centerY" secondItem="3IK-N3-5Vb" secondAttribute="centerY" id="1lu-cx-WNj"/>
+                <constraint firstItem="9sK-Aj-g4d" firstAttribute="leading" secondItem="iBV-84-xYg" secondAttribute="leading" constant="10" id="92w-1p-LbQ"/>
+                <constraint firstItem="i0M-0n-DlI" firstAttribute="top" secondItem="iBV-84-xYg" secondAttribute="top" constant="12" id="ATs-0Q-EUQ"/>
+                <constraint firstAttribute="height" constant="150" id="CZE-j8-1N3"/>
+                <constraint firstItem="3IK-N3-5Vb" firstAttribute="leading" secondItem="sUs-ga-Ebu" secondAttribute="leading" id="Epq-rl-MjX"/>
+                <constraint firstItem="sUs-ga-Ebu" firstAttribute="top" secondItem="i0M-0n-DlI" secondAttribute="bottom" constant="5" id="Grq-kd-rzx"/>
+                <constraint firstAttribute="trailing" secondItem="9sK-Aj-g4d" secondAttribute="trailing" id="H9I-m1-OYa"/>
+                <constraint firstAttribute="bottom" secondItem="3IK-N3-5Vb" secondAttribute="bottom" constant="15" id="Kv7-He-cB4"/>
+                <constraint firstItem="i0M-0n-DlI" firstAttribute="leading" secondItem="iIk-0S-Btf" secondAttribute="trailing" constant="10" id="Ocj-JR-lX2"/>
+                <constraint firstItem="3d5-B1-drZ" firstAttribute="leading" secondItem="w5F-0K-T8a" secondAttribute="trailing" constant="3" id="PFc-ob-hYY"/>
+                <constraint firstItem="3d5-B1-drZ" firstAttribute="centerY" secondItem="w5F-0K-T8a" secondAttribute="centerY" id="UlE-pI-Jk5"/>
+                <constraint firstAttribute="trailing" secondItem="i0M-0n-DlI" secondAttribute="trailing" constant="10" id="VpV-Ep-WjA"/>
+                <constraint firstAttribute="bottom" secondItem="9sK-Aj-g4d" secondAttribute="bottom" id="cnx-Jk-X4P"/>
+                <constraint firstItem="3IK-N3-5Vb" firstAttribute="top" secondItem="sUs-ga-Ebu" secondAttribute="bottom" constant="8" id="fi6-wv-OE8"/>
+                <constraint firstItem="iIk-0S-Btf" firstAttribute="leading" secondItem="iBV-84-xYg" secondAttribute="leading" constant="10" id="iVw-za-U2d"/>
+                <constraint firstItem="w5F-0K-T8a" firstAttribute="leading" secondItem="Lbb-66-4iX" secondAttribute="trailing" constant="5" id="id7-eq-Kap"/>
+                <constraint firstAttribute="trailing" secondItem="sUs-ga-Ebu" secondAttribute="trailing" constant="10" id="pVF-jZ-Iz7"/>
+                <constraint firstAttribute="width" constant="500" id="rvG-NC-Ad7"/>
+                <constraint firstItem="iIk-0S-Btf" firstAttribute="top" secondItem="iBV-84-xYg" secondAttribute="top" constant="15" id="wHf-7R-Fft"/>
+                <constraint firstItem="sUs-ga-Ebu" firstAttribute="leading" secondItem="iIk-0S-Btf" secondAttribute="trailing" constant="10" id="yab-JE-YLD"/>
+                <constraint firstItem="Lbb-66-4iX" firstAttribute="leading" secondItem="3IK-N3-5Vb" secondAttribute="trailing" constant="2" id="zif-1h-MUJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Comment" width="50" height="50"/>
+        <image name="Log" width="30" height="30"/>
+    </resources>
+</document>
