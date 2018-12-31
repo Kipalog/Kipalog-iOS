@@ -9,21 +9,21 @@
 import UIKit
 
 // For CollectionViewCell only
-protocol HasViewController: AnyObject {
-    associatedtype ContentViewController: UIViewController
-    associatedtype ParentViewController: UIViewController
+protocol UIComponent: class {
+    associatedtype Content: UIViewController
+    associatedtype Parent: UIViewController
     var contentView: UIView { get }
-    var contentViewController: ContentViewController? { get set }
-    var parentViewController: ParentViewController? { get set }
+    var content: Content? { get set }
+    var parent: Parent? { get set }
 }
 
-extension HasViewController where Self: UIView {
-    func add(viewController: UIViewController) {
-        guard let vc =  viewController as? ContentViewController else { return }
-        self.contentViewController = vc
+extension UIComponent {
+    func embed(viewController: UIViewController) {
+        guard let vc =  viewController as? Content else { return }
+        self.content = vc
         vc.view.translatesAutoresizingMaskIntoConstraints = false
 
-        parentViewController?.addChild(vc)
+        parent?.addChild(vc)
         contentView.addSubview(vc.view)
 
         NSLayoutConstraint.activate(
@@ -35,13 +35,13 @@ extension HasViewController where Self: UIView {
             ]
         )
 
-       vc.didMove(toParent: parentViewController)
+       vc.didMove(toParent: parent)
     }
 }
 
-class CollectionViewCell<C: UIViewController, P: UIViewController>: UICollectionViewCell, HasViewController {
-    var contentViewController: C?
-    var parentViewController: P?
+class CollectionViewCell<C: UIViewController, P: UIViewController>: UICollectionViewCell, UIComponent {
+    var content: C?
+    var parent: P?
 
     static var reuseIdentifier: String {
         return C.className
@@ -51,9 +51,9 @@ class CollectionViewCell<C: UIViewController, P: UIViewController>: UICollection
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
 
-    static func deque(from collectionView: UICollectionView, for indexPath: IndexPath, parentViewController: P) -> CollectionViewCell {
+    static func deque(from collectionView: UICollectionView, for indexPath: IndexPath, parent: P) -> CollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
-        cell.add(viewController: C.bootstrap())
+        cell.embed(viewController: C.bootstrap())
         return cell
     }
 }

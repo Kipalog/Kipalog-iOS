@@ -61,7 +61,6 @@
 		B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */; };
 		B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */; };
 		B4E930441FEFCBE40021A41D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930431FEFCBE40021A41D /* Kingfisher.framework */; };
-		B4E930471FF0E7540021A41D /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930451FF0E7540021A41D /* FeedCell.swift */; };
 		B4E930481FF0E7540021A41D /* FeedCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E930461FF0E7540021A41D /* FeedCellViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -136,7 +135,6 @@
 		B4E930371FECFC9D0021A41D /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B4E930431FEFCBE40021A41D /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
-		B4E930451FF0E7540021A41D /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		B4E930461FF0E7540021A41D /* FeedCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCellViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,7 +184,6 @@
 		B43FC58F2003703300344483 /* FeedCell */ = {
 			isa = PBXGroup;
 			children = (
-				B4E930451FF0E7540021A41D /* FeedCell.swift */,
 				B4E930461FF0E7540021A41D /* FeedCellViewController.xib */,
 				B4E238D021DA003900B9E4E3 /* FeedCellViewController.swift */,
 			);
@@ -567,7 +564,6 @@
 			files = (
 				B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */,
 				B4E930321FECFC2C0021A41D /* SearchViewController.swift in Sources */,
-				B4E930471FF0E7540021A41D /* FeedCell.swift in Sources */,
 				B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */,
 				B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */,
 				B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */,
