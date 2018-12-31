@@ -45,7 +45,6 @@
 		B4E238D121DA003900B9E4E3 /* FeedCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E238D021DA003900B9E4E3 /* FeedCellViewController.swift */; };
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
 		B4E92FF21FEBDDE30021A41D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FF11FEBDDE30021A41D /* RootViewController.swift */; };
-		B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF31FEBDDE30021A41D /* Main.storyboard */; };
 		B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF61FEBDDE30021A41D /* Assets.xcassets */; };
 		B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E92FF81FEBDDE30021A41D /* LaunchScreen.storyboard */; };
 		B4E930051FEBDDE40021A41D /* KipalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930041FEBDDE40021A41D /* KipalogTests.swift */; };
@@ -114,7 +113,6 @@
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4E92FF11FEBDDE30021A41D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		B4E92FF41FEBDDE30021A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4E92FF61FEBDDE30021A41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E92FF91FEBDDE30021A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4E92FFB1FEBDDE30021A41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -276,6 +274,7 @@
 		B4E92FEE1FEBDDE30021A41D /* Kipalog */ = {
 			isa = PBXGroup;
 			children = (
+				202F3B9E96D821A2C61C56E3 /* Generic */,
 				B4E9302A1FECEA810021A41D /* Supporting Files */,
 				B4E930291FECEA6E0021A41D /* View Components */,
 				B4E930281FECEA660021A41D /* Extension */,
@@ -283,8 +282,6 @@
 				B4E930261FECEA550021A41D /* View */,
 				B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */,
 				B4E92FF11FEBDDE30021A41D /* RootViewController.swift */,
-				B4E92FF31FEBDDE30021A41D /* Main.storyboard */,
-				202F3B9E96D821A2C61C56E3 /* Generic */,
 			);
 			path = Kipalog;
 			sourceTree = "<group>";
@@ -518,7 +515,6 @@
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
 				B464A0742008E8B000DAB1D0 /* SearchCellViewController.xib in Resources */,
 				B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */,
-				B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */,
 				B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */,
 				B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */,
 			);
@@ -618,14 +614,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B4E92FF31FEBDDE30021A41D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B4E92FF41FEBDDE30021A41D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B4E92FF81FEBDDE30021A41D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

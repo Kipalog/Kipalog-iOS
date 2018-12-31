@@ -14,21 +14,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
         return true
     }
 
-    static var rootViewController: RootViewController {
-        guard
-            let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-            let rootViewController = appDelegate.window?.rootViewController as? RootViewController
-        else {
-            fatalError("Unexpected appDelegate \(String(describing: UIApplication.shared.delegate))")
-        }
-        return rootViewController
-    }
+    lazy var rootViewController: RootViewController = {
+        let vc = RootViewController()
+        vc.view.backgroundColor = UIColor.white
+        return vc
+    }()
 
-    static var rootTabBarController: CustomTabBarViewController? {
+    var rootTabBarController: CustomTabBarViewController? {
         return rootViewController.contentViewController
     }
 

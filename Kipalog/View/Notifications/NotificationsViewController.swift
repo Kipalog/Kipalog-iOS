@@ -42,8 +42,8 @@ class NotificationsViewController: UICollectionViewController, TabConvertible {
     private func binding() {
         rx.viewWillAppear
             .asSignal(onErrorSignalWith: .empty())
-            .emit(onNext: { _ in
-                if let tabBarItems = AppDelegate.rootTabBarController?.tabBar.items {
+            .emit(onNext: { [appDelegate = UIApplication.shared.delegate as? AppDelegate] _ in
+                if let tabBarItems = appDelegate?.rootTabBarController?.tabBar.items {
                     tabBarItems[2].badgeValue = nil
                 }
             })
