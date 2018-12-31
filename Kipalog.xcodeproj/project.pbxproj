@@ -38,8 +38,8 @@
 		B4708966200755AB00443FAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4708965200755AB00443FAA /* HomeViewController.swift */; };
 		B48C59081FFE729F00C6E0E4 /* AuthorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */; };
 		B48C590A1FFE72EF00C6E0E4 /* AuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */; };
-		B48C590C1FFE74F400C6E0E4 /* HotAuthorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */; };
-		B48C590E1FFE771500C6E0E4 /* HotAuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */; };
+		B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */; };
+		B48C590E1FFE771500C6E0E4 /* HotAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C590D1FFE771500C6E0E4 /* HotAuthorViewController.swift */; };
 		B4C1FCDF2012E53100D73FEC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */; };
 		B4C1FCE12012E55F00D73FEC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C1FCE02012E55F00D73FEC /* Profile.storyboard */; };
 		B4E238D121DA003900B9E4E3 /* FeedCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E238D021DA003900B9E4E3 /* FeedCellViewController.swift */; };
@@ -106,8 +106,8 @@
 		B4708965200755AB00443FAA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorCell.xib; sourceTree = "<group>"; };
 		B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCell.swift; sourceTree = "<group>"; };
-		B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthorView.xib; sourceTree = "<group>"; };
-		B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotAuthorView.swift; sourceTree = "<group>"; };
+		B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthorViewController.xib; sourceTree = "<group>"; };
+		B48C590D1FFE771500C6E0E4 /* HotAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotAuthorViewController.swift; sourceTree = "<group>"; };
 		B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B4C1FCE02012E55F00D73FEC /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B4E238D021DA003900B9E4E3 /* FeedCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewController.swift; sourceTree = "<group>"; };
@@ -202,8 +202,8 @@
 		B43FC5912003704A00344483 /* HotAuthorView */ = {
 			isa = PBXGroup;
 			children = (
-				B48C590B1FFE74F400C6E0E4 /* HotAuthorView.xib */,
-				B48C590D1FFE771500C6E0E4 /* HotAuthorView.swift */,
+				B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */,
+				B48C590D1FFE771500C6E0E4 /* HotAuthorViewController.swift */,
 			);
 			path = HotAuthorView;
 			sourceTree = "<group>";
@@ -517,7 +517,7 @@
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
 				B4C1FCE12012E55F00D73FEC /* Profile.storyboard in Resources */,
 				B464A0742008E8B000DAB1D0 /* SearchCell.xib in Resources */,
-				B48C590C1FFE74F400C6E0E4 /* HotAuthorView.xib in Resources */,
+				B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */,
 				B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */,
 				B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */,
 				B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */,
@@ -586,7 +586,7 @@
 				B4E238D121DA003900B9E4E3 /* FeedCellViewController.swift in Sources */,
 				202F39DBD504021624EBE12F /* UILabel+Extension.swift in Sources */,
 				B449CDF7201614550085F3F5 /* FollowerCell.swift in Sources */,
-				B48C590E1FFE771500C6E0E4 /* HotAuthorView.swift in Sources */,
+				B48C590E1FFE771500C6E0E4 /* HotAuthorViewController.swift in Sources */,
 				202F31EAD5D8124BAC4E03C7 /* CustomNavigationViewController.swift in Sources */,
 				202F338408780D975FB6A477 /* SearchViewModel.swift in Sources */,
 				202F35DC6076B995E86BD331 /* UIScrollView+Rx.swift in Sources */,

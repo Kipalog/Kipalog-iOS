@@ -41,11 +41,7 @@ class FeedViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         CollectionViewCell<FeedCellViewController, FeedViewController>.register(to: collectionView)
-        collectionView.register(
-            UINib(nibName: HotAuthorView.identifier, bundle: nil),
-            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-            withReuseIdentifier: HotAuthorView.identifier
-        )
+        CollectionReusableView<HotAuthorViewController, FeedViewController>.register(to: collectionView, for: .header)
 
         collectionView.backgroundColor = UIColor.white
         navigationItem.title = "Kipalog"
@@ -97,24 +93,16 @@ extension FeedViewController {
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let post = posts[indexPath.row]
-            let cell = CollectionViewCell<FeedCellViewController, FeedViewController>.deque(from: collectionView, for: indexPath, parent: parent)
+            let cell = CollectionViewCell<FeedCellViewController, FeedViewController>.dequeue(from: collectionView, for: indexPath, parent: parent)
             cell.content?.post = post
             return cell
         }
 
         func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-            guard indexPath.section == 0,
-                  kind == UICollectionView.elementKindSectionHeader,
-                  let hotAuthorHeader = collectionView.dequeueReusableSupplementaryView(
-                      ofKind: UICollectionView.elementKindSectionHeader,
-                      withReuseIdentifier: HotAuthorView.identifier,
-                      for: indexPath
-                  ) as? HotAuthorView
-            else {
+            guard indexPath.section == 0 else {
                 return UICollectionReusableView()
             }
-
-            return hotAuthorHeader
+            return CollectionReusableView<HotAuthorViewController, FeedViewController>.dequeue(from: collectionView, of: .header, for: indexPath, parent: parent)
         }
     }
 }

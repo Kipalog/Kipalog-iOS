@@ -51,8 +51,42 @@ class CollectionViewCell<C: UIViewController, P: UIViewController>: UICollection
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
 
-    static func deque(from collectionView: UICollectionView, for indexPath: IndexPath, parent: P?) -> CollectionViewCell {
+    static func dequeue(from collectionView: UICollectionView, for indexPath: IndexPath, parent: P?) -> CollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
+        cell.embed(content: C.make(), parent: parent!)
+        return cell
+    }
+}
+
+enum CollectionViewSupplementaryKind {
+    case header
+    case footer
+
+    var rawValue: String {
+        switch self {
+        case .header: return UICollectionView.elementKindSectionHeader
+        case .footer: return UICollectionView.elementKindSectionFooter
+        }
+    }
+}
+
+class CollectionReusableView<C: UIViewController, P: UIViewController>: UICollectionReusableView, UIComponent {
+    var content: C?
+    var parent: P?
+    var contentView: UIView {
+        return self
+    }
+
+    static var reuseIdentifier: String {
+        return C.className
+    }
+
+    static func register(to collectionView: UICollectionView, for kind: CollectionViewSupplementaryKind) {
+        collectionView.register(CollectionReusableView.self, forSupplementaryViewOfKind: kind.rawValue, withReuseIdentifier: reuseIdentifier)
+    }
+
+    static func dequeue(from collectionView: UICollectionView, of kind: CollectionViewSupplementaryKind, for indexPath: IndexPath, parent: P?) -> CollectionReusableView {
+        let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind.rawValue, withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionReusableView
         cell.embed(content: C.make(), parent: parent!)
         return cell
     }

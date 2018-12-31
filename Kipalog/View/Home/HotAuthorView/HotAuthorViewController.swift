@@ -1,5 +1,5 @@
 //
-//  HotAuthorView.swift
+//  HotAuthorViewController.swift
 //  Kipalog
 //
 //  Created by DTVD on 2018/01/04.
@@ -10,18 +10,17 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HotAuthorView: UICollectionReusableView, UICollectionViewDelegate {
-    static let identifier = "HotAuthorView"
+class HotAuthorViewController: UIViewController, UICollectionViewDelegate {
+    static let identifier = "HotAuthorViewController"
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var sectionIcon: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
         collectionView.register(
             UINib(nibName: AuthorCell.identifier, bundle: nil),
             forCellWithReuseIdentifier: AuthorCell.identifier
@@ -92,7 +91,7 @@ class HotAuthorView: UICollectionReusableView, UICollectionViewDelegate {
     }
 }
 
-extension HotAuthorView {
+extension HotAuthorViewController {
     final private class DataSource: NSObject, RxCollectionViewDataSourceType, UICollectionViewDataSource {
         typealias Element = [User]
 
@@ -122,7 +121,7 @@ extension HotAuthorView {
     }
 }
 
-extension HotAuthorView: UICollectionViewDelegateFlowLayout {
+extension HotAuthorViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 70, height: 80)
     }
