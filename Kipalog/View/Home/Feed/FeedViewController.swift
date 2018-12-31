@@ -97,7 +97,7 @@ extension FeedViewController {
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let post = posts[indexPath.row]
-            let cell = CollectionViewCell<FeedCellViewController, FeedViewController>.deque(from: collectionView, for: indexPath, parent: parent!)
+            let cell = CollectionViewCell<FeedCellViewController, FeedViewController>.deque(from: collectionView, for: indexPath, parent: parent)
             cell.content?.post = post
             return cell
         }

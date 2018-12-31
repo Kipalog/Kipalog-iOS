@@ -10,14 +10,14 @@ import UIKit
 
 protocol XibViewController {
     static var className: String { get }
-    static func bootstrap() -> UIViewController
+    static func make() -> Self
 }
 
 extension XibViewController where Self: UIViewController {
     static var className: String {
         return String(describing: self).components(separatedBy: ".").last!
     }
-    static func bootstrap() -> UIViewController{
+    static func make() -> Self {
         return self.init(nibName: Self.className, bundle: nil)
     }
 }
