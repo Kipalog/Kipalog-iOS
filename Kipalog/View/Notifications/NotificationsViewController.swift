@@ -23,11 +23,9 @@ class NotificationsViewController: UICollectionViewController, TabConvertible {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(
-            UINib(nibName: NotificationCell.identifier, bundle: nil),
-            forCellWithReuseIdentifier: NotificationCell.identifier
-        )
         collectionView.backgroundColor = UIColor.white
+        CollectionViewCell<NotificationCellViewController, NotificationsViewController>.register(to: collectionView)
+        dataSource.set(parent: self)
         navigationItem.title = "Thông báo"
         setupLayout()
         binding()
@@ -62,6 +60,11 @@ extension NotificationsViewController {
         typealias Element = NotificationViewModel.DataSource
 
         private(set) var notifications: [Notification] = []
+        private weak var parent: NotificationsViewController?
+
+        fileprivate func set(parent: NotificationsViewController) {
+            self.parent = parent
+        }
 
         func collectionView(_ collectionView: UICollectionView, observedEvent: Event<Element>) {
             if case .next(let element) = observedEvent {
@@ -80,8 +83,8 @@ extension NotificationsViewController {
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let notification = notifications[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NotificationCell.identifier, for: indexPath) as! NotificationCell
-            cell.notification = notification
+            let cell = CollectionViewCell<NotificationCellViewController, NotificationsViewController>.dequeue(from: collectionView, for: indexPath, parent: parent)
+            cell.content?.notification = notification
             return cell
         }
     }

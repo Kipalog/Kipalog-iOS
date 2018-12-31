@@ -32,8 +32,8 @@
 		B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */; };
 		B464A0732008E8B000DAB1D0 /* SearchCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */; };
 		B464A0742008E8B000DAB1D0 /* SearchCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */; };
-		B464A0772009F49900DAB1D0 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0752009F49900DAB1D0 /* NotificationCell.swift */; };
-		B464A0782009F49900DAB1D0 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0762009F49900DAB1D0 /* NotificationCell.xib */; };
+		B464A0772009F49900DAB1D0 /* NotificationCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */; };
+		B464A0782009F49900DAB1D0 /* NotificationCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0762009F49900DAB1D0 /* NotificationCellViewController.xib */; };
 		B47089642007559A00443FAA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47089632007559A00443FAA /* Home.storyboard */; };
 		B4708966200755AB00443FAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4708965200755AB00443FAA /* HomeViewController.swift */; };
 		B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C59071FFE729F00C6E0E4 /* AuthorCellViewController.xib */; };
@@ -100,8 +100,8 @@
 		B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VNF-ProximaNovaCond-Regular.ttf"; sourceTree = "<group>"; };
 		B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewController.swift; sourceTree = "<group>"; };
 		B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCellViewController.xib; sourceTree = "<group>"; };
-		B464A0752009F49900DAB1D0 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
-		B464A0762009F49900DAB1D0 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
+		B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewController.swift; sourceTree = "<group>"; };
+		B464A0762009F49900DAB1D0 /* NotificationCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCellViewController.xib; sourceTree = "<group>"; };
 		B47089632007559A00443FAA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B4708965200755AB00443FAA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B48C59071FFE729F00C6E0E4 /* AuthorCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorCellViewController.xib; sourceTree = "<group>"; };
@@ -166,8 +166,8 @@
 		202F3668E79CE4C9B95CDB19 /* NotificationCell */ = {
 			isa = PBXGroup;
 			children = (
-				B464A0752009F49900DAB1D0 /* NotificationCell.swift */,
-				B464A0762009F49900DAB1D0 /* NotificationCell.xib */,
+				B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */,
+				B464A0762009F49900DAB1D0 /* NotificationCellViewController.xib */,
 			);
 			path = NotificationCell;
 			sourceTree = "<group>";
@@ -508,7 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B464A0782009F49900DAB1D0 /* NotificationCell.xib in Resources */,
+				B464A0782009F49900DAB1D0 /* NotificationCellViewController.xib in Resources */,
 				B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */,
 				B47089642007559A00443FAA /* Home.storyboard in Resources */,
 				B449CDF8201614550085F3F5 /* FollowerCell.xib in Resources */,
@@ -582,7 +582,7 @@
 				202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */,
 				B4C1FCDF2012E53100D73FEC /* ProfileViewController.swift in Sources */,
 				202F3D836B47508A17CA28DD /* PostMeta.swift in Sources */,
-				B464A0772009F49900DAB1D0 /* NotificationCell.swift in Sources */,
+				B464A0772009F49900DAB1D0 /* NotificationCellViewController.swift in Sources */,
 				B4E238D121DA003900B9E4E3 /* FeedCellViewController.swift in Sources */,
 				202F39DBD504021624EBE12F /* UILabel+Extension.swift in Sources */,
 				B449CDF7201614550085F3F5 /* FollowerCell.swift in Sources */,

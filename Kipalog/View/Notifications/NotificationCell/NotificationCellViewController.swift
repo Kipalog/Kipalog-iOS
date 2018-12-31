@@ -1,5 +1,5 @@
 //
-//  NotificationCell.swift
+//  NotificationCellViewController.swift
 //  Kipalog
 //
 //  Created by DTVD on 2018/01/13.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationCell: UICollectionViewCell {
+class NotificationCellViewController: UIViewController {
 
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!
@@ -18,9 +18,9 @@ class NotificationCell: UICollectionViewCell {
     
     static let identifier = "NotificationCell"
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.translatesAutoresizingMaskIntoConstraints = false
         let screenWidth = UIScreen.main.bounds.size.width
         containerWidthConstraint.constant = screenWidth
     }
