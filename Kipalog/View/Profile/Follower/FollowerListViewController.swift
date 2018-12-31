@@ -22,10 +22,9 @@ class FollowerListViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(
-            UINib(nibName: FollowerCell.identifier, bundle: nil),
-            forCellWithReuseIdentifier: FollowerCell.identifier)
         collectionView.backgroundColor = UIColor.white
+        CollectionViewCell<FollowerCellViewController, FollowerListViewController>.register(to: collectionView)
+        dataSource.set(parent: self)
         setupLayout()
         binding()
     }
@@ -51,6 +50,11 @@ extension FollowerListViewController {
         typealias Element = FollowerListViewModel.DataSource
 
         private(set) var users: [User] = []
+        private weak var parent: FollowerListViewController?
+
+        fileprivate func set(parent: FollowerListViewController) {
+            self.parent = parent
+        }
 
         func collectionView(_ collectionView: UICollectionView, observedEvent: Event<Element>) {
             if case .next(let element) = observedEvent {
@@ -69,8 +73,8 @@ extension FollowerListViewController {
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let user = users[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.identifier, for: indexPath) as! FollowerCell
-            cell.user = user
+            let cell = CollectionViewCell<FollowerCellViewController, FollowerListViewController>.dequeue(from: collectionView, for: indexPath, parent: parent)
+            cell.content?.user = user
             return cell
         }
     }

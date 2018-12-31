@@ -26,8 +26,8 @@
 		202F3FA362509F1E286C7C3F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AD3196A52B89B0D5F1D /* User.swift */; };
 		202F3FDBE6D12C3A9C4B70B2 /* FollowerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F30709E7146024B6046CE /* FollowerListViewModel.swift */; };
 		B449CDF320160E880085F3F5 /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449CDF220160E880085F3F5 /* FollowerListViewController.swift */; };
-		B449CDF7201614550085F3F5 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449CDF5201614550085F3F5 /* FollowerCell.swift */; };
-		B449CDF8201614550085F3F5 /* FollowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B449CDF6201614550085F3F5 /* FollowerCell.xib */; };
+		B449CDF7201614550085F3F5 /* FollowerCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449CDF5201614550085F3F5 /* FollowerCellViewController.swift */; };
+		B449CDF8201614550085F3F5 /* FollowerCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B449CDF6201614550085F3F5 /* FollowerCellViewController.xib */; };
 		B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */; };
 		B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */; };
 		B464A0732008E8B000DAB1D0 /* SearchCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */; };
@@ -94,8 +94,8 @@
 		202F3F2CE8D0903AD4184C5B /* PostMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostMeta.swift; sourceTree = "<group>"; };
 		202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		B449CDF220160E880085F3F5 /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
-		B449CDF5201614550085F3F5 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
-		B449CDF6201614550085F3F5 /* FollowerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCell.xib; sourceTree = "<group>"; };
+		B449CDF5201614550085F3F5 /* FollowerCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCellViewController.swift; sourceTree = "<group>"; };
+		B449CDF6201614550085F3F5 /* FollowerCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCellViewController.xib; sourceTree = "<group>"; };
 		B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VNF-ProximaNovaCond-Regular.ttf"; sourceTree = "<group>"; };
 		B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewController.swift; sourceTree = "<group>"; };
@@ -211,8 +211,8 @@
 		B449CDF42016135A0085F3F5 /* FollowerCell */ = {
 			isa = PBXGroup;
 			children = (
-				B449CDF5201614550085F3F5 /* FollowerCell.swift */,
-				B449CDF6201614550085F3F5 /* FollowerCell.xib */,
+				B449CDF5201614550085F3F5 /* FollowerCellViewController.swift */,
+				B449CDF6201614550085F3F5 /* FollowerCellViewController.xib */,
 			);
 			path = FollowerCell;
 			sourceTree = "<group>";
@@ -511,7 +511,7 @@
 				B464A0782009F49900DAB1D0 /* NotificationCellViewController.xib in Resources */,
 				B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */,
 				B47089642007559A00443FAA /* Home.storyboard in Resources */,
-				B449CDF8201614550085F3F5 /* FollowerCell.xib in Resources */,
+				B449CDF8201614550085F3F5 /* FollowerCellViewController.xib in Resources */,
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B4E930481FF0E7540021A41D /* FeedCellViewController.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
@@ -585,7 +585,7 @@
 				B464A0772009F49900DAB1D0 /* NotificationCellViewController.swift in Sources */,
 				B4E238D121DA003900B9E4E3 /* FeedCellViewController.swift in Sources */,
 				202F39DBD504021624EBE12F /* UILabel+Extension.swift in Sources */,
-				B449CDF7201614550085F3F5 /* FollowerCell.swift in Sources */,
+				B449CDF7201614550085F3F5 /* FollowerCellViewController.swift in Sources */,
 				B48C590E1FFE771500C6E0E4 /* HotAuthorViewController.swift in Sources */,
 				202F31EAD5D8124BAC4E03C7 /* CustomNavigationViewController.swift in Sources */,
 				202F338408780D975FB6A477 /* SearchViewModel.swift in Sources */,
