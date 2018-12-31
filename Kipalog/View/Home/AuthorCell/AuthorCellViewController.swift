@@ -1,5 +1,5 @@
 //
-//  AuthorCell.swift
+//  AuthorCellViewController.swift
 //  Kipalog
 //
 //  Created by DTVD on 2018/01/04.
@@ -8,16 +8,14 @@
 
 import UIKit
 
-class AuthorCell: UICollectionViewCell {
+class AuthorCellViewController: UIViewController {
     
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var name: UILabel!
 
-    static let identifier = "AuthorCell"
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.translatesAutoresizingMaskIntoConstraints = false
     }
 
     var author: User? {

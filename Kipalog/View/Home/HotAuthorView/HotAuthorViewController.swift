@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 
 class HotAuthorViewController: UIViewController, UICollectionViewDelegate {
-    static let identifier = "HotAuthorViewController"
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
 
@@ -21,12 +20,10 @@ class HotAuthorViewController: UIViewController, UICollectionViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.register(
-            UINib(nibName: AuthorCell.identifier, bundle: nil),
-            forCellWithReuseIdentifier: AuthorCell.identifier
-        )
+        CollectionViewCell<AuthorCellViewController, HotAuthorViewController>.register(to: collectionView)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
+        dataSource.set(parent: self)
         setupLayout()
         binding()
     }
@@ -96,6 +93,11 @@ extension HotAuthorViewController {
         typealias Element = [User]
 
         private(set) var authors: [User] = []
+        private weak var parent: HotAuthorViewController?
+
+        fileprivate func set(parent: HotAuthorViewController) {
+            self.parent = parent
+        }
 
         func collectionView(_ collectionView: UICollectionView, observedEvent: Event<Element>) {
             if case .next(let element) = observedEvent {
@@ -113,8 +115,8 @@ extension HotAuthorViewController {
         }
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AuthorCell.identifier, for: indexPath) as! AuthorCell
-            cell.author = authors[indexPath.row]
+            let cell = CollectionViewCell<AuthorCellViewController, HotAuthorViewController>.dequeue(from: collectionView, for: indexPath, parent: parent)
+            cell.content?.author = authors[indexPath.row]
             return cell
         }
 

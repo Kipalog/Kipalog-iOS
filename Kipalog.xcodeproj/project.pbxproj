@@ -36,8 +36,8 @@
 		B464A0782009F49900DAB1D0 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0762009F49900DAB1D0 /* NotificationCell.xib */; };
 		B47089642007559A00443FAA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47089632007559A00443FAA /* Home.storyboard */; };
 		B4708966200755AB00443FAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4708965200755AB00443FAA /* HomeViewController.swift */; };
-		B48C59081FFE729F00C6E0E4 /* AuthorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */; };
-		B48C590A1FFE72EF00C6E0E4 /* AuthorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */; };
+		B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C59071FFE729F00C6E0E4 /* AuthorCellViewController.xib */; };
+		B48C590A1FFE72EF00C6E0E4 /* AuthorCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59091FFE72EF00C6E0E4 /* AuthorCellViewController.swift */; };
 		B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */; };
 		B48C590E1FFE771500C6E0E4 /* HotAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C590D1FFE771500C6E0E4 /* HotAuthorViewController.swift */; };
 		B4C1FCDF2012E53100D73FEC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */; };
@@ -104,8 +104,8 @@
 		B464A0762009F49900DAB1D0 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		B47089632007559A00443FAA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B4708965200755AB00443FAA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorCell.xib; sourceTree = "<group>"; };
-		B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCell.swift; sourceTree = "<group>"; };
+		B48C59071FFE729F00C6E0E4 /* AuthorCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorCellViewController.xib; sourceTree = "<group>"; };
+		B48C59091FFE72EF00C6E0E4 /* AuthorCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCellViewController.swift; sourceTree = "<group>"; };
 		B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthorViewController.xib; sourceTree = "<group>"; };
 		B48C590D1FFE771500C6E0E4 /* HotAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotAuthorViewController.swift; sourceTree = "<group>"; };
 		B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -193,8 +193,8 @@
 		B43FC5902003703E00344483 /* AuthorCell */ = {
 			isa = PBXGroup;
 			children = (
-				B48C59071FFE729F00C6E0E4 /* AuthorCell.xib */,
-				B48C59091FFE72EF00C6E0E4 /* AuthorCell.swift */,
+				B48C59071FFE729F00C6E0E4 /* AuthorCellViewController.xib */,
+				B48C59091FFE72EF00C6E0E4 /* AuthorCellViewController.swift */,
 			);
 			path = AuthorCell;
 			sourceTree = "<group>";
@@ -509,7 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B464A0782009F49900DAB1D0 /* NotificationCell.xib in Resources */,
-				B48C59081FFE729F00C6E0E4 /* AuthorCell.xib in Resources */,
+				B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */,
 				B47089642007559A00443FAA /* Home.storyboard in Resources */,
 				B449CDF8201614550085F3F5 /* FollowerCell.xib in Resources */,
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
@@ -568,7 +568,7 @@
 				B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */,
 				B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */,
 				B4E930381FECFC9D0021A41D /* NotificationsViewController.swift in Sources */,
-				B48C590A1FFE72EF00C6E0E4 /* AuthorCell.swift in Sources */,
+				B48C590A1FFE72EF00C6E0E4 /* AuthorCellViewController.swift in Sources */,
 				B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */,
 				B4708966200755AB00443FAA /* HomeViewController.swift in Sources */,
 				B464A0732008E8B000DAB1D0 /* SearchCell.swift in Sources */,
