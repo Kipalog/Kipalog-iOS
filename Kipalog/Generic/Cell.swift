@@ -52,7 +52,9 @@ class CollectionViewCell<C: UIViewController, P: UIViewController>: UICollection
 
     static func dequeue(from collectionView: UICollectionView, for indexPath: IndexPath, parent: P?) -> CollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
-        cell.embed(content: C.make(), parent: parent!)
+        if cell.content == nil {
+            cell.embed(content: C.make(), parent: parent!)
+        }
         return cell
     }
 }
@@ -86,7 +88,9 @@ class CollectionReusableView<C: UIViewController, P: UIViewController>: UICollec
 
     static func dequeue(from collectionView: UICollectionView, of kind: CollectionViewSupplementaryKind, for indexPath: IndexPath, parent: P?) -> CollectionReusableView {
         let cell = collectionView.dequeueReusableSupplementaryView(ofKind: kind.rawValue, withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionReusableView
-        cell.embed(content: C.make(), parent: parent!)
+        if cell.content == nil {
+            cell.embed(content: C.make(), parent: parent!)
+        }
         return cell
     }
 }
