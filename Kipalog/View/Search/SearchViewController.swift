@@ -26,10 +26,8 @@ class SearchViewController: UICollectionViewController, TabConvertible {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = UIColor.white
-        collectionView.register(
-            UINib(nibName: SearchCell.identifier, bundle: nil),
-            forCellWithReuseIdentifier: SearchCell.identifier
-        )
+        CollectionViewCell<SearchCellViewController, SearchViewController>.register(to: collectionView)
+        dataSource.set(parent: self)
         navigationItem.title = "Tìm kiếm"
         setupSearchBar()
         setupLayout()
@@ -88,6 +86,11 @@ extension SearchViewController{
         typealias Element = SearchViewModel.DataSource
 
         private(set) var posts: [Post] = []
+        private weak var parent: SearchViewController?
+
+        fileprivate func set(parent: SearchViewController) {
+            self.parent = parent
+        }
 
         func collectionView(_ collectionView: UICollectionView, observedEvent: Event<Element>) {
             if case .next(let element) = observedEvent {
@@ -106,8 +109,8 @@ extension SearchViewController{
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let post = posts[indexPath.row]
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCell.identifier, for: indexPath) as! SearchCell
-            cell.post = post
+            let cell = CollectionViewCell<SearchCellViewController, SearchViewController>.dequeue(from: collectionView, for: indexPath, parent: parent)
+            cell.content?.post = post
             return cell
         }
     }

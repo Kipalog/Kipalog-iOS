@@ -8,28 +8,26 @@
 
 import UIKit
 
-class SearchCell: UICollectionViewCell {
+class SearchCellViewController: UIViewController {
 
     @IBOutlet weak var avatar: UIImageView!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var postTitle: UILabel!
     @IBOutlet weak var detail: UILabel!
     @IBOutlet weak var kipalogCount: UILabel!
     @IBOutlet weak var commentCount: UILabel!
     @IBOutlet weak var containerWidthConstraint: NSLayoutConstraint!
 
-    static let identifier = "SearchCell"
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.translatesAutoresizingMaskIntoConstraints = false
         let screenWidth = UIScreen.main.bounds.size.width
         containerWidthConstraint.constant = screenWidth
     }
 
     var post: Post? {
         didSet {
-            title.text = post?.title
-            title.setLineSpacing(1)
+            postTitle.text = post?.title
+            postTitle.setLineSpacing(1)
 
             detail.text = post?.detail
             detail.setLineSpacing(3)

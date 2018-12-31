@@ -30,8 +30,8 @@
 		B449CDF8201614550085F3F5 /* FollowerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B449CDF6201614550085F3F5 /* FollowerCell.xib */; };
 		B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */; };
 		B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */; };
-		B464A0732008E8B000DAB1D0 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0712008E8B000DAB1D0 /* SearchCell.swift */; };
-		B464A0742008E8B000DAB1D0 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0722008E8B000DAB1D0 /* SearchCell.xib */; };
+		B464A0732008E8B000DAB1D0 /* SearchCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */; };
+		B464A0742008E8B000DAB1D0 /* SearchCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */; };
 		B464A0772009F49900DAB1D0 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0752009F49900DAB1D0 /* NotificationCell.swift */; };
 		B464A0782009F49900DAB1D0 /* NotificationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0762009F49900DAB1D0 /* NotificationCell.xib */; };
 		B47089642007559A00443FAA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47089632007559A00443FAA /* Home.storyboard */; };
@@ -98,8 +98,8 @@
 		B449CDF6201614550085F3F5 /* FollowerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCell.xib; sourceTree = "<group>"; };
 		B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VNF-ProximaNovaCond-Regular.ttf"; sourceTree = "<group>"; };
-		B464A0712008E8B000DAB1D0 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		B464A0722008E8B000DAB1D0 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewController.swift; sourceTree = "<group>"; };
+		B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCellViewController.xib; sourceTree = "<group>"; };
 		B464A0752009F49900DAB1D0 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		B464A0762009F49900DAB1D0 /* NotificationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCell.xib; sourceTree = "<group>"; };
 		B47089632007559A00443FAA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -238,8 +238,8 @@
 		B47089672008C37000443FAA /* SearchCell */ = {
 			isa = PBXGroup;
 			children = (
-				B464A0712008E8B000DAB1D0 /* SearchCell.swift */,
-				B464A0722008E8B000DAB1D0 /* SearchCell.xib */,
+				B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */,
+				B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */,
 			);
 			path = SearchCell;
 			sourceTree = "<group>";
@@ -516,7 +516,7 @@
 				B4E930481FF0E7540021A41D /* FeedCellViewController.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
 				B4C1FCE12012E55F00D73FEC /* Profile.storyboard in Resources */,
-				B464A0742008E8B000DAB1D0 /* SearchCell.xib in Resources */,
+				B464A0742008E8B000DAB1D0 /* SearchCellViewController.xib in Resources */,
 				B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */,
 				B4E92FF51FEBDDE30021A41D /* Main.storyboard in Resources */,
 				B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */,
@@ -571,7 +571,7 @@
 				B48C590A1FFE72EF00C6E0E4 /* AuthorCellViewController.swift in Sources */,
 				B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */,
 				B4708966200755AB00443FAA /* HomeViewController.swift in Sources */,
-				B464A0732008E8B000DAB1D0 /* SearchCell.swift in Sources */,
+				B464A0732008E8B000DAB1D0 /* SearchCellViewController.swift in Sources */,
 				202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */,
 				202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */,
 				202F3B0A81604DD63D8D87C4 /* UIColor+Extension.swift in Sources */,
