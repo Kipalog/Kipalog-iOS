@@ -34,13 +34,13 @@
 		B464A0742008E8B000DAB1D0 /* SearchCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */; };
 		B464A0772009F49900DAB1D0 /* NotificationCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */; };
 		B464A0782009F49900DAB1D0 /* NotificationCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0762009F49900DAB1D0 /* NotificationCellViewController.xib */; };
-		B47089642007559A00443FAA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47089632007559A00443FAA /* Home.storyboard */; };
 		B4708966200755AB00443FAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4708965200755AB00443FAA /* HomeViewController.swift */; };
 		B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C59071FFE729F00C6E0E4 /* AuthorCellViewController.xib */; };
 		B48C590A1FFE72EF00C6E0E4 /* AuthorCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59091FFE72EF00C6E0E4 /* AuthorCellViewController.swift */; };
 		B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */; };
 		B48C590E1FFE771500C6E0E4 /* HotAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C590D1FFE771500C6E0E4 /* HotAuthorViewController.swift */; };
 		B495B6B021DA5AAE00AF4ECB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B495B6AF21DA5AAE00AF4ECB /* ProfileViewController.xib */; };
+		B495B6B221DA655A00AF4ECB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B495B6B121DA655A00AF4ECB /* HomeViewController.xib */; };
 		B4C1FCDF2012E53100D73FEC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */; };
 		B4E238D121DA003900B9E4E3 /* FeedCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E238D021DA003900B9E4E3 /* FeedCellViewController.swift */; };
 		B4E92FF01FEBDDE30021A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */; };
@@ -102,13 +102,13 @@
 		B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCellViewController.xib; sourceTree = "<group>"; };
 		B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewController.swift; sourceTree = "<group>"; };
 		B464A0762009F49900DAB1D0 /* NotificationCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCellViewController.xib; sourceTree = "<group>"; };
-		B47089632007559A00443FAA /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		B4708965200755AB00443FAA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B48C59071FFE729F00C6E0E4 /* AuthorCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorCellViewController.xib; sourceTree = "<group>"; };
 		B48C59091FFE72EF00C6E0E4 /* AuthorCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCellViewController.swift; sourceTree = "<group>"; };
 		B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthorViewController.xib; sourceTree = "<group>"; };
 		B48C590D1FFE771500C6E0E4 /* HotAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotAuthorViewController.swift; sourceTree = "<group>"; };
 		B495B6AF21DA5AAE00AF4ECB /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		B495B6B121DA655A00AF4ECB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		B4C1FCDE2012E53100D73FEC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B4E238D021DA003900B9E4E3 /* FeedCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewController.swift; sourceTree = "<group>"; };
 		B4E92FEC1FEBDDE30021A41D /* Kipalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kipalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -376,8 +376,8 @@
 				B43FC5912003704A00344483 /* HotAuthorView */,
 				B43FC5902003703E00344483 /* AuthorCell */,
 				B43FC58F2003703300344483 /* FeedCell */,
-				B47089632007559A00443FAA /* Home.storyboard */,
 				B4708965200755AB00443FAA /* HomeViewController.swift */,
+				B495B6B121DA655A00AF4ECB /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -511,8 +511,8 @@
 				B495B6B021DA5AAE00AF4ECB /* ProfileViewController.xib in Resources */,
 				B464A0782009F49900DAB1D0 /* NotificationCellViewController.xib in Resources */,
 				B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */,
-				B47089642007559A00443FAA /* Home.storyboard in Resources */,
 				B449CDF8201614550085F3F5 /* FollowerCellViewController.xib in Resources */,
+				B495B6B221DA655A00AF4ECB /* HomeViewController.xib in Resources */,
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B4E930481FF0E7540021A41D /* FeedCellViewController.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
