@@ -8,7 +8,6 @@
 
 import UIKit
 
-// For CollectionViewCell only
 protocol UIComponent: class {
     associatedtype Content: UIViewController
     associatedtype Parent: UIViewController
