@@ -70,6 +70,7 @@ extension NotificationsViewController {
             if case .next(let element) = observedEvent {
                 notifications = element.notifications
                 collectionView.reloadData()
+                collectionView.collectionViewLayout.invalidateLayout()
             }
         }
 

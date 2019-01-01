@@ -21,6 +21,7 @@ class SearchViewController: UICollectionViewController, TabConvertible {
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
     private var viewModel: SearchViewModel!
+    private var searchController: UISearchController!
     private let searchInput = PublishRelay<String?>()
 
     override func viewDidLoad() {
@@ -41,22 +42,26 @@ class SearchViewController: UICollectionViewController, TabConvertible {
             layout.minimumLineSpacing = 0.0
         }
     }
+
     private func setupSearchBar() {
-        let searchController = UISearchController(searchResultsController: nil)
+        searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Nhập từ khoá"
         searchController.searchBar.barStyle = .black
         searchController.searchBar.tintColor = UIColor.white
         searchController.hidesNavigationBarDuringPresentation = false
+        definesPresentationContext = true
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
             navigationItem.hidesSearchBarWhenScrolling = false
         } else {
             navigationItem.titleView = searchController.searchBar
-            present(searchController, animated: true, completion: nil)
         }
-        definesPresentationContext = true
     }
 
     private func binding() {

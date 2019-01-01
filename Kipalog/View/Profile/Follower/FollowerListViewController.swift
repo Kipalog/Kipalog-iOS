@@ -60,6 +60,7 @@ extension FollowerListViewController {
             if case .next(let element) = observedEvent {
                 users = element.users
                 collectionView.reloadData()
+                collectionView.collectionViewLayout.invalidateLayout()
             }
         }
 

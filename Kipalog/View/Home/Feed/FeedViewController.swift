@@ -80,6 +80,7 @@ extension FeedViewController {
             if case .next(let element) = observedEvent {
                 posts = element.posts
                 collectionView.reloadData()
+                collectionView.collectionViewLayout.invalidateLayout()
             }
         }
 

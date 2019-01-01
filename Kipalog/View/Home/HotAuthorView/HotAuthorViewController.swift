@@ -103,6 +103,7 @@ extension HotAuthorViewController {
             if case .next(let element) = observedEvent {
                 authors = element
                 collectionView.reloadData()
+                collectionView.collectionViewLayout.invalidateLayout()
             }
         }
 
