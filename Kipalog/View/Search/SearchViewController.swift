@@ -48,10 +48,12 @@ class SearchViewController: UICollectionViewController, TabConvertible {
         searchController.searchBar.placeholder = "Nhập từ khoá"
         searchController.searchBar.barStyle = .black
         searchController.searchBar.tintColor = UIColor.white
+        searchController.hidesNavigationBarDuringPresentation = false
         if #available(iOS 11.0, *) {
             navigationItem.searchController = searchController
             navigationItem.hidesSearchBarWhenScrolling = false
         } else {
+            navigationItem.titleView = searchController.searchBar
             present(searchController, animated: true, completion: nil)
         }
         definesPresentationContext = true
@@ -96,6 +98,7 @@ extension SearchViewController{
             if case .next(let element) = observedEvent {
                 posts = element.posts
                 collectionView.reloadData()
+                collectionView.collectionViewLayout.invalidateLayout()
             }
         }
 
