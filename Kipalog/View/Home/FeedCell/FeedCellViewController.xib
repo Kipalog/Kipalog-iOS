@@ -36,8 +36,12 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-0n-DlI" userLabel="PostTitle">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-0n-DlI" userLabel="PostTitle">
                     <rect key="frame" x="60" y="12" width="430" height="24.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="49.5" id="Lfy-Tb-pgL"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24.5" id="nMx-j4-8Df"/>
+                    </constraints>
                     <attributedString key="attributedText">
                         <fragment content="Title">
                             <attributes>
@@ -49,8 +53,12 @@
                     </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUs-ga-Ebu" userLabel="Detail">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUs-ga-Ebu" userLabel="Detail">
                     <rect key="frame" x="60" y="41.5" width="430" height="70.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70.5" id="gbX-vy-V1u"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45.5" id="o46-v1-m13"/>
+                    </constraints>
                     <attributedString key="attributedText">
                         <fragment content="Very long detail">
                             <attributes>
@@ -69,7 +77,7 @@
                         <constraint firstAttribute="height" constant="1" id="xXr-RX-k38"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="166" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IK-N3-5Vb" userLabel="Kipalog Count">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="166" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IK-N3-5Vb" userLabel="Kipalog Count">
                     <rect key="frame" x="60" y="120" width="21" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="yZl-i6-KMd"/>
@@ -78,14 +86,14 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Log" translatesAutoresizingMaskIntoConstraints="NO" id="Lbb-66-4iX" userLabel="Kipalog Icon">
+                <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Log" translatesAutoresizingMaskIntoConstraints="NO" id="Lbb-66-4iX" userLabel="Kipalog Icon">
                     <rect key="frame" x="83" y="121.5" width="12" height="12"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="12" id="WxP-Id-Hkv"/>
                         <constraint firstAttribute="height" constant="12" id="c61-bB-fgD"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5F-0K-T8a" userLabel="Comment Count">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w5F-0K-T8a" userLabel="Comment Count">
                     <rect key="frame" x="100" y="120" width="8" height="15"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="15" id="5DZ-h3-Nlf"/>
@@ -94,7 +102,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Comment" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-B1-drZ" userLabel="Comment Icon">
+                <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Comment" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-B1-drZ" userLabel="Comment Icon">
                     <rect key="frame" x="111" y="122" width="11" height="11"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="11" id="THZ-aB-NAY"/>
@@ -102,7 +110,7 @@
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="w5F-0K-T8a" firstAttribute="centerY" secondItem="3IK-N3-5Vb" secondAttribute="centerY" id="12w-e4-E6W"/>
                 <constraint firstItem="Lbb-66-4iX" firstAttribute="centerY" secondItem="3IK-N3-5Vb" secondAttribute="centerY" id="1lu-cx-WNj"/>

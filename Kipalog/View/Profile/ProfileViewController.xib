@@ -291,6 +291,7 @@
                 <outlet property="dataSource" destination="-1" id="ZI1-RH-hf6"/>
                 <outlet property="delegate" destination="-1" id="GAo-id-rXl"/>
             </connections>
+            <point key="canvasLocation" x="41" y="-4"/>
         </tableView>
     </objects>
 </document>
