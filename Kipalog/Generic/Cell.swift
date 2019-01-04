@@ -40,7 +40,7 @@ extension UIComponent {
 
 class CollectionViewCell<C: UIViewController, P: UIViewController>: UICollectionViewCell, UIComponent {
     var content: C?
-    var parent: P?
+    weak var parent: P?
 
     static var reuseIdentifier: String {
         return C.className
@@ -73,7 +73,7 @@ enum CollectionViewSupplementaryKind {
 
 class CollectionReusableView<C: UIViewController, P: UIViewController>: UICollectionReusableView, UIComponent {
     var content: C?
-    var parent: P?
+    weak var parent: P?
     var contentView: UIView {
         return self
     }
