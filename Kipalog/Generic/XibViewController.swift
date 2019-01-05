@@ -24,3 +24,14 @@ extension XibViewController where Self: UIViewController {
 
 extension UIViewController: XibViewController {}
 
+protocol DependencyInjectable {
+    associatedtype Dependency
+    init(dependency: Dependency)
+    func inject(dependency: Dependency)
+}
+
+extension DependencyInjectable where Dependency == Void {
+    init() {
+        self.init(dependency: ())
+    }
+}
