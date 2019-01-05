@@ -16,13 +16,17 @@ protocol UIComponent: class {
     var parent: Parent? { get set }
 }
 
-extension UIComponent {
+extension UIComponent where Self: UIView {
     func embed(content: Content, parent: Parent) {
         self.content = content
         self.parent = parent
         content.view.translatesAutoresizingMaskIntoConstraints = false
 
-        parent.addChild(content)
+        if superview == nil {
+            content.willMove(toParent: parent)
+        } else {
+            parent.addChild(content)
+        }
         contentView.addSubview(content.view)
 
         NSLayoutConstraint.activate(
@@ -34,7 +38,11 @@ extension UIComponent {
             ]
         )
 
-       content.didMove(toParent: parent)
+        if superview == nil {
+            content.removeFromParent()
+        } else {
+            content.didMove(toParent: parent)
+        }
     }
 }
 
