@@ -112,17 +112,17 @@
                         <constraint firstAttribute="trailing" secondItem="9EM-yL-JL2" secondAttribute="trailing" id="zcY-Jh-yBM"/>
                     </constraints>
                 </view>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0du-8W-d4p">
-                    <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0du-8W-d4p">
+                    <rect key="frame" x="0.0" y="60" width="375" height="558"/>
                     <subviews>
                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-kA-IYf" userLabel="Top Posts Container">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="558"/>
                         </containerView>
                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qc0-xn-zwh" userLabel="New Posts Container">
-                            <rect key="frame" x="375" y="0.0" width="375" height="607"/>
+                            <rect key="frame" x="375" y="0.0" width="375" height="558"/>
                         </containerView>
                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZ3-Au-lkA" userLabel="TIL Posts Container">
-                            <rect key="frame" x="750" y="0.0" width="375" height="607"/>
+                            <rect key="frame" x="750" y="0.0" width="375" height="558"/>
                         </containerView>
                     </subviews>
                     <constraints>
@@ -150,9 +150,10 @@
                 <constraint firstItem="OcZ-7m-AoG" firstAttribute="trailing" secondItem="0du-8W-d4p" secondAttribute="trailing" id="84B-Oe-i4N"/>
                 <constraint firstItem="0du-8W-d4p" firstAttribute="top" secondItem="fpw-Yr-reg" secondAttribute="bottom" id="Ajb-F0-T6P"/>
                 <constraint firstItem="0du-8W-d4p" firstAttribute="leading" secondItem="OcZ-7m-AoG" secondAttribute="leading" id="DkZ-Qy-F6h"/>
+                <constraint firstItem="OcZ-7m-AoG" firstAttribute="bottom" secondItem="0du-8W-d4p" secondAttribute="bottom" priority="750" id="QCU-V3-e4S"/>
                 <constraint firstItem="OcZ-7m-AoG" firstAttribute="trailing" secondItem="fpw-Yr-reg" secondAttribute="trailing" id="Upj-wF-MXZ"/>
                 <constraint firstItem="OcZ-7m-AoG" firstAttribute="top" secondItem="fpw-Yr-reg" secondAttribute="top" id="aKK-qi-3Pv"/>
-                <constraint firstItem="OcZ-7m-AoG" firstAttribute="bottom" secondItem="0du-8W-d4p" secondAttribute="bottom" id="fa4-Id-48F"/>
+                <constraint firstItem="0du-8W-d4p" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="cVc-N9-5yS" secondAttribute="bottom" constant="-49" id="fa4-Id-48F"/>
                 <constraint firstItem="fpw-Yr-reg" firstAttribute="leading" secondItem="OcZ-7m-AoG" secondAttribute="leading" id="s1Q-AT-QEZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="OcZ-7m-AoG"/>
