@@ -22,12 +22,12 @@ extension UIComponent where Self: UIView {
         self.parent = parent
         content.view.translatesAutoresizingMaskIntoConstraints = false
 
+        contentView.addSubview(content.view)
         if superview == nil {
             content.willMove(toParent: parent)
         } else {
             parent.addChild(content)
         }
-        contentView.addSubview(content.view)
 
         NSLayoutConstraint.activate(
             [
