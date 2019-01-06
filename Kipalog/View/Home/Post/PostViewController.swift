@@ -16,9 +16,11 @@ class PostViewController: UIViewController, DependencyInjectable {
 
     private let disposeBag = DisposeBag()
     private let viewModel: PostViewModel
-
+    @IBOutlet weak var contentTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        contentTextView.text = viewModel.post.detail
     }
 
     required init(dependency: Post) {
