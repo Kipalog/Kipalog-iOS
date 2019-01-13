@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostViewController" customModule="Kipalog" customModuleProvider="target">
             <connections>
-                <outlet property="contentTextView" destination="fRW-P5-0Qf" id="con-ND-2Ii"/>
+                <outlet property="contentView" destination="k6B-4b-kWx" id="Aih-9E-ClB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="6R7-Kq-dI6"/>
             </connections>
         </placeholder>
@@ -21,19 +21,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRW-P5-0Qf">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6B-4b-kWx" userLabel="Content View">
                     <rect key="frame" x="5" y="35" width="365" height="583"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                    <viewLayoutGuide key="safeArea" id="xGm-Ne-lXo"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fRW-P5-0Qf" secondAttribute="bottom" priority="750" constant="49" id="GgX-tM-ozf"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fRW-P5-0Qf" secondAttribute="trailing" constant="5" id="Odh-V4-NEA"/>
-                <constraint firstItem="fRW-P5-0Qf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" priority="750" constant="15" id="dZO-sL-mrZ"/>
-                <constraint firstItem="fRW-P5-0Qf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="qBu-oY-iM6"/>
+                <constraint firstItem="k6B-4b-kWx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="4XV-QM-fVw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="k6B-4b-kWx" secondAttribute="trailing" constant="5" id="NG1-7X-EBL"/>
+                <constraint firstItem="k6B-4b-kWx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="ucq-P1-AcO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="k6B-4b-kWx" secondAttribute="bottom" constant="49" id="uxH-hS-zWX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>

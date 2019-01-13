@@ -7,25 +7,45 @@
 //
 
 import UIKit
+import WebKit
 import RxSwift
 import RxCocoa
 import Kingfisher
 
-class PostViewController: UIViewController, DependencyInjectable {
+class PostViewController: UIViewController, DependencyInjectable, WKUIDelegate {
     typealias Dependency = Post
 
     private let disposeBag = DisposeBag()
     private let viewModel: PostViewModel
-    @IBOutlet weak var contentTextView: UITextView!
-    
+    private var webView: WKWebView!
+    @IBOutlet private weak var contentView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupWebView()
+    }
+
+    private func setupWebView() {
+        webView = WKWebView(frame: contentView.frame, configuration: WKWebViewConfiguration())
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.uiDelegate = self
+        contentView.addSubview(webView)
+        NSLayoutConstraint.activate(
+            [
+                webView.topAnchor.constraint(equalTo: contentView.topAnchor),
+                webView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+                webView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+                webView.rightAnchor.constraint(equalTo: contentView.rightAnchor)
+            ]
+        )
+
+        if let url = viewModel.url {
+            webView.load(URLRequest(url: url))
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        contentTextView.attributedText = viewModel.content
-        contentTextView.linkTextAttributes = viewModel.linkTextAttributes
     }
 
     required init(dependency: Post) {
