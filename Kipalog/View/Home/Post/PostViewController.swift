@@ -26,7 +26,9 @@ class PostViewController: UIViewController, DependencyInjectable, WKUIDelegate {
     }
 
     private func setupWebView() {
-        webView = WKWebView(frame: contentView.frame, configuration: WKWebViewConfiguration())
+        let configuration = WKWebViewConfiguration()
+        configuration.selectionGranularity = .character
+        webView = WKWebView(frame: contentView.frame, configuration: configuration)
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.uiDelegate = self
         contentView.addSubview(webView)
