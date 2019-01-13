@@ -20,7 +20,12 @@ class PostViewController: UIViewController, DependencyInjectable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentTextView.text = viewModel.post.detail
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        contentTextView.attributedText = viewModel.content
+        contentTextView.linkTextAttributes = viewModel.linkTextAttributes
     }
 
     required init(dependency: Post) {
