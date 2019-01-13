@@ -21,8 +21,6 @@ class HotAuthorViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         CollectionViewCell<AuthorCellViewController, HotAuthorViewController>.register(to: collectionView)
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.showsVerticalScrollIndicator = false
         dataSource.set(parent: self)
         setupLayout()
         binding()
@@ -127,5 +125,12 @@ extension HotAuthorViewController {
 extension HotAuthorViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 70, height: 80)
+    }
+}
+
+extension HotAuthorViewController {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = ProfileViewController.make()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
