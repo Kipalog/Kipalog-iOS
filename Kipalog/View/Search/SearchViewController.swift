@@ -123,3 +123,12 @@ extension SearchViewController{
         }
     }
 }
+
+extension SearchViewController {
+    public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let post = dataSource.posts[indexPath.row]
+        let postViewController = PostViewController(dependency: post)
+        postViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(postViewController, animated: true)
+    }
+}
