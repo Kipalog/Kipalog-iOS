@@ -12,7 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostViewController" customModule="Kipalog" customModuleProvider="target">
             <connections>
+                <outlet property="authorAvatar" destination="g4H-O1-741" id="JqO-sC-gxD"/>
+                <outlet property="authorName" destination="6Pm-c9-hd8" id="rcU-yA-9vf"/>
                 <outlet property="contentView" destination="k6B-4b-kWx" id="Aih-9E-ClB"/>
+                <outlet property="titleLabel" destination="j5J-VO-gji" id="mRp-Qs-e79"/>
                 <outlet property="view" destination="iN0-l3-epB" id="6R7-Kq-dI6"/>
             </connections>
         </placeholder>
@@ -21,18 +24,76 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5J-VO-gji">
+                    <rect key="frame" x="15" y="40" width="54" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                    <color key="textColor" red="0.2470588235" green="0.63921568630000003" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHK-X4-Nyd" userLabel="Circle">
+                    <rect key="frame" x="14.5" y="79.5" width="26" height="26"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="G9f-Uj-QlK"/>
+                        <constraint firstAttribute="width" constant="26" id="W6o-YK-XDq"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="T6V-ay-Oaj"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="13"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AEW-F5-I0E" userLabel="User Info Stack View">
+                    <rect key="frame" x="15" y="80" width="80" height="25"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4H-O1-741" userLabel="Avatar">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="UVL-Pb-tN0"/>
+                                <constraint firstAttribute="height" constant="25" id="bVJ-dy-M62"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pm-c9-hd8">
+                            <rect key="frame" x="35" y="0.0" width="45" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.5450980392" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k6B-4b-kWx" userLabel="Content View">
-                    <rect key="frame" x="0.0" y="40" width="375" height="578"/>
+                    <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <viewLayoutGuide key="safeArea" id="xGm-Ne-lXo"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="j5J-VO-gji" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="3tz-NB-VLc"/>
                 <constraint firstItem="k6B-4b-kWx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4XV-QM-fVw"/>
+                <constraint firstItem="j5J-VO-gji" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="7Le-gR-YHk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="k6B-4b-kWx" secondAttribute="trailing" id="NG1-7X-EBL"/>
-                <constraint firstItem="k6B-4b-kWx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="ucq-P1-AcO"/>
+                <constraint firstItem="AEW-F5-I0E" firstAttribute="leading" secondItem="j5J-VO-gji" secondAttribute="leading" id="TVX-w6-9VQ"/>
+                <constraint firstItem="AEW-F5-I0E" firstAttribute="top" secondItem="j5J-VO-gji" secondAttribute="bottom" constant="10" id="eYj-AB-xAV"/>
+                <constraint firstItem="EHK-X4-Nyd" firstAttribute="centerY" secondItem="g4H-O1-741" secondAttribute="centerY" id="ih0-S5-0tf"/>
+                <constraint firstItem="k6B-4b-kWx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="100" id="ucq-P1-AcO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="k6B-4b-kWx" secondAttribute="bottom" constant="49" id="uxH-hS-zWX"/>
+                <constraint firstItem="EHK-X4-Nyd" firstAttribute="centerX" secondItem="g4H-O1-741" secondAttribute="centerX" id="xJP-xX-aQJ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
