@@ -19,25 +19,10 @@ class PostViewController: UIViewController, DependencyInjectable, WKUIDelegate {
     private let viewModel: PostViewModel
     private var webView: WKWebView!
     @IBOutlet private weak var contentView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var authorAvatar: UIImageView!
-    @IBOutlet weak var authorName: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupWebView()
-        setupHeader()
-    }
-
-    func setupHeader() {
-        titleLabel.text = viewModel.post.title
-        authorName.text = viewModel.post.author.name
-        if let url = viewModel.post.author.avatarUrl {
-            authorAvatar.kf.setImage(
-                with: url,
-                options: [.transition(.fade(0.25))]
-            )
-        }
     }
 
     private func setupWebView() {
