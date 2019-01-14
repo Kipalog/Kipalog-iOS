@@ -19,10 +19,17 @@ class PostViewController: UIViewController, DependencyInjectable, WKUIDelegate {
     private let viewModel: PostViewModel
     private var webView: WKWebView!
     @IBOutlet private weak var contentView: UIView!
-
+    @IBOutlet weak var buttonsContainerView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupWebView()
+        setupButtonsView()
+    }
+
+    private func setupButtonsView() {
+        let vc = ButtonsViewController(dependency: viewModel.post)
+        embed(vc, to: buttonsContainerView)
     }
 
     private func setupWebView() {
@@ -56,7 +63,7 @@ class PostViewController: UIViewController, DependencyInjectable, WKUIDelegate {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("Not implemented")
+        fatalError("init(coder:) has not been implemented")
     }
 
     func inject(dependency: Post) {

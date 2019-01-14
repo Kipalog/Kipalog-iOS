@@ -25,6 +25,7 @@
 		202F3E5A719F8098956BD8FB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3483187E43DDFBD084AF /* Notification.swift */; };
 		202F3FA362509F1E286C7C3F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AD3196A52B89B0D5F1D /* User.swift */; };
 		202F3FDBE6D12C3A9C4B70B2 /* FollowerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F30709E7146024B6046CE /* FollowerListViewModel.swift */; };
+		B43F499B21ECBE18002FDE19 /* ButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F499A21ECBE18002FDE19 /* ButtonsViewModel.swift */; };
 		B449CDF320160E880085F3F5 /* FollowerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449CDF220160E880085F3F5 /* FollowerListViewController.swift */; };
 		B449CDF7201614550085F3F5 /* FollowerCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449CDF5201614550085F3F5 /* FollowerCellViewController.swift */; };
 		B449CDF8201614550085F3F5 /* FollowerCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B449CDF6201614550085F3F5 /* FollowerCellViewController.xib */; };
@@ -64,6 +65,8 @@
 		B4E9303D1FED01C30021A41D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */; };
 		B4E930441FEFCBE40021A41D /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930431FEFCBE40021A41D /* Kingfisher.framework */; };
 		B4E930481FF0E7540021A41D /* FeedCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4E930461FF0E7540021A41D /* FeedCellViewController.xib */; };
+		B4F35F9421ECA6A900683E00 /* ButtonsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F35F9321ECA6A900683E00 /* ButtonsViewController.xib */; };
+		B4F35F9621ECA6D900683E00 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F35F9521ECA6D900683E00 /* ButtonsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,7 @@
 		202F3F042FFA016BAC7AA441 /* TabConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabConvertible.swift; sourceTree = "<group>"; };
 		202F3F2CE8D0903AD4184C5B /* PostMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostMeta.swift; sourceTree = "<group>"; };
 		202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
+		B43F499A21ECBE18002FDE19 /* ButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewModel.swift; sourceTree = "<group>"; };
 		B449CDF220160E880085F3F5 /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
 		B449CDF5201614550085F3F5 /* FollowerCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCellViewController.swift; sourceTree = "<group>"; };
 		B449CDF6201614550085F3F5 /* FollowerCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowerCellViewController.xib; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 		B4E9303C1FED01C30021A41D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		B4E930431FEFCBE40021A41D /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		B4E930461FF0E7540021A41D /* FeedCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCellViewController.xib; sourceTree = "<group>"; };
+		B4F35F9321ECA6A900683E00 /* ButtonsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsViewController.xib; sourceTree = "<group>"; };
+		B4F35F9521ECA6D900683E00 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +230,7 @@
 		B451BC4521E0F35700C8FC75 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				B4F35F9221ECA68800683E00 /* Buttons */,
 				B451BC4621E0F36F00C8FC75 /* PostViewController.xib */,
 				B451BC4821E0F37E00C8FC75 /* PostViewController.swift */,
 				B451BC4A21E0F41400C8FC75 /* PostViewModel.swift */,
@@ -436,6 +443,16 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		B4F35F9221ECA68800683E00 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B4F35F9321ECA6A900683E00 /* ButtonsViewController.xib */,
+				B4F35F9521ECA6D900683E00 /* ButtonsViewController.swift */,
+				B43F499A21ECBE18002FDE19 /* ButtonsViewModel.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -530,6 +547,7 @@
 				B495B6B221DA655A00AF4ECB /* HomeViewController.xib in Resources */,
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B4E930481FF0E7540021A41D /* FeedCellViewController.xib in Resources */,
+				B4F35F9421ECA6A900683E00 /* ButtonsViewController.xib in Resources */,
 				B4E92FF71FEBDDE30021A41D /* Assets.xcassets in Resources */,
 				B464A0742008E8B000DAB1D0 /* SearchCellViewController.xib in Resources */,
 				B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */,
@@ -590,9 +608,11 @@
 				202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */,
 				202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */,
 				202F3B0A81604DD63D8D87C4 /* UIColor+Extension.swift in Sources */,
+				B43F499B21ECBE18002FDE19 /* ButtonsViewModel.swift in Sources */,
 				B449CDF320160E880085F3F5 /* FollowerListViewController.swift in Sources */,
 				202F39B0DF308A8FD56478C9 /* Post.swift in Sources */,
 				202F3FA362509F1E286C7C3F /* User.swift in Sources */,
+				B4F35F9621ECA6D900683E00 /* ButtonsViewController.swift in Sources */,
 				202F33FA9B21E4B24F799FA7 /* PostStatus.swift in Sources */,
 				202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */,
 				B4C1FCDF2012E53100D73FEC /* ProfileViewController.swift in Sources */,
