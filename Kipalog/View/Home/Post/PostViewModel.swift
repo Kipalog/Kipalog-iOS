@@ -15,7 +15,7 @@ class PostViewModel: DependencyInjectable {
 
     var post: Post
     var url: URL? {
-        return URL(string: "https://kipalog.com/posts/Huong-dan-su-dung-Markdown-tren-Kipalog")
+        return URL(string: "http://localhost:3000/posts/NHUNG-SU-THAT-KHONG-PHAI-AI-CUNG-BIET-VE-DAM-ME/content")
     }
 
     required init(dependency: Post) {
