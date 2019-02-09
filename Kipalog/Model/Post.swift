@@ -9,9 +9,17 @@
 import Foundation
 
 struct Post: Codable {
-    let status: PostStatus
     let title: String
     let detail: String
     let author: User
-    let meta: PostMeta
+    let kipalogCount: Int
+    let commentsCount: Int
+
+    private enum CodingKeys : String, CodingKey {
+        case title
+        case detail = "content"
+        case author = "user"
+        case kipalogCount = "like_cnt"
+        case commentsCount = "cmts_cnt"
+    }
 }
