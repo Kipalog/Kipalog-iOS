@@ -76,7 +76,8 @@ class HomeViewController: UIViewController, TabConvertible {
             .distinctUntilChanged()
 
         scrolledTab
-            .emit(onNext: { [unowned self] tab in
+            .emit(onNext: { [weak self] tab in
+                guard let self = self else { return }
                 for (index, button) in self.buttons.enumerated() {
                     let isSelected = index == tab.rawValue
                     button.isSelected = isSelected
@@ -87,7 +88,8 @@ class HomeViewController: UIViewController, TabConvertible {
             .disposed(by: disposeBag)
 
         scrollProgress
-            .emit(onNext: { [unowned self] progress in
+            .emit(onNext: { [weak self] progress in
+                guard let self = self else { return }
                 self.borderViewOriginX.constant = self.generalScrollView.frame.width * progress
             })
             .disposed(by: disposeBag)
@@ -101,14 +103,23 @@ class HomeViewController: UIViewController, TabConvertible {
             .asSignal(onErrorSignalWith: .empty())
 
         tappedTab
-            .map { [unowned self] in CGFloat($0.rawValue) * self.generalScrollView.frame.width }
-            .filter { [unowned self] in self.generalScrollView.contentOffset.x != $0 }
-            .emit(onNext: { [unowned self] in self.generalScrollView.setContentOffset(CGPoint(x: $0, y: 0.0), animated: true)})
+            .flatMap { [weak self] tab -> Signal<CGFloat> in
+                guard let self = self else { return .empty() }
+                return Signal.just(CGFloat(tab.rawValue) * self.generalScrollView.frame.width)
+            }
+            .filter { [weak self] offSet in
+                guard let self = self else { return false }
+                return self.generalScrollView.contentOffset.x != offSet
+            }
+            .emit(onNext: { [weak self] in
+                self?.generalScrollView.setContentOffset(CGPoint(x: $0, y: 0.0), animated: true)
+            })
             .disposed(by: disposeBag)
 
         Signal.merge(scrolledTab, tappedTab)
             .distinctUntilChanged()
-            .emit(onNext: { [unowned self] tab in
+            .emit(onNext: { [weak self] tab in
+                guard let self = self else { return }
                 for view in self.scrollViews {
                     view.value.scrollsToTop = false
                 }
