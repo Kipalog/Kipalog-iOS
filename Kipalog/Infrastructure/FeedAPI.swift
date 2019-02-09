@@ -18,9 +18,16 @@ enum FeedTab {
 
 struct FeedAPI {
     func getFeed(for tab: FeedTab) -> Observable<[Post]> {
-        return Session.send(request: FeedRequest.HotRequest())
+        switch tab {
+        case .top:
+            return Session.send(request: FeedRequest.HotRequest())
             .map { response in
                 return response.content
             }
+        case .new:
+            return Observable.empty()
+        case .til:
+            return Observable.empty()
+        }
     }
 }

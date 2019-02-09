@@ -16,6 +16,7 @@ class FeedViewModel {
     }
 
     private(set) var dataSource: Driver<DataSource>!
+    private let api = FeedAPI()
 
     init() {
         let fixtureSource = DataSource(posts: [
@@ -85,6 +86,9 @@ class FeedViewModel {
                 commentsCount: 0
             ),
         ])
-        dataSource = Driver.just(fixtureSource)
+//        dataSource = Driver.just(fixtureSource)
+        dataSource = api.getFeed(for: .top)
+            .asDriver(onErrorDriveWith: .empty())
+            .map { posts in DataSource(posts: posts) }
     }
 }
