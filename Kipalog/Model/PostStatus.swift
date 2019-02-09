@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PostStatus {
+enum PostStatus: String, Codable {
     case draft
     case publish
 }

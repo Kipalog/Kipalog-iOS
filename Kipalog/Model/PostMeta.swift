@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PostMeta {
+struct PostMeta: Codable {
     let kipalogCount: Int
     let commentCount: Int
 }

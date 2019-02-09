@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Post {
+struct Post: Codable {
     let status: PostStatus
     let title: String
     let detail: String

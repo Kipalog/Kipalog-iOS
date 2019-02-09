@@ -182,6 +182,13 @@
 			path = NotificationCell;
 			sourceTree = "<group>";
 		};
+		202F3838212864220B9894DB /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		202F3B9E96D821A2C61C56E3 /* Generic */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +311,7 @@
 				B4E930261FECEA550021A41D /* View */,
 				B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */,
 				B4E92FF11FEBDDE30021A41D /* RootViewController.swift */,
+				202F3838212864220B9894DB /* Infrastructure */,
 			);
 			path = Kipalog;
 			sourceTree = "<group>";

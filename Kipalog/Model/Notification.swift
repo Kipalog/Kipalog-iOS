@@ -8,18 +8,18 @@
 
 import Foundation
 
-enum NotificationStatus {
+enum NotificationStatus: String, Codable {
     case unchecked
     case saw
     case checked
 }
 
-struct NotificationUser {
+struct NotificationUser: Codable {
     let name: String
     let avatar_url_path: URL
 }
 
-struct Notification {
+struct Notification: Codable {
     let id: Int
     let user: NotificationUser
     let org: Bool
