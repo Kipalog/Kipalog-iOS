@@ -10,14 +10,8 @@ import Foundation
 import APIKit
 import RxSwift
 
-enum FeedTab {
-    case top
-    case new
-    case til
-}
-
 struct FeedAPI {
-    func getFeed(for tab: FeedTab) -> Observable<[Post]> {
+    func getFeed(for tab: FeedViewController.FeedTab) -> Observable<[Post]> {
         switch tab {
         case .top:
             return Session.send(request: FeedRequest.HotRequest())

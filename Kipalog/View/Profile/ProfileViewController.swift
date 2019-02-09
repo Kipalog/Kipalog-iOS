@@ -60,9 +60,11 @@ class ProfileViewController: UITableViewController, TabConvertible {
 
     private func setupDisplay(_ profile: Profile) {
 
-        avatar.kf.setImage(
-            with: URL(string: profile.user.avatarUrl)
-        )
+        if let avatarUrl = profile.user.avatarUrl, let url = URL(string: avatarUrl) {
+            avatar.kf.setImage(
+                with: url
+            )
+        }
         if let avatarUrl = profile.userMeta.organizationInfo?.avatarUrl, let url = URL(string: avatarUrl) {
             orgAvatar.kf.setImage(
                 with: url

@@ -14,27 +14,29 @@ import Kingfisher
 class FeedViewController: UICollectionViewController {
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
-    private let viewModel = FeedViewModel()
 
     override var collectionView: UICollectionView! {
         get { return super.collectionView }
         set { super.collectionView = newValue }
     }
 
-    enum Tab: Int {
+    enum FeedTab: Int {
         case top
         case new
         case til
     }
-    private var tab: Tab = .top
+
+    private let tab: FeedTab
+    private let viewModel: FeedViewModel
 
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        fatalError("Not implemented")
     }
 
-    init(_ startTab: Tab) {
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    init(_ startTab: FeedTab) {
         tab = startTab
+        viewModel = FeedViewModel(startTab)
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
         dataSource.set(parent: self)
     }
 

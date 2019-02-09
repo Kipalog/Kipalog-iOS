@@ -22,7 +22,7 @@ class ButtonsViewController: UIViewController, DependencyInjectable {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = post.author.name
-        if let url = URL(string: post.author.avatarUrl) {
+        if let avatarUrl = post.author.avatarUrl, let url = URL(string: avatarUrl) {
             avatar.kf.setImage(
                 with: url,
                 options: [.transition(.fade(0.25))]

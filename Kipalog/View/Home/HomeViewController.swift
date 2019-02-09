@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, TabConvertible {
     @IBOutlet weak var newPostsContainer: UIView!
     @IBOutlet weak var tilPostsContainer: UIView!
 
-    typealias Tab = FeedViewController.Tab
+    typealias Tab = FeedViewController.FeedTab
 
     private var scrollViews: [Tab: UIScrollView] = [:]
     private let disposeBag = DisposeBag()
