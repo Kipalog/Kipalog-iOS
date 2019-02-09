@@ -299,7 +299,6 @@
 			children = (
 				202F3B9E96D821A2C61C56E3 /* Generic */,
 				B4E9302A1FECEA810021A41D /* Supporting Files */,
-				B4E930291FECEA6E0021A41D /* View Components */,
 				B4E930281FECEA660021A41D /* Extension */,
 				B4E930271FECEA5E0021A41D /* Model */,
 				B4E930261FECEA550021A41D /* View */,
@@ -369,13 +368,6 @@
 				202F311A8F8BB5D08E6355C7 /* UIScrollView+Rx.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		B4E930291FECEA6E0021A41D /* View Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Components";
 			sourceTree = "<group>";
 		};
 		B4E9302A1FECEA810021A41D /* Supporting Files */ = {
