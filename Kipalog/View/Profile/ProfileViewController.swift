@@ -41,7 +41,7 @@ class ProfileViewController: UITableViewController, TabConvertible {
                 name: "Vu Nhat Minh",
                 email: "nhatminh179@gmail.com",
                 handleName: "Orakaro",
-                avatarUrl: URL(string: "https://s3-ap-southeast-1.amazonaws.com/kipalog.com/dtkycrfm2t_hrlxd8Jh.png")
+                avatarUrl: "https://s3-ap-southeast-1.amazonaws.com/kipalog.com/dtkycrfm2t_hrlxd8Jh.png"
             ),
             userMeta: UserMeta(
                 kipalogCount: 1121,
@@ -51,7 +51,7 @@ class ProfileViewController: UITableViewController, TabConvertible {
                 followingCount: 12,
                 organizationInfo: OrganizationInfo(
                     name: "KTMT",
-                    avatarUrl: URL(string: "https://ktmt.github.io/images/logo.jpg")!
+                    avatarUrl: "https://ktmt.github.io/images/logo.jpg"
                 )
             )
         )
@@ -61,11 +61,11 @@ class ProfileViewController: UITableViewController, TabConvertible {
     private func setupDisplay(_ profile: Profile) {
 
         avatar.kf.setImage(
-            with: profile.user.avatarUrl
+            with: URL(string: profile.user.avatarUrl)
         )
-        if let avatarUrl = profile.userMeta.organizationInfo?.avatarUrl {
+        if let avatarUrl = profile.userMeta.organizationInfo?.avatarUrl, let url = URL(string: avatarUrl) {
             orgAvatar.kf.setImage(
-                with: avatarUrl
+                with: url
             )
         }
         nameLabel.text = profile.user.name

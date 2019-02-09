@@ -14,7 +14,11 @@ protocol KipalogRequest: Request where Response: Decodable {
 
 extension KipalogRequest {
     var baseURL: URL {
-        return URL(string: "http://localhost:3000/api/v1/")!
+        return URL(string: "http://192.168.11.4:3000/api/v1/")!
+    }
+
+    var dataParser: DataParser {
+        return ResponseDataParser()
     }
 
     var decoder: JSONDecoder {

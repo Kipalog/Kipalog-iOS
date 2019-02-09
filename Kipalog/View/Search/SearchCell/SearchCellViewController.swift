@@ -29,10 +29,10 @@ class SearchCellViewController: UIViewController {
             postTitle.text = post?.title
             postTitle.setLineSpacing(1)
 
-            detail.text = post?.detail
+            detail.text = post?.preview
             detail.setLineSpacing(3)
 
-            if let url = post?.author.avatarUrl {
+            if let avatarUrl = post?.author.avatarUrl, let url = URL(string: avatarUrl) {
                 avatar.kf.setImage(
                     with: url,
                     options: [.transition(.fade(0.25))]

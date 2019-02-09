@@ -13,5 +13,5 @@ struct User: Codable {
     let name: String
     let email: String
     let handleName: String
-    let avatarUrl: URL?
+    let avatarUrl: String
 }

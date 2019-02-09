@@ -19,6 +19,7 @@ extension Session {
                     observer.onNext(response)
                     observer.onCompleted()
                 case .failure(let error):
+                    print(error)
                     observer.onError(error)
                 }
             }

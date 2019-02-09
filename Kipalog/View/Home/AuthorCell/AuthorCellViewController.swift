@@ -21,7 +21,7 @@ class AuthorCellViewController: UIViewController {
     var author: User? {
         didSet {
             name.text = author?.name
-            if let url = author?.avatarUrl {
+            if let avatarUrl = author?.avatarUrl, let url = URL(string: avatarUrl) {
                 avatar.kf.setImage(
                     with: url,
                     options: [.transition(.fade(0.25))]

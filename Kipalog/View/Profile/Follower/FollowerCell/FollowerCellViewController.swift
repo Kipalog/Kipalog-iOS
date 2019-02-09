@@ -24,7 +24,7 @@ class FollowerCellViewController: UIViewController {
     var user: User? {
         didSet {
             nameLabel.text = user?.name
-            if let url = user?.avatarUrl {
+            if let avatarUrl = user?.avatarUrl, let url = URL(string: avatarUrl) {
                 avatar.kf.setImage(
                     with: url,
                     options: [.transition(.fade(0.25))]

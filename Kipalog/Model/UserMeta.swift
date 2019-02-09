@@ -10,7 +10,7 @@ import Foundation
 
 struct OrganizationInfo: Codable {
     let name: String
-    let avatarUrl: URL
+    let avatarUrl: String
 }
 
 struct UserMeta: Codable {

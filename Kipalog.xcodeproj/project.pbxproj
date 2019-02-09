@@ -14,6 +14,7 @@
 		202F338408780D975FB6A477 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F327B527400FE47603ECD /* SearchViewModel.swift */; };
 		202F33C27B209C2C5E5746D2 /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3910D2FC392A22DA28A0 /* XibViewController.swift */; };
 		202F33FA9B21E4B24F799FA7 /* PostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F36EE2EF8F054234446EF /* PostStatus.swift */; };
+		202F3472C870A3156EAADCD6 /* ResponseDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F618C5D38BAD5294768 /* ResponseDataParser.swift */; };
 		202F351EFBF9733D720E56EF /* FeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3733AD8B2BD58068A9F0 /* FeedRequest.swift */; };
 		202F35DC6076B995E86BD331 /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F311A8F8BB5D08E6355C7 /* UIScrollView+Rx.swift */; };
 		202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3A28DF09562234A617FD /* FeedViewModel.swift */; };
@@ -104,6 +105,7 @@
 		202F3EAD2A255E28C066B118 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		202F3F042FFA016BAC7AA441 /* TabConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabConvertible.swift; sourceTree = "<group>"; };
 		202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
+		202F3F618C5D38BAD5294768 /* ResponseDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDataParser.swift; sourceTree = "<group>"; };
 		B43F499A21ECBE18002FDE19 /* ButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewModel.swift; sourceTree = "<group>"; };
 		B449CDF220160E880085F3F5 /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
 		B449CDF5201614550085F3F5 /* FollowerCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCellViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				202F3733AD8B2BD58068A9F0 /* FeedRequest.swift */,
 				202F3E27370D067EB81F6AD3 /* KipalogRequest.swift */,
 				202F3BA48292D678080825AF /* FeedAPI.swift */,
+				202F3F618C5D38BAD5294768 /* ResponseDataParser.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				202F3AADE0C1911C9B0D17B7 /* KipalogRequest.swift in Sources */,
 				202F3043184D227E5A0E1239 /* FeedAPI.swift in Sources */,
 				202F3D15A991145B2A05F74A /* Observable+Session.swift in Sources */,
+				202F3472C870A3156EAADCD6 /* ResponseDataParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
