@@ -88,7 +88,8 @@ extension HotAuthorViewController: UICollectionViewDelegateFlowLayout {
 
 extension HotAuthorViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = ProfileViewController.make()
+        let user = dataSource.authors[indexPath.row]
+        let vc = ProfileViewController(dependency: user)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

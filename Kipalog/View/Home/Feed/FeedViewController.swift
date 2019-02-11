@@ -30,7 +30,7 @@ class FeedViewController: UICollectionViewController {
     private let viewModel: FeedViewModel
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("Not implemented")
+        fatalError("init(coder:) has not been implemented")
     }
 
     init(_ startTab: FeedTab) {

@@ -10,8 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ProfileViewController: UITableViewController, TabConvertible {
+class ProfileViewController: UITableViewController, DependencyInjectable, TabConvertible {
     let barImageName = "Profile"
+    private var user: User
 
     @IBOutlet var followersCell: UITableViewCell!
     @IBOutlet var followingCell: UITableViewCell!
@@ -27,56 +28,49 @@ class ProfileViewController: UITableViewController, TabConvertible {
     @IBOutlet weak var orgAvatar: UIImageView!
     @IBOutlet weak var orgName: UILabel!
 
-    struct Profile {
-        let user: User
-        let userMeta: UserMeta
+    required init(dependency: User) {
+        self.user = dependency
+        super.init(nibName: ProfileViewController.className, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        self.user = User.mock // TODO: Replace with current user after implement Login
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+
+    func inject(dependency: User) {
+        self.user = dependency
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Hồ sơ cá nhân"
-        let profile = Profile (
-            user: User(
-                id: "1",
-                name: "Vu Nhat Minh",
-                email: "nhatminh179@gmail.com",
-                handleName: "Orakaro",
-                avatarUrl: "https://s3-ap-southeast-1.amazonaws.com/kipalog.com/dtkycrfm2t_hrlxd8Jh.png"
-            ),
-            userMeta: UserMeta(
-                kipalogCount: 1121,
-                commentCount: 214,
-                viewCount: 175207,
-                followerCount: 714,
-                followingCount: 12,
-                organizationInfo: OrganizationInfo(
-                    name: "KTMT",
-                    avatarUrl: "https://ktmt.github.io/images/logo.jpg"
-                )
-            )
-        )
-        setupDisplay(profile)
+        setupDisplay(user)
     }
 
-    private func setupDisplay(_ profile: Profile) {
+    private func setupDisplay(_ user: User) {
 
-        if let avatarUrl = profile.user.avatarUrl, let url = URL(string: avatarUrl) {
+        if let avatarUrl = user.avatarUrl, let url = URL(string: avatarUrl) {
             avatar.kf.setImage(
                 with: url
             )
         }
-        if let avatarUrl = profile.userMeta.organizationInfo?.avatarUrl, let url = URL(string: avatarUrl) {
+        if let avatarUrl = user.organizations.first?.avatarUrl, let url = URL(string: avatarUrl) {
             orgAvatar.kf.setImage(
                 with: url
             )
         }
-        nameLabel.text = profile.user.name
-        kipalogLabel.text = String(profile.userMeta.kipalogCount)
-        commentLabel.text = String(profile.userMeta.commentCount)
-        viewLabel.text = String(profile.userMeta.viewCount)
-        followerCountLabel.text = String(profile.userMeta.followerCount) + " người theo dõi"
-        followingCountLabel.text = "Theo dõi " + String(profile.userMeta.followingCount) + " người"
-        orgName.text = profile.userMeta.organizationInfo?.name
+        nameLabel.text = user.name
+        kipalogLabel.text = String(user.kipalogCount)
+        commentLabel.text = String(user.commentsCount)
+        viewLabel.text = user.totalViewCount
+        followerCountLabel.text = String(user.followerCount) + " người theo dõi"
+        followingCountLabel.text = "Theo dõi " + String(user.followingCount) + " người"
+        orgName.text = user.organizations.first?.name
     }
 
 }

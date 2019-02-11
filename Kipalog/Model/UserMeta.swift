@@ -8,16 +8,7 @@
 
 import Foundation
 
-struct OrganizationInfo: Codable {
+struct Organization: Codable {
     let name: String
     let avatarUrl: String
-}
-
-struct UserMeta: Codable {
-    let kipalogCount: Int
-    let commentCount: Int
-    let viewCount: Int
-    let followerCount: Int
-    let followingCount: Int
-    let organizationInfo: OrganizationInfo?
 }
