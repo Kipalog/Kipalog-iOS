@@ -14,14 +14,14 @@ enum NotificationStatus: String, Codable {
     case checked
 }
 
-struct NotificationUser: Codable {
+struct Source: Codable {
     let name: String
-    let avatar_url_path: URL
+    let avatarUrl: String
 }
 
 struct Notification: Codable {
     let id: Int
-    let user: NotificationUser
+    let source: Source
     let org: Bool
     let message: String
     let info: String

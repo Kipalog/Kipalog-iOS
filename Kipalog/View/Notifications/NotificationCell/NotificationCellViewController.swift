@@ -28,7 +28,7 @@ class NotificationCellViewController: UIViewController {
     var notification: Notification? {
         didSet {
             guard let notification = notification else { return }
-            let userNameText = NSMutableAttributedString(string: notification.user.name, attributes: [
+            let userNameText = NSMutableAttributedString(string: notification.source.name, attributes: [
                 NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)
             ])
 
@@ -48,7 +48,7 @@ class NotificationCellViewController: UIViewController {
             dateLabel.text = notification.createdAt
 
             avatar.kf.setImage(
-                with: notification.user.avatar_url_path,
+                with: URL(string: notification.source.avatarUrl),
                 options: [.transition(.fade(0.25))]
             )
 

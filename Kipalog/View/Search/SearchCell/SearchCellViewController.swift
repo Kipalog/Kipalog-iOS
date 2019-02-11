@@ -39,8 +39,8 @@ class SearchCellViewController: UIViewController {
                 )
             }
 
-            kipalogCount.text = post.map{ String($0.kipalogCount) }
-            commentCount.text = post.map{ String($0.commentsCount) }
+            kipalogCount.text = post.map{ String($0.meta.kipalogCount) }
+            commentCount.text = post.map{ String($0.meta.commentsCount) }
         }
     }
 

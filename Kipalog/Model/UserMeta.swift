@@ -10,5 +10,5 @@ import Foundation
 
 struct Organization: Codable {
     let name: String
-    let avatarUrl: String
+    let avatarUrl: String?
 }

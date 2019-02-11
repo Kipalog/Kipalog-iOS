@@ -64,12 +64,13 @@ class ProfileViewController: UITableViewController, DependencyInjectable, TabCon
                 with: url
             )
         }
+        let profile = user.profile
         nameLabel.text = user.name
-        kipalogLabel.text = String(user.kipalogCount)
-        commentLabel.text = String(user.commentsCount)
-        viewLabel.text = user.totalViewCount
-        followerCountLabel.text = String(user.followerCount) + " người theo dõi"
-        followingCountLabel.text = "Theo dõi " + String(user.followingCount) + " người"
+        kipalogLabel.text = String(profile.kipalogCount)
+        commentLabel.text = String(profile.commentsCount)
+        viewLabel.text = profile.totalViewCount
+        followerCountLabel.text = String(profile.followerCount) + " người theo dõi"
+        followingCountLabel.text = "Theo dõi " + String(profile.followingCount) + " người"
         orgName.text = user.organizations.first?.name
     }
 
