@@ -16,7 +16,7 @@ struct FeedAPI {
         case .top:
             return Session.send(request: FeedRequest.HotRequest())
             .map { response in
-                return response.content
+                return response.posts
             }
         case .new:
             return Observable.empty()

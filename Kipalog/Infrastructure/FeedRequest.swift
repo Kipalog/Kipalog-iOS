@@ -20,9 +20,7 @@ struct FeedRequest {
     }
 
     struct HotResponse: Codable {
-        let content: [Post]
-        let status: Int
-        let cause: String
+        let posts: [Post]
     }
 
 }

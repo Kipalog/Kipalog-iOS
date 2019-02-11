@@ -14,7 +14,7 @@ protocol KipalogRequest: Request where Response: Decodable {
 
 extension KipalogRequest {
     var baseURL: URL {
-        return URL(string: "http://192.168.11.4:3000/api/v1/")!
+        return URL(string: "http://192.168.11.4:3000/api/v1/")! //TODO: Separate dev and prod
     }
 
     var dataParser: DataParser {
@@ -29,7 +29,7 @@ extension KipalogRequest {
 
     var headerFields: [String : String] {
         return [
-            "X-Kipalog-Token": "cdtaz9rkg506a79y5dy1odo0ce4q0f"
+            "X-Kipalog-Token": "cdtaz9rkg506a79y5dy1odo0ce4q0f" //TODO: Implement login
         ]
     }
 
