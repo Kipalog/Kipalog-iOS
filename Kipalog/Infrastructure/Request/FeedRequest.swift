@@ -12,15 +12,43 @@ import APIKit
 struct FeedRequest {
 
     struct HotRequest: KipalogGetRequest {
-        typealias Response = HotResponse
+        typealias Response = FeedResponse
 
         var path: String {
             return "post/hot"
         }
     }
 
-    struct HotResponse: Codable {
+    struct NewestRequest: KipalogGetRequest {
+        typealias Response = FeedResponse
+
+        var path: String {
+            return "post/newest"
+        }
+    }
+    
+    struct TilRequest: KipalogGetRequest {
+        typealias Response = FeedResponse
+
+        var path: String {
+            return "post/til"
+        }
+    }
+
+    struct FeedResponse: Codable {
         let posts: [Post]
+    }
+
+    struct TopAuthorRequest: KipalogGetRequest {
+        typealias Response = TopAuthorResponse
+
+        var path: String {
+            return "user/top"
+        }
+    }
+
+    struct TopAuthorResponse: Codable {
+        let users: [User]
     }
 
 }

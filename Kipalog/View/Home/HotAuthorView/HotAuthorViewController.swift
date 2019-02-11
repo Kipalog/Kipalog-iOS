@@ -13,6 +13,7 @@ import RxCocoa
 class HotAuthorViewController: UIViewController, UICollectionViewDelegate {
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
+    private let api = FeedAPI()
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sectionLabel: UILabel!
@@ -36,51 +37,8 @@ class HotAuthorViewController: UIViewController, UICollectionViewDelegate {
     }
 
     private func binding() {
-        let loadedData: Driver<[User]> = Driver.just([
-            User(
-                id: "6",
-                name: "Huy Tran",
-                email: "huytran@gmail.com",
-                handleName: "huytran",
-                avatarUrl: "https://pbs.twimg.com/media/C1OsxXCWgAEy1F_.png"
-            ),
-            User(
-                id: "2",
-                name: "Do Xuan Huy",
-                email: "huydx@gmail.com",
-                handleName: "huydx",
-                avatarUrl: "https://orig05.deviantart.net/a1df/f/2011/112/8/f/nyan_cat_gif_by_kodiakpaws-d3emqu1.gif"
-            ),
-            User(
-                id: "3",
-                name: "Bui Hong Ha",
-                email: "habuihong@gmail.com",
-                handleName: "telescreen",
-                avatarUrl: "https://avatars.githubusercontent.com/u/181202?v=3"
-            ),
-            User(
-                id: "1",
-                name: "Vu Nhat Minh",
-                email: "nhatminh179@gmail.com",
-                handleName: "orakaro",
-                avatarUrl: "https://pbs.twimg.com/profile_images/494654050776780802/hrlxd8Jh.png"
-            ),
-            User(
-                id: "4",
-                name: "Viet Nguyen Hoang",
-                email: "vietnguyenhoang@gmail.com",
-                handleName: "vietnguyen",
-                avatarUrl: "https://avatars.githubusercontent.com/u/2935719"
-            ),
-            User(
-                id: "5",
-                name: "Hoang Le Van",
-                email: "hoanglevan@gmail.com",
-                handleName: "hoangchay",
-                avatarUrl: "https://pbs.twimg.com/profile_images/378800000054639404/705e424771d095d926406eb6d5dc40b9.jpeg"
-            )
-        ])
-        loadedData
+       api.getTopAuthor()
+            .asDriver(onErrorDriveWith: .empty())
             .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
     }

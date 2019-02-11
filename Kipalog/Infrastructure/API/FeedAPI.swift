@@ -19,9 +19,22 @@ struct FeedAPI {
                 return response.posts
             }
         case .new:
-            return Observable.empty()
+            return Session.send(request: FeedRequest.NewestRequest())
+                .map { response in
+                    return response.posts
+                }
         case .til:
-            return Observable.empty()
+            return Session.send(request: FeedRequest.TilRequest())
+                .map { response in
+                    return response.posts
+                }
         }
+    }
+
+    func getTopAuthor() -> Observable<[User]> {
+        return Session.send(request: FeedRequest.TopAuthorRequest())
+            .map { response in
+                return response.users
+            }
     }
 }

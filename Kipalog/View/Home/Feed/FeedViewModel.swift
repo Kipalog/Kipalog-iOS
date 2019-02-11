@@ -19,6 +19,11 @@ class FeedViewModel {
     private let disposeBag = DisposeBag()
     private let api = FeedAPI()
 
+    lazy var topAuthor: Driver<[User]> = {
+        return api.getTopAuthor()
+            .asDriver(onErrorDriveWith: .empty())
+    }()
+
     init(_ startTab: FeedViewController.FeedTab) {
         dataSource = api.getFeed(for: startTab)
             .asDriver(onErrorDriveWith: .empty())
