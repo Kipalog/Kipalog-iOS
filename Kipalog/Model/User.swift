@@ -21,9 +21,25 @@ struct User: Codable {
     let name: String
     let email: String
     let handleName: String
-    let avatarUrl: String?
+    var avatarUrl: String?
     let profile: Profile
     let organizations: [Organization]
+}
+
+extension User {
+    private mutating func convertToSecureUrl() {
+        guard let url = avatarUrl,
+              var comps = URLComponents(string: url)
+            else { return }
+        comps.scheme = "https"
+        avatarUrl = comps.string
+    }
+
+    func standardize() -> User {
+        var new = self
+        new.convertToSecureUrl()
+        return new
+    }
 }
 
 extension User {

@@ -16,25 +16,25 @@ struct FeedAPI {
         case .top:
             return Session.send(request: FeedRequest.HotRequest())
             .map { response in
-                return response.posts
+                return response.posts.map { $0.standardize() }
             }
         case .new:
             return Session.send(request: FeedRequest.NewestRequest())
                 .map { response in
-                    return response.posts
+                    return response.posts.map { $0.standardize() }
                 }
         case .til:
             return Session.send(request: FeedRequest.TilRequest())
                 .map { response in
-                    return response.posts
+                    return response.posts.map { $0.standardize() }
                 }
         }
     }
 
     func getTopAuthor() -> Observable<[User]> {
         return Session.send(request: FeedRequest.TopAuthorRequest())
-            .map { response in
-                return response.users
+            .map { (response: FeedRequest.TopAuthorResponse) in
+                return response.users.map { $0.standardize() }
             }
     }
 }

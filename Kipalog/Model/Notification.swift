@@ -16,16 +16,40 @@ enum NotificationStatus: String, Codable {
 
 struct Source: Codable {
     let name: String
-    let avatarUrlPath: String
+    var avatarUrlPath: String?
 }
 
 struct Notification: Codable {
     let id: Int
-    let source: Source
+    var source: Source
     let org: Bool
     let message: String
     let info: String
     let endpoint: String
     let status: NotificationStatus
     let createdAt: String
+}
+
+extension Source {
+    private mutating func convertToSecureUrl() {
+        guard let url = avatarUrlPath,
+              var comps = URLComponents(string: url)
+            else { return }
+        comps.scheme = "https"
+        avatarUrlPath = comps.string
+    }
+
+    func standardize() -> Source {
+        var new = self
+        new.convertToSecureUrl()
+        return new
+    }
+}
+
+extension Notification {
+    func standardize() -> Notification {
+        var new = self
+        new.source = new.source.standardize()
+        return new
+    }
 }

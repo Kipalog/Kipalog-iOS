@@ -16,7 +16,15 @@ struct Meta: Codable {
 struct Post: Codable {
     let id: String
     let title: String
-    let author: User
+    var author: User
     let preview: String
     let meta: Meta
+}
+
+extension Post {
+    func standardize() -> Post {
+        var new = self
+        new.author = new.author.standardize()
+        return new
+    }
 }

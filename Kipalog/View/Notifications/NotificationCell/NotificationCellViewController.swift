@@ -47,10 +47,12 @@ class NotificationCellViewController: UIViewController {
             infoLabel.attributedText = labelText
             dateLabel.text = notification.createdAt
 
-            avatar.kf.setImage(
-                with: URL(string: notification.source.avatarUrlPath),
-                options: [.transition(.fade(0.25))]
-            )
+            if let url = notification.source.avatarUrlPath {
+                avatar.kf.setImage(
+                    with: URL(string: url),
+                    options: [.transition(.fade(0.25))]
+                )
+            }
 
             if notification.status != .checked {
                 baseView.backgroundColor = UIColor.kipalog.greyColor

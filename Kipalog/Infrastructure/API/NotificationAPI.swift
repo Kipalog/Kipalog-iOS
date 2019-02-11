@@ -14,7 +14,7 @@ struct NotificationAPI {
     func getActive() -> Observable<[Notification]> {
         return Session.send(request: NotificationRequest.ActiveRequest())
             .map { response in 
-                return response.notifications
+                return response.notifications.map { $0.standardize() }
             }
     }
 }
