@@ -10,17 +10,24 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class NotificationViewModel {
+class NotificationViewModel: DependencyInjectable {
     struct DataSource {
         let notifications: [Notification]
     }
 
     private(set) var dataSource: Driver<DataSource>!
     private let api = NotificationAPI()
+    private let trigger = PublishRelay<[Notification]>()
 
-    init() {
-        dataSource = api.getActive()
+    required init(dependency: [Notification]) {
+        dataSource = trigger
             .asDriver(onErrorDriveWith: .empty())
+            .filter { !$0.isEmpty }
             .map { DataSource(notifications: $0) }
+        trigger.accept(dependency)
+    }
+
+    func inject(dependency : [Notification]) {
+        trigger.accept(dependency)
     }
 }

@@ -7,18 +7,37 @@
 //
 
 import UIKit
+import RxSwift
 
 class CustomTabBarViewController: UITabBarController {
 
+    private let api = NotificationAPI()
+    private let disposeBag = DisposeBag()
+
+    private let homeViewController = HomeViewController.make()
+    private let searchViewController = SearchViewController(collectionViewLayout: UICollectionViewFlowLayout())
+    private let notificationsViewController = NotificationsViewController(collectionViewLayout: UICollectionViewFlowLayout())
+    private let profileViewController = ProfileViewController.make()
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        api.getActive()
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(onNext: { [notificationsViewController, tabBar] notifications in
+                let notificationCounts = notifications.filter { $0.status == .unchecked }.count
+                if let tabBarItems = tabBar.items, notificationCounts > 0 {
+                    tabBarItems[2].badgeValue = String(notificationCounts)
+                }
+                notificationsViewController.inject(dependency: notifications)
+            })
+            .disposed(by: disposeBag)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let homeViewController = HomeViewController.make()
-
-        let searchViewController = SearchViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        let notificationsViewController = NotificationsViewController(collectionViewLayout: UICollectionViewFlowLayout())
-
-        let profileViewController = ProfileViewController.make()
 
         viewControllers = [
             homeViewController.buildTabController(),
@@ -28,9 +47,5 @@ class CustomTabBarViewController: UITabBarController {
         ]
 
         tabBar.tintColor = UIColor.kipalog.masterColor
-
-        if let tabBarItems = tabBar.items {
-            tabBarItems[2].badgeValue = "3"
-        }
     }
 }

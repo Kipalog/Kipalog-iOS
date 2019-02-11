@@ -10,15 +10,35 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class NotificationsViewController: UICollectionViewController, TabConvertible {
+class NotificationsViewController: UICollectionViewController, DependencyInjectable, TabConvertible {
     let barImageName = "Notifications"
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
-    private let viewModel = NotificationViewModel()
+    private let viewModel: NotificationViewModel
 
     override var collectionView: UICollectionView! {
         get { return super.collectionView }
         set { super.collectionView = newValue }
+    }
+
+    override init(collectionViewLayout layout: UICollectionViewLayout) {
+        self.viewModel = NotificationViewModel(dependency: [])
+        super.init(collectionViewLayout: layout)
+        binding()
+    }
+
+    required init(dependency: [Notification]) {
+        self.viewModel = NotificationViewModel(dependency: dependency)
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+        binding()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    func inject(dependency: [Notification]) {
+        viewModel.inject(dependency: dependency)
     }
 
     override func viewDidLoad() {
@@ -28,7 +48,6 @@ class NotificationsViewController: UICollectionViewController, TabConvertible {
         dataSource.set(parent: self)
         navigationItem.title = "Thông báo"
         setupLayout()
-        binding()
     }
 
     private func setupLayout() {
