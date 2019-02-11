@@ -14,7 +14,7 @@ protocol KipalogRequest: Request where Response: Decodable {
 
 extension KipalogRequest {
     var baseURL: URL {
-        return URL(string: "http://192.168.11.4:3000/api/v1/")! //TODO: Separate dev and prod
+        return URL(string: "\(AppContext.Url.base)/api/v1/")!
     }
 
     var dataParser: DataParser {

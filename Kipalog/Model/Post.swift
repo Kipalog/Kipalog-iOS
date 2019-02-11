@@ -9,6 +9,7 @@
 import Foundation
 
 struct Post: Codable {
+    let id: String
     let title: String
     let preview: String
     let author: User
@@ -16,6 +17,7 @@ struct Post: Codable {
     let commentsCount: Int
 
     private enum CodingKeys : String, CodingKey {
+        case id
         case title
         case preview
         case author = "user"

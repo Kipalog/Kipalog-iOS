@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		202F3043184D227E5A0E1239 /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3BA48292D678080825AF /* FeedAPI.swift */; };
 		202F305839DA894E4D00C1D7 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F30C0955A6E99BDD0B967 /* Cell.swift */; };
 		202F31EAD5D8124BAC4E03C7 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */; };
 		202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F042FFA016BAC7AA441 /* TabConvertible.swift */; };
 		202F338408780D975FB6A477 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F327B527400FE47603ECD /* SearchViewModel.swift */; };
 		202F33C27B209C2C5E5746D2 /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3910D2FC392A22DA28A0 /* XibViewController.swift */; };
+		202F33C2C0A149EADBEB9858 /* KipalogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F34ABFC4F095AE1401A5E /* KipalogRequest.swift */; };
 		202F33FA9B21E4B24F799FA7 /* PostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F36EE2EF8F054234446EF /* PostStatus.swift */; };
-		202F3472C870A3156EAADCD6 /* ResponseDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F618C5D38BAD5294768 /* ResponseDataParser.swift */; };
-		202F351EFBF9733D720E56EF /* FeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3733AD8B2BD58068A9F0 /* FeedRequest.swift */; };
+		202F344AF382DCB0A9680301 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AB581B852CC5C953D9E /* AppContext.swift */; };
+		202F35558FBA422FA8BD95E6 /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F36D35DB74D57236A38AD /* FeedAPI.swift */; };
 		202F35DC6076B995E86BD331 /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F311A8F8BB5D08E6355C7 /* UIScrollView+Rx.swift */; };
 		202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3A28DF09562234A617FD /* FeedViewModel.swift */; };
 		202F39B0DF308A8FD56478C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3383342247840583E038 /* Post.swift */; };
 		202F39DBD504021624EBE12F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F38B5086A40BE64300C6B /* UILabel+Extension.swift */; };
 		202F3A74F987731A796150DB /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F378C4C0FD19B8EC54EDB /* NotificationViewModel.swift */; };
-		202F3AADE0C1911C9B0D17B7 /* KipalogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3E27370D067EB81F6AD3 /* KipalogRequest.swift */; };
 		202F3B0A81604DD63D8D87C4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F34AD997061A4CD3F12BF /* UIColor+Extension.swift */; };
 		202F3C28FC4DB81462B03F1E /* UserMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F34A55204A72CA784324D /* UserMeta.swift */; };
 		202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3EAD2A255E28C066B118 /* UIView+Extension.swift */; };
 		202F3D15A991145B2A05F74A /* Observable+Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F369123112F31203BA1ED /* Observable+Session.swift */; };
+		202F3D8D778AEC4AD1EF8307 /* ResponseDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F358007967E50C25922B2 /* ResponseDataParser.swift */; };
 		202F3E5A719F8098956BD8FB /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3483187E43DDFBD084AF /* Notification.swift */; };
+		202F3EF7F469001FAD4FE7C2 /* FeedRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F389BB40A4AFA9DA0F677 /* FeedRequest.swift */; };
 		202F3FA362509F1E286C7C3F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AD3196A52B89B0D5F1D /* User.swift */; };
 		202F3FDBE6D12C3A9C4B70B2 /* FollowerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F30709E7146024B6046CE /* FollowerListViewModel.swift */; };
 		B43F499B21ECBE18002FDE19 /* ButtonsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43F499A21ECBE18002FDE19 /* ButtonsViewModel.swift */; };
@@ -91,21 +92,22 @@
 		202F3383342247840583E038 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		202F3483187E43DDFBD084AF /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		202F34A55204A72CA784324D /* UserMeta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMeta.swift; sourceTree = "<group>"; };
+		202F34ABFC4F095AE1401A5E /* KipalogRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KipalogRequest.swift; sourceTree = "<group>"; };
 		202F34AD997061A4CD3F12BF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		202F358007967E50C25922B2 /* ResponseDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDataParser.swift; sourceTree = "<group>"; };
 		202F369123112F31203BA1ED /* Observable+Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Session.swift"; sourceTree = "<group>"; };
+		202F36D35DB74D57236A38AD /* FeedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAPI.swift; sourceTree = "<group>"; };
 		202F36EE2EF8F054234446EF /* PostStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostStatus.swift; sourceTree = "<group>"; };
-		202F3733AD8B2BD58068A9F0 /* FeedRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedRequest.swift; sourceTree = "<group>"; };
 		202F378C4C0FD19B8EC54EDB /* NotificationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		202F389BB40A4AFA9DA0F677 /* FeedRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedRequest.swift; sourceTree = "<group>"; };
 		202F38B5086A40BE64300C6B /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		202F3910D2FC392A22DA28A0 /* XibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibViewController.swift; sourceTree = "<group>"; };
 		202F3A28DF09562234A617FD /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		202F3AB581B852CC5C953D9E /* AppContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		202F3AD3196A52B89B0D5F1D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		202F3BA48292D678080825AF /* FeedAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAPI.swift; sourceTree = "<group>"; };
-		202F3E27370D067EB81F6AD3 /* KipalogRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KipalogRequest.swift; sourceTree = "<group>"; };
 		202F3EAD2A255E28C066B118 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		202F3F042FFA016BAC7AA441 /* TabConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabConvertible.swift; sourceTree = "<group>"; };
 		202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
-		202F3F618C5D38BAD5294768 /* ResponseDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDataParser.swift; sourceTree = "<group>"; };
 		B43F499A21ECBE18002FDE19 /* ButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewModel.swift; sourceTree = "<group>"; };
 		B449CDF220160E880085F3F5 /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
 		B449CDF5201614550085F3F5 /* FollowerCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCellViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		202F32FD2FA7D1BB8E14A9F2 /* AppContext */ = {
+			isa = PBXGroup;
+			children = (
+				202F3AB581B852CC5C953D9E /* AppContext.swift */,
+			);
+			path = AppContext;
+			sourceTree = "<group>";
+		};
 		202F3668E79CE4C9B95CDB19 /* NotificationCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,12 +203,18 @@
 		202F3838212864220B9894DB /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				202F3733AD8B2BD58068A9F0 /* FeedRequest.swift */,
-				202F3E27370D067EB81F6AD3 /* KipalogRequest.swift */,
-				202F3BA48292D678080825AF /* FeedAPI.swift */,
-				202F3F618C5D38BAD5294768 /* ResponseDataParser.swift */,
+				202F39F382E86D5A3B045105 /* API */,
+				202F3CE6A7088D514F2DCB41 /* Request */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		202F39F382E86D5A3B045105 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				202F36D35DB74D57236A38AD /* FeedAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		202F3B9E96D821A2C61C56E3 /* Generic */ = {
@@ -208,6 +224,16 @@
 				202F3910D2FC392A22DA28A0 /* XibViewController.swift */,
 			);
 			path = Generic;
+			sourceTree = "<group>";
+		};
+		202F3CE6A7088D514F2DCB41 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				202F389BB40A4AFA9DA0F677 /* FeedRequest.swift */,
+				202F34ABFC4F095AE1401A5E /* KipalogRequest.swift */,
+				202F358007967E50C25922B2 /* ResponseDataParser.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		B43FC58F2003703300344483 /* FeedCell */ = {
@@ -324,6 +350,7 @@
 				B4E92FEF1FEBDDE30021A41D /* AppDelegate.swift */,
 				B4E92FF11FEBDDE30021A41D /* RootViewController.swift */,
 				202F3838212864220B9894DB /* Infrastructure */,
+				202F32FD2FA7D1BB8E14A9F2 /* AppContext */,
 			);
 			path = Kipalog;
 			sourceTree = "<group>";
@@ -643,11 +670,12 @@
 				202F3FDBE6D12C3A9C4B70B2 /* FollowerListViewModel.swift in Sources */,
 				202F305839DA894E4D00C1D7 /* Cell.swift in Sources */,
 				202F33C27B209C2C5E5746D2 /* XibViewController.swift in Sources */,
-				202F351EFBF9733D720E56EF /* FeedRequest.swift in Sources */,
-				202F3AADE0C1911C9B0D17B7 /* KipalogRequest.swift in Sources */,
-				202F3043184D227E5A0E1239 /* FeedAPI.swift in Sources */,
 				202F3D15A991145B2A05F74A /* Observable+Session.swift in Sources */,
-				202F3472C870A3156EAADCD6 /* ResponseDataParser.swift in Sources */,
+				202F35558FBA422FA8BD95E6 /* FeedAPI.swift in Sources */,
+				202F3EF7F469001FAD4FE7C2 /* FeedRequest.swift in Sources */,
+				202F33C2C0A149EADBEB9858 /* KipalogRequest.swift in Sources */,
+				202F3D8D778AEC4AD1EF8307 /* ResponseDataParser.swift in Sources */,
+				202F344AF382DCB0A9680301 /* AppContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

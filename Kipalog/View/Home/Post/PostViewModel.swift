@@ -15,7 +15,7 @@ class PostViewModel: DependencyInjectable {
 
     var post: Post
     var url: URL? {
-        return URL(string: "http://localhost:3000/posts/Toi-da-xay-dung-mot-phan-mem-ma-nguon-mo-nhu-the-nao/content?pp=disable")
+        return URL(string: "\(AppContext.Url.base)/posts/\(post.id)/content")
     }
 
     required init(dependency: Post) {
