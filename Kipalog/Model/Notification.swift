@@ -16,7 +16,7 @@ enum NotificationStatus: String, Codable {
 
 struct Source: Codable {
     let name: String
-    let avatarUrl: String
+    let avatarUrlPath: String
 }
 
 struct Notification: Codable {
@@ -25,7 +25,7 @@ struct Notification: Codable {
     let org: Bool
     let message: String
     let info: String
-    let endpoint: URL
+    let endpoint: String
     let status: NotificationStatus
     let createdAt: String
 }

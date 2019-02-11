@@ -16,9 +16,11 @@ class NotificationViewModel {
     }
 
     private(set) var dataSource: Driver<DataSource>!
+    private let api = NotificationAPI()
 
     init() {
-        let fixtureSource = DataSource(notifications: [])
-        dataSource = Driver.just(fixtureSource)
+        dataSource = api.getActive()
+            .asDriver(onErrorDriveWith: .empty())
+            .map { DataSource(notifications: $0) }
     }
 }

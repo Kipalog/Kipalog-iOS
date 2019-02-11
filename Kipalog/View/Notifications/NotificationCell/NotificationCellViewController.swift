@@ -48,7 +48,7 @@ class NotificationCellViewController: UIViewController {
             dateLabel.text = notification.createdAt
 
             avatar.kf.setImage(
-                with: URL(string: notification.source.avatarUrl),
+                with: URL(string: notification.source.avatarUrlPath),
                 options: [.transition(.fade(0.25))]
             )
 

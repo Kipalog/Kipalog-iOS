@@ -15,12 +15,14 @@
 		202F33C2C0A149EADBEB9858 /* KipalogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F34ABFC4F095AE1401A5E /* KipalogRequest.swift */; };
 		202F33FA9B21E4B24F799FA7 /* PostStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F36EE2EF8F054234446EF /* PostStatus.swift */; };
 		202F344AF382DCB0A9680301 /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AB581B852CC5C953D9E /* AppContext.swift */; };
+		202F346D9E6825E4F2292CD0 /* NotificationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3AAC77310B594DA128F8 /* NotificationAPI.swift */; };
 		202F35558FBA422FA8BD95E6 /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F36D35DB74D57236A38AD /* FeedAPI.swift */; };
 		202F35DC6076B995E86BD331 /* UIScrollView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F311A8F8BB5D08E6355C7 /* UIScrollView+Rx.swift */; };
 		202F3831F550445DC4F369E9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3A28DF09562234A617FD /* FeedViewModel.swift */; };
 		202F39B0DF308A8FD56478C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3383342247840583E038 /* Post.swift */; };
 		202F39DBD504021624EBE12F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F38B5086A40BE64300C6B /* UILabel+Extension.swift */; };
 		202F3A74F987731A796150DB /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F378C4C0FD19B8EC54EDB /* NotificationViewModel.swift */; };
+		202F3A83A9D755985BD97903 /* NotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3D53F9FCEDC42D183C09 /* NotificationRequest.swift */; };
 		202F3B0A81604DD63D8D87C4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F34AD997061A4CD3F12BF /* UIColor+Extension.swift */; };
 		202F3C28FC4DB81462B03F1E /* UserMeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F34A55204A72CA784324D /* UserMeta.swift */; };
 		202F3CD4A95E9C7DA996EEF5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3EAD2A255E28C066B118 /* UIView+Extension.swift */; };
@@ -103,8 +105,10 @@
 		202F38B5086A40BE64300C6B /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		202F3910D2FC392A22DA28A0 /* XibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibViewController.swift; sourceTree = "<group>"; };
 		202F3A28DF09562234A617FD /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		202F3AAC77310B594DA128F8 /* NotificationAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationAPI.swift; sourceTree = "<group>"; };
 		202F3AB581B852CC5C953D9E /* AppContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		202F3AD3196A52B89B0D5F1D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		202F3D53F9FCEDC42D183C09 /* NotificationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationRequest.swift; sourceTree = "<group>"; };
 		202F3EAD2A255E28C066B118 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		202F3F042FFA016BAC7AA441 /* TabConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabConvertible.swift; sourceTree = "<group>"; };
 		202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				202F36D35DB74D57236A38AD /* FeedAPI.swift */,
+				202F3AAC77310B594DA128F8 /* NotificationAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				202F389BB40A4AFA9DA0F677 /* FeedRequest.swift */,
 				202F34ABFC4F095AE1401A5E /* KipalogRequest.swift */,
 				202F358007967E50C25922B2 /* ResponseDataParser.swift */,
+				202F3D53F9FCEDC42D183C09 /* NotificationRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -676,6 +682,8 @@
 				202F33C2C0A149EADBEB9858 /* KipalogRequest.swift in Sources */,
 				202F3D8D778AEC4AD1EF8307 /* ResponseDataParser.swift in Sources */,
 				202F344AF382DCB0A9680301 /* AppContext.swift in Sources */,
+				202F3A83A9D755985BD97903 /* NotificationRequest.swift in Sources */,
+				202F346D9E6825E4F2292CD0 /* NotificationAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
