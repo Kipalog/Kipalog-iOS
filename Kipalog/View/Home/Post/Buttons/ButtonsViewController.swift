@@ -36,7 +36,7 @@ class ButtonsViewController: UIViewController, DependencyInjectable {
             .asSignal(onErrorSignalWith: .empty())
             .emit(onNext: { [weak self] _ in
                 guard let self = self else { return }
-                let vc = ProfileViewController.make()
+                let vc = ProfileViewController(dependency: self.post.author)
                 self.parent?.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)
