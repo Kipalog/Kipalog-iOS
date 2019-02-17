@@ -15,7 +15,7 @@ class PostViewModel: DependencyInjectable {
 
     var post: Post
     var url: URL? {
-        return URL(string: "\(AppContext.Url.base)/posts/\(post.id)/content")
+        return URL(string: "\(AppContext.Url.base)/posts/\(post.id)/mobile_content")
     }
 
     required init(dependency: Post) {
