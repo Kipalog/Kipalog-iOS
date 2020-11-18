@@ -1,0 +1,273 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-module-flags: -target x86_64-apple-ios8.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name APIKit
+@_exported import APIKit
+import Foundation
+import MobileCoreServices
+import Swift
+@available(*, unavailable, renamed: "Request")
+public typealias RequestType = APIKit.Request
+@available(*, unavailable, renamed: "SessionAdapter")
+public typealias SessionAdapterType = APIKit.SessionAdapter
+@available(*, unavailable, renamed: "SessionTask")
+public typealias SessionTaskType = APIKit.SessionTask
+@available(*, unavailable, renamed: "BodyParameters")
+public typealias BodyParametersType = APIKit.BodyParameters
+@available(*, unavailable, renamed: "DataParser")
+public typealias DataParserType = APIKit.DataParser
+extension Session {
+  @available(*, unavailable, renamed: "shared")
+  public class var sharedSession: APIKit.Session {
+    get
+  }
+  @available(*, unavailable, renamed: "send(_:callbackQueue:handler:)")
+  public class func sendRequest<Request>(_ request: Request, callbackQueue: APIKit.CallbackQueue? = nil, handler: @escaping (Swift.Result<Request.Response, APIKit.SessionTaskError>) -> Swift.Void = { _ in }) -> APIKit.SessionTask? where Request : APIKit.Request
+  @available(*, unavailable, renamed: "send(_:callbackQueue:handler:)")
+  public func sendRequest<Request>(_ request: Request, callbackQueue: APIKit.CallbackQueue? = nil, handler: @escaping (Swift.Result<Request.Response, APIKit.SessionTaskError>) -> Swift.Void = { _ in }) -> APIKit.SessionTask? where Request : APIKit.Request
+  @available(*, unavailable, renamed: "cancelRequests(with:passingTest:)")
+  public class func cancelRequest<Request>(_ requestType: Request.Type, passingTest test: @escaping (Request) -> Swift.Bool = { _ in true }) where Request : APIKit.Request
+  @available(*, unavailable, renamed: "cancelRequests(with:passingTest:)")
+  public func cancelRequest<Request>(_ requestType: Request.Type, passingTest test: @escaping (Request) -> Swift.Bool = { _ in true }) where Request : APIKit.Request
+}
+public protocol Request {
+  associatedtype Response
+  var baseURL: Foundation.URL { get }
+  var method: APIKit.HTTPMethod { get }
+  var path: Swift.String { get }
+  var parameters: Any? { get }
+  var queryParameters: [Swift.String : Any]? { get }
+  var bodyParameters: APIKit.BodyParameters? { get }
+  var headerFields: [Swift.String : Swift.String] { get }
+  var dataParser: APIKit.DataParser { get }
+  func intercept(urlRequest: Foundation.URLRequest) throws -> Foundation.URLRequest
+  func intercept(object: Any, urlResponse: Foundation.HTTPURLResponse) throws -> Any
+  func response(from object: Any, urlResponse: Foundation.HTTPURLResponse) throws -> Self.Response
+}
+extension Request {
+  public var parameters: Any? {
+    get
+  }
+  public var queryParameters: [Swift.String : Any]? {
+    get
+  }
+  public var bodyParameters: APIKit.BodyParameters? {
+    get
+  }
+  public var headerFields: [Swift.String : Swift.String] {
+    get
+  }
+  public var dataParser: APIKit.DataParser {
+    get
+  }
+  public func intercept(urlRequest: Foundation.URLRequest) throws -> Foundation.URLRequest
+  public func intercept(object: Any, urlResponse: Foundation.HTTPURLResponse) throws -> Any
+  public func buildURLRequest() throws -> Foundation.URLRequest
+  public func parse(data: Foundation.Data, urlResponse: Foundation.HTTPURLResponse) throws -> Self.Response
+}
+public protocol DataParser {
+  var contentType: Swift.String? { get }
+  func parse(data: Foundation.Data) throws -> Any
+}
+public enum CallbackQueue {
+  case main
+  case sessionQueue
+  case operationQueue(Foundation.OperationQueue)
+  case dispatchQueue(Dispatch.DispatchQueue)
+  public func execute(closure: @escaping () -> Swift.Void)
+}
+public struct MultipartFormDataBodyParameters : APIKit.BodyParameters {
+  public enum EntityType {
+    case data
+    case inputStream
+    public static func == (a: APIKit.MultipartFormDataBodyParameters.EntityType, b: APIKit.MultipartFormDataBodyParameters.EntityType) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public let parts: [APIKit.MultipartFormDataBodyParameters.Part]
+  public let boundary: Swift.String
+  public let entityType: APIKit.MultipartFormDataBodyParameters.EntityType
+  public init(parts: [APIKit.MultipartFormDataBodyParameters.Part], boundary: Swift.String = String(format: "%08x%08x", arc4random(), arc4random()), entityType: APIKit.MultipartFormDataBodyParameters.EntityType = .data)
+  public var contentType: Swift.String {
+    get
+  }
+  public func buildEntity() throws -> APIKit.RequestBodyEntity
+}
+extension MultipartFormDataBodyParameters {
+  public struct Part {
+    public enum Error : Swift.Error {
+      case illegalValue(Any)
+      case illegalFileURL(Foundation.URL)
+      case cannotGetFileSize(Foundation.URL)
+    }
+    public let inputStream: Foundation.InputStream
+    public let name: Swift.String
+    public let mimeType: Swift.String?
+    public let fileName: Swift.String?
+    public let count: Swift.Int
+    public init(value: Any, name: Swift.String, mimeType: Swift.String? = nil, fileName: Swift.String? = nil, encoding: Swift.String.Encoding = .utf8) throws
+    public init(data: Foundation.Data, name: Swift.String, mimeType: Swift.String? = nil, fileName: Swift.String? = nil)
+    public init(fileURL: Foundation.URL, name: Swift.String, mimeType: Swift.String? = nil, fileName: Swift.String? = nil) throws
+  }
+}
+public enum ResponseError : Swift.Error {
+  case nonHTTPURLResponse(Foundation.URLResponse?)
+  case unacceptableStatusCode(Swift.Int)
+  case unexpectedObject(Any)
+}
+public class JSONDataParser : APIKit.DataParser {
+  final public let readingOptions: Foundation.JSONSerialization.ReadingOptions
+  public init(readingOptions: Foundation.JSONSerialization.ReadingOptions)
+  public var contentType: Swift.String? {
+    get
+  }
+  public func parse(data: Foundation.Data) throws -> Any
+  @objc deinit
+}
+open class Session {
+  final public let adapter: APIKit.SessionAdapter
+  final public let callbackQueue: APIKit.CallbackQueue
+  public init(adapter: APIKit.SessionAdapter, callbackQueue: APIKit.CallbackQueue = .main)
+  open class var shared: APIKit.Session {
+    get
+  }
+  @discardableResult
+  open class func send<Request>(_ request: Request, callbackQueue: APIKit.CallbackQueue? = nil, handler: @escaping (Swift.Result<Request.Response, APIKit.SessionTaskError>) -> Swift.Void = { _ in }) -> APIKit.SessionTask? where Request : APIKit.Request
+  open class func cancelRequests<Request>(with requestType: Request.Type, passingTest test: @escaping (Request) -> Swift.Bool = { _ in true }) where Request : APIKit.Request
+  @discardableResult
+  open func send<Request>(_ request: Request, callbackQueue: APIKit.CallbackQueue? = nil, handler: @escaping (Swift.Result<Request.Response, APIKit.SessionTaskError>) -> Swift.Void = { _ in }) -> APIKit.SessionTask? where Request : APIKit.Request
+  open func cancelRequests<Request>(with requestType: Request.Type, passingTest test: @escaping (Request) -> Swift.Bool = { _ in true }) where Request : APIKit.Request
+  @objc deinit
+}
+public enum RequestBodyEntity {
+  case data(Foundation.Data)
+  case inputStream(Foundation.InputStream)
+}
+public protocol BodyParameters {
+  var contentType: Swift.String { get }
+  func buildEntity() throws -> APIKit.RequestBodyEntity
+}
+public struct JSONBodyParameters : APIKit.BodyParameters {
+  public let JSONObject: Any
+  public let writingOptions: Foundation.JSONSerialization.WritingOptions
+  public init(JSONObject: Any, writingOptions: Foundation.JSONSerialization.WritingOptions = [])
+  public var contentType: Swift.String {
+    get
+  }
+  public func buildEntity() throws -> APIKit.RequestBodyEntity
+}
+public protocol SessionTask : AnyObject {
+  func resume()
+  func cancel()
+}
+public protocol SessionAdapter {
+  func createTask(with URLRequest: Foundation.URLRequest, handler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void) -> APIKit.SessionTask
+  func getTasks(with handler: @escaping ([APIKit.SessionTask]) -> Swift.Void)
+}
+public enum RequestError : Swift.Error {
+  case invalidBaseURL(Foundation.URL)
+  case unexpectedURLRequest(Foundation.URLRequest)
+}
+public class FormURLEncodedDataParser : APIKit.DataParser {
+  public enum Error : Swift.Error {
+    case cannotGetStringFromData(Foundation.Data)
+  }
+  final public let encoding: Swift.String.Encoding
+  public init(encoding: Swift.String.Encoding)
+  public var contentType: Swift.String? {
+    get
+  }
+  public func parse(data: Foundation.Data) throws -> Any
+  @objc deinit
+}
+public struct ProtobufBodyParameters : APIKit.BodyParameters {
+  public let protobufObject: Foundation.Data
+  public init(protobufObject: Foundation.Data)
+  public var contentType: Swift.String {
+    get
+  }
+  public func buildEntity() throws -> APIKit.RequestBodyEntity
+}
+public struct FormURLEncodedBodyParameters : APIKit.BodyParameters {
+  public let form: [Swift.String : Any]
+  public let encoding: Swift.String.Encoding
+  public init(formObject: [Swift.String : Any], encoding: Swift.String.Encoding = .utf8)
+  public var contentType: Swift.String {
+    get
+  }
+  public func buildEntity() throws -> APIKit.RequestBodyEntity
+}
+public enum SessionTaskError : Swift.Error {
+  case connectionError(Swift.Error)
+  case requestError(Swift.Error)
+  case responseError(Swift.Error)
+}
+public class ProtobufDataParser : APIKit.DataParser {
+  public init()
+  public var contentType: Swift.String? {
+    get
+  }
+  public func parse(data: Foundation.Data) throws -> Any
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class URLEncodedSerialization {
+  public enum Error : Swift.Error {
+    case cannotGetStringFromData(Foundation.Data, Swift.String.Encoding)
+    case cannotGetDataFromString(Swift.String, Swift.String.Encoding)
+    case cannotCastObjectToDictionary(Any)
+    case invalidFormatString(Swift.String)
+  }
+  public static func object(from data: Foundation.Data, encoding: Swift.String.Encoding) throws -> [Swift.String : Swift.String]
+  public static func data(from object: Any, encoding: Swift.String.Encoding) throws -> Foundation.Data
+  public static func string(from dictionary: [Swift.String : Any]) -> Swift.String
+  @objc deinit
+}
+extension URLSessionTask : APIKit.SessionTask {
+}
+@objc open class URLSessionAdapter : ObjectiveC.NSObject, APIKit.SessionAdapter, Foundation.URLSessionDelegate, Foundation.URLSessionTaskDelegate, Foundation.URLSessionDataDelegate {
+  open var urlSession: Foundation.URLSession!
+  public init(configuration: Foundation.URLSessionConfiguration)
+  open func createTask(with URLRequest: Foundation.URLRequest, handler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void) -> APIKit.SessionTask
+  open func getTasks(with handler: @escaping ([APIKit.SessionTask]) -> Swift.Void)
+  @objc open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public class StringDataParser : APIKit.DataParser {
+  public enum Error : Swift.Error {
+    case invalidData(Foundation.Data)
+  }
+  final public let encoding: Swift.String.Encoding
+  public init(encoding: Swift.String.Encoding = .utf8)
+  public var contentType: Swift.String? {
+    get
+  }
+  public func parse(data: Foundation.Data) throws -> Any
+  @objc deinit
+}
+public enum HTTPMethod : Swift.String {
+  case get
+  case post
+  case put
+  case head
+  case delete
+  case patch
+  case trace
+  case options
+  case connect
+  public var prefersQueryParameters: Swift.Bool {
+    get
+  }
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+}
+extension APIKit.MultipartFormDataBodyParameters.EntityType : Swift.Equatable {}
+extension APIKit.MultipartFormDataBodyParameters.EntityType : Swift.Hashable {}
+extension APIKit.HTTPMethod : Swift.Equatable {}
+extension APIKit.HTTPMethod : Swift.Hashable {}
+extension APIKit.HTTPMethod : Swift.RawRepresentable {}

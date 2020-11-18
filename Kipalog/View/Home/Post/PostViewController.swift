@@ -10,7 +10,6 @@ import UIKit
 import WebKit
 import RxSwift
 import RxCocoa
-import Kingfisher
 
 class PostViewController: UIViewController, DependencyInjectable, WKUIDelegate {
     typealias Dependency = Post

@@ -46,6 +46,7 @@
 		B464A0772009F49900DAB1D0 /* NotificationCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */; };
 		B464A0782009F49900DAB1D0 /* NotificationCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0762009F49900DAB1D0 /* NotificationCellViewController.xib */; };
 		B4708966200755AB00443FAA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4708965200755AB00443FAA /* HomeViewController.swift */; };
+		B482E4EC2565715200D2A3A0 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B482E4EB2565715200D2A3A0 /* RxRelay.framework */; };
 		B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C59071FFE729F00C6E0E4 /* AuthorCellViewController.xib */; };
 		B48C590A1FFE72EF00C6E0E4 /* AuthorCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C59091FFE72EF00C6E0E4 /* AuthorCellViewController.swift */; };
 		B48C590C1FFE74F400C6E0E4 /* HotAuthorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */; };
@@ -61,9 +62,7 @@
 		B4E930051FEBDDE40021A41D /* KipalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E930041FEBDDE40021A41D /* KipalogTests.swift */; };
 		B4E930171FECE5F20021A41D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930101FECE5F10021A41D /* RxSwift.framework */; };
 		B4E930181FECE5F20021A41D /* APIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930111FECE5F10021A41D /* APIKit.framework */; };
-		B4E930191FECE5F20021A41D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930121FECE5F10021A41D /* Result.framework */; };
 		B4E9301A1FECE5F20021A41D /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930131FECE5F10021A41D /* RxCocoa.framework */; };
-		B4E9301B1FECE5F20021A41D /* Himotoki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930141FECE5F10021A41D /* Himotoki.framework */; };
 		B4E9301D1FECE5F20021A41D /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E930161FECE5F20021A41D /* RxBlocking.framework */; };
 		B4E9302C1FECFA130021A41D /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9302B1FECFA130021A41D /* CustomTabBarViewController.swift */; };
 		B4E9302F1FECFB510021A41D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E9302E1FECFB510021A41D /* FeedViewController.swift */; };
@@ -126,6 +125,7 @@
 		B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewController.swift; sourceTree = "<group>"; };
 		B464A0762009F49900DAB1D0 /* NotificationCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCellViewController.xib; sourceTree = "<group>"; };
 		B4708965200755AB00443FAA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B482E4EB2565715200D2A3A0 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		B48C59071FFE729F00C6E0E4 /* AuthorCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorCellViewController.xib; sourceTree = "<group>"; };
 		B48C59091FFE72EF00C6E0E4 /* AuthorCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorCellViewController.swift; sourceTree = "<group>"; };
 		B48C590B1FFE74F400C6E0E4 /* HotAuthorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotAuthorViewController.xib; sourceTree = "<group>"; };
@@ -169,10 +169,9 @@
 			files = (
 				B4E930441FEFCBE40021A41D /* Kingfisher.framework in Frameworks */,
 				B4E930171FECE5F20021A41D /* RxSwift.framework in Frameworks */,
+				B482E4EC2565715200D2A3A0 /* RxRelay.framework in Frameworks */,
 				B4E930181FECE5F20021A41D /* APIKit.framework in Frameworks */,
-				B4E930191FECE5F20021A41D /* Result.framework in Frameworks */,
 				B4E9301A1FECE5F20021A41D /* RxCocoa.framework in Frameworks */,
-				B4E9301B1FECE5F20021A41D /* Himotoki.framework in Frameworks */,
 				B4E9301D1FECE5F20021A41D /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +372,7 @@
 		B4E9300F1FECE5F10021A41D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B482E4EB2565715200D2A3A0 /* RxRelay.framework */,
 				B4E930431FEFCBE40021A41D /* Kingfisher.framework */,
 				B4E930211FECE84D0021A41D /* XCTest.framework */,
 				B4E930111FECE5F10021A41D /* APIKit.framework */,
@@ -544,17 +544,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = Kipalog;
 				TargetAttributes = {
 					B4E92FEB1FEBDDE30021A41D = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Automatic;
 					};
 					B4E92FFF1FEBDDE30021A41D = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B4E92FEB1FEBDDE30021A41D;
 					};
@@ -618,19 +618,18 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/APIKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Himotoki.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -742,6 +741,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -767,7 +767,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -801,6 +801,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -820,7 +821,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -839,11 +840,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Kipalog/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -859,11 +860,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Kipalog/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipalog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -879,7 +880,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipalog.KipalogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kipalog.app/Kipalog";
 			};
@@ -896,7 +897,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipalog.KipalogTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kipalog.app/Kipalog";
 			};

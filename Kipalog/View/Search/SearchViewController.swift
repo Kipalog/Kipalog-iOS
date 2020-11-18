@@ -70,7 +70,7 @@ class SearchViewController: UICollectionViewController, TabConvertible {
                 guard let text = input else { return Signal.empty() }
                 return Signal.just(text)
             }
-            .debounce(0.5)
+            .debounce(.milliseconds(500))
 
         viewModel = SearchViewModel(searchText: searchText)
 
