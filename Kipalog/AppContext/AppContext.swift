@@ -10,6 +10,6 @@ import Foundation
 
 struct AppContext {
     struct Url {
-        static let base: String = "http://localhost:8080"
+        static let base: String = "http://192.168.11.14:8080"
     }
 }
