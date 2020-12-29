@@ -8,8 +8,17 @@
 
 import UIKit
 
+protocol Reusable {
+    func prepareForReuse() -> Void
+}
+
+extension Reusable {
+    func prepareForReuse() -> Void {
+    }
+}
+
 protocol UIComponent: class {
-    associatedtype Content: UIViewController
+    associatedtype Content: UIViewController & Reusable
     associatedtype Parent: UIViewController
     var contentView: UIView { get }
     var content: Content? { get set }
@@ -46,7 +55,7 @@ extension UIComponent where Self: UIView {
     }
 }
 
-class CollectionViewCell<C: UIViewController, P: UIViewController>: UICollectionViewCell, UIComponent {
+class CollectionViewCell<C: UIViewController & Reusable, P: UIViewController>: UICollectionViewCell, UIComponent {
     var content: C?
     weak var parent: P?
 
@@ -65,6 +74,11 @@ class CollectionViewCell<C: UIViewController, P: UIViewController>: UICollection
         }
         return cell
     }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        content?.prepareForReuse()
+    }
 }
 
 enum CollectionViewSupplementaryKind {
@@ -79,7 +93,7 @@ enum CollectionViewSupplementaryKind {
     }
 }
 
-class CollectionReusableView<C: UIViewController, P: UIViewController>: UICollectionReusableView, UIComponent {
+class CollectionReusableView<C: UIViewController & Reusable, P: UIViewController>: UICollectionReusableView, UIComponent {
     var content: C?
     weak var parent: P?
     var contentView: UIView {

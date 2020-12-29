@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FollowerCellViewController: UIViewController {
+class FollowerCellViewController: UIViewController, Reusable {
 
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

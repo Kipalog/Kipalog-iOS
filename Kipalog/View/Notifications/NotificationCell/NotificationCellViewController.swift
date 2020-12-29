@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotificationCellViewController: UIViewController {
+class NotificationCellViewController: UIViewController, Reusable {
 
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var infoLabel: UILabel!

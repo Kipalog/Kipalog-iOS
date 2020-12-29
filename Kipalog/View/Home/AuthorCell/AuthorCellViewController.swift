@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AuthorCellViewController: UIViewController {
+class AuthorCellViewController: UIViewController, Reusable {
     
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var name: UILabel!
@@ -30,4 +30,8 @@ class AuthorCellViewController: UIViewController {
         }
     }
 
+    func prepareForReuse() {
+        avatar.kf.cancelDownloadTask()
+        avatar.image = nil
+    }
 }

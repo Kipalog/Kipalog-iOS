@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchCellViewController: UIViewController {
+class SearchCellViewController: UIViewController, Reusable {
 
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var postTitle: UILabel!

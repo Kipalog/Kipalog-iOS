@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HotAuthorViewController: UIViewController, UICollectionViewDelegate {
+class HotAuthorViewController: UIViewController, UICollectionViewDelegate, Reusable {
     private let dataSource = DataSource()
     private let disposeBag = DisposeBag()
     private let api = FeedAPI()

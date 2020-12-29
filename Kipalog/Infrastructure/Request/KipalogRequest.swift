@@ -29,7 +29,7 @@ extension KipalogRequest {
 
     var headerFields: [String : String] {
         return [
-            "X-Kipalog-Token": "SOME_TOKEN" //TODO: Implement login
+            "X-Kipalog-Token": "p8dt781e1rjj1k2osinx9lkcx3nys2" //TODO: Implement login
         ]
     }
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedCellViewController: UIViewController {
+class FeedCellViewController: UIViewController, Reusable {
 
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var postTitle: UILabel!
