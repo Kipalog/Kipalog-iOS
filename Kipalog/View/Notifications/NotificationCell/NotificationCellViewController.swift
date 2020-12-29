@@ -52,6 +52,8 @@ class NotificationCellViewController: UIViewController, Reusable {
                     with: URL(string: url),
                     options: [.transition(.fade(0.25))]
                 )
+            } else {
+                avatar.image = Asset.maleAvatar.image
             }
 
             if notification.status != .checked {

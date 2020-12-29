@@ -1,0 +1,6 @@
+xcassets:
+  inputs:
+    - Kipalog/SupportingFiles/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: Kipalog/SupportingFiles/Assets.swift

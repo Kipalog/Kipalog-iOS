@@ -41,6 +41,7 @@
 		B451BC4B21E0F41400C8FC75 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B451BC4A21E0F41400C8FC75 /* PostViewModel.swift */; };
 		B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */; };
 		B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */; };
+		B4638210259B2C6100503FA2 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463820F259B2C6100503FA2 /* Assets.swift */; };
 		B464A0732008E8B000DAB1D0 /* SearchCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */; };
 		B464A0742008E8B000DAB1D0 /* SearchCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */; };
 		B464A0772009F49900DAB1D0 /* NotificationCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */; };
@@ -120,6 +121,7 @@
 		B451BC4A21E0F41400C8FC75 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VNF-ProximaNovaCond-Regular.ttf"; sourceTree = "<group>"; };
+		B463820F259B2C6100503FA2 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewController.swift; sourceTree = "<group>"; };
 		B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCellViewController.xib; sourceTree = "<group>"; };
 		B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewController.swift; sourceTree = "<group>"; };
@@ -139,7 +141,7 @@
 		B4E92FF11FEBDDE30021A41D /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B4E92FF61FEBDDE30021A41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4E92FF91FEBDDE30021A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B4E92FFB1FEBDDE30021A41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4E92FFB1FEBDDE30021A41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Kipalog/SupportingFiles/Info.plist; sourceTree = SOURCE_ROOT; };
 		B4E930001FEBDDE30021A41D /* KipalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KipalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4E930041FEBDDE40021A41D /* KipalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KipalogTests.swift; sourceTree = "<group>"; };
 		B4E930061FEBDDE40021A41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -348,7 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				202F3B9E96D821A2C61C56E3 /* Generic */,
-				B4E9302A1FECEA810021A41D /* Supporting Files */,
+				B4E9302A1FECEA810021A41D /* SupportingFiles */,
 				B4E930281FECEA660021A41D /* Extension */,
 				B4E930271FECEA5E0021A41D /* Model */,
 				B4E930261FECEA550021A41D /* View */,
@@ -423,15 +425,16 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		B4E9302A1FECEA810021A41D /* Supporting Files */ = {
+		B4E9302A1FECEA810021A41D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B463820F259B2C6100503FA2 /* Assets.swift */,
 				B45942EE1FFD33E200A30A08 /* Fonts */,
 				B4E92FF81FEBDDE30021A41D /* LaunchScreen.storyboard */,
 				B4E92FFB1FEBDDE30021A41D /* Info.plist */,
 				B4E92FF61FEBDDE30021A41D /* Assets.xcassets */,
 			);
-			path = "Supporting Files";
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		B4E9302D1FECFB3B0021A41D /* Home */ = {
@@ -505,10 +508,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4E930091FEBDDE40021A41D /* Build configuration list for PBXNativeTarget "Kipalog" */;
 			buildPhases = (
+				B4638160259B264C00503FA2 /* SwiftGen */,
 				B4E92FE81FEBDDE30021A41D /* Sources */,
 				B4E92FE91FEBDDE30021A41D /* Frameworks */,
 				B4E92FEA1FEBDDE30021A41D /* Resources */,
-				B4E9301E1FECE60E0021A41D /* ShellScript */,
+				B4E9301E1FECE60E0021A41D /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -611,7 +615,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B4E9301E1FECE60E0021A41D /* ShellScript */ = {
+		B4638160259B264C00503FA2 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen\n";
+		};
+		B4E9301E1FECE60E0021A41D /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -625,6 +647,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
+			name = Carthage;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,6 +685,7 @@
 				B4C1FCDF2012E53100D73FEC /* ProfileViewController.swift in Sources */,
 				B464A0772009F49900DAB1D0 /* NotificationCellViewController.swift in Sources */,
 				B4E238D121DA003900B9E4E3 /* FeedCellViewController.swift in Sources */,
+				B4638210259B2C6100503FA2 /* Assets.swift in Sources */,
 				202F39DBD504021624EBE12F /* UILabel+Extension.swift in Sources */,
 				B451BC4B21E0F41400C8FC75 /* PostViewModel.swift in Sources */,
 				B449CDF7201614550085F3F5 /* FollowerCellViewController.swift in Sources */,
@@ -767,6 +791,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -821,6 +846,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -840,7 +866,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Kipalog/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Kipalog/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipalog;
@@ -862,7 +888,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Kipalog/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Kipalog/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kipalog;

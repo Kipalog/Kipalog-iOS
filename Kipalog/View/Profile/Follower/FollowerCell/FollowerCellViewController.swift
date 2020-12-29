@@ -30,7 +30,7 @@ class FollowerCellViewController: UIViewController, Reusable {
                     options: [.transition(.fade(0.25))]
                 )
             } else {
-                avatar.image = UIImage(named: "MaleAvatar")
+                avatar.image = Asset.maleAvatar.image
             }
         }
     }
