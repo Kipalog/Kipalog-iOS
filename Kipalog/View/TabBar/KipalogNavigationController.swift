@@ -1,5 +1,5 @@
 //
-//  CustomNavigationViewController.swift
+//  KipalogNavigationController.swift
 //  Kipalog
 // 
 //  Created by DTVD on 2018/01/04.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomNavigationViewController: UINavigationController {
+class KipalogNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpAppearance()

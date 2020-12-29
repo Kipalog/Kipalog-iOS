@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		202F305839DA894E4D00C1D7 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F30C0955A6E99BDD0B967 /* Cell.swift */; };
-		202F31EAD5D8124BAC4E03C7 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */; };
+		202F31EAD5D8124BAC4E03C7 /* KipalogNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F57B3A504D0A32FB7CA /* KipalogNavigationController.swift */; };
 		202F332E397675CF9EB4712E /* TabConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3F042FFA016BAC7AA441 /* TabConvertible.swift */; };
 		202F338408780D975FB6A477 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F327B527400FE47603ECD /* SearchViewModel.swift */; };
 		202F33C27B209C2C5E5746D2 /* XibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202F3910D2FC392A22DA28A0 /* XibViewController.swift */; };
@@ -42,6 +42,8 @@
 		B45942F01FFD341A00A30A08 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */; };
 		B459430C1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */; };
 		B4638210259B2C6100503FA2 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B463820F259B2C6100503FA2 /* Assets.swift */; };
+		B4638215259B34F000503FA2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4638214259B34F000503FA2 /* LoginViewController.xib */; };
+		B4638219259B34FA00503FA2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4638218259B34FA00503FA2 /* LoginViewController.swift */; };
 		B464A0732008E8B000DAB1D0 /* SearchCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */; };
 		B464A0742008E8B000DAB1D0 /* SearchCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */; };
 		B464A0772009F49900DAB1D0 /* NotificationCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */; };
@@ -111,7 +113,7 @@
 		202F3D53F9FCEDC42D183C09 /* NotificationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationRequest.swift; sourceTree = "<group>"; };
 		202F3EAD2A255E28C066B118 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		202F3F042FFA016BAC7AA441 /* TabConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabConvertible.swift; sourceTree = "<group>"; };
-		202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
+		202F3F57B3A504D0A32FB7CA /* KipalogNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KipalogNavigationController.swift; sourceTree = "<group>"; };
 		B43F499A21ECBE18002FDE19 /* ButtonsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewModel.swift; sourceTree = "<group>"; };
 		B449CDF220160E880085F3F5 /* FollowerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewController.swift; sourceTree = "<group>"; };
 		B449CDF5201614550085F3F5 /* FollowerCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCellViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,8 @@
 		B45942EF1FFD341A00A30A08 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		B45942FE1FFD343D00A30A08 /* VNF-ProximaNovaCond-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VNF-ProximaNovaCond-Regular.ttf"; sourceTree = "<group>"; };
 		B463820F259B2C6100503FA2 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		B4638214259B34F000503FA2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		B4638218259B34FA00503FA2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B464A0712008E8B000DAB1D0 /* SearchCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCellViewController.swift; sourceTree = "<group>"; };
 		B464A0722008E8B000DAB1D0 /* SearchCellViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCellViewController.xib; sourceTree = "<group>"; };
 		B464A0752009F49900DAB1D0 /* NotificationCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCellViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +303,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		B4638213259B34B700503FA2 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B4638214259B34F000503FA2 /* LoginViewController.xib */,
+				B4638218259B34FA00503FA2 /* LoginViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		B47089622007558000443FAA /* Feed */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +404,7 @@
 		B4E930261FECEA550021A41D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4638213259B34B700503FA2 /* Onboarding */,
 				B4E9303E1FED03760021A41D /* TabBar */,
 				B4E930391FECFCAE0021A41D /* Profile */,
 				B4E930361FECFC7C0021A41D /* Notifications */,
@@ -486,7 +500,7 @@
 			children = (
 				B4E9302B1FECFA130021A41D /* CustomTabBarViewController.swift */,
 				202F3F042FFA016BAC7AA441 /* TabConvertible.swift */,
-				202F3F57B3A504D0A32FB7CA /* CustomNavigationViewController.swift */,
+				202F3F57B3A504D0A32FB7CA /* KipalogNavigationController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -593,6 +607,7 @@
 				B48C59081FFE729F00C6E0E4 /* AuthorCellViewController.xib in Resources */,
 				B449CDF8201614550085F3F5 /* FollowerCellViewController.xib in Resources */,
 				B451BC4721E0F36F00C8FC75 /* PostViewController.xib in Resources */,
+				B4638215259B34F000503FA2 /* LoginViewController.xib in Resources */,
 				B495B6B221DA655A00AF4ECB /* HomeViewController.xib in Resources */,
 				B4E92FFA1FEBDDE30021A41D /* LaunchScreen.storyboard in Resources */,
 				B4E930481FF0E7540021A41D /* FeedCellViewController.xib in Resources */,
@@ -690,7 +705,7 @@
 				B451BC4B21E0F41400C8FC75 /* PostViewModel.swift in Sources */,
 				B449CDF7201614550085F3F5 /* FollowerCellViewController.swift in Sources */,
 				B48C590E1FFE771500C6E0E4 /* HotAuthorViewController.swift in Sources */,
-				202F31EAD5D8124BAC4E03C7 /* CustomNavigationViewController.swift in Sources */,
+				202F31EAD5D8124BAC4E03C7 /* KipalogNavigationController.swift in Sources */,
 				202F338408780D975FB6A477 /* SearchViewModel.swift in Sources */,
 				202F35DC6076B995E86BD331 /* UIScrollView+Rx.swift in Sources */,
 				202F3A74F987731A796150DB /* NotificationViewModel.swift in Sources */,
@@ -701,6 +716,7 @@
 				202F33C27B209C2C5E5746D2 /* XibViewController.swift in Sources */,
 				202F3D15A991145B2A05F74A /* Observable+Session.swift in Sources */,
 				202F35558FBA422FA8BD95E6 /* FeedAPI.swift in Sources */,
+				B4638219259B34FA00503FA2 /* LoginViewController.swift in Sources */,
 				202F3EF7F469001FAD4FE7C2 /* FeedRequest.swift in Sources */,
 				202F33C2C0A149EADBEB9858 /* KipalogRequest.swift in Sources */,
 				202F3D8D778AEC4AD1EF8307 /* ResponseDataParser.swift in Sources */,

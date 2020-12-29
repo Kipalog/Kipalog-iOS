@@ -14,7 +14,8 @@ class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+//        setup()
+        displayLogin()
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -27,5 +28,10 @@ class RootViewController: UIViewController {
         embed(tabBarController, to: view)
     }
 
+    private func displayLogin() {
+        let loginViewController = LoginViewController.make()
+        let navViewController = KipalogNavigationController(rootViewController: loginViewController)
+        embed(navViewController, to: view)
+    }
 }
 
