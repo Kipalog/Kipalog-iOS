@@ -26,6 +26,8 @@ class AuthorCellViewController: UIViewController, Reusable {
                     with: url,
                     options: [.transition(.fade(0.25))]
                 )
+            } else {
+                avatar.image = UIImage(named: "MaleAvatar")
             }
         }
     }

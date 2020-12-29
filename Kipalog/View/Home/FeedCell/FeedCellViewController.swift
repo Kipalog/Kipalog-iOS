@@ -38,6 +38,8 @@ class FeedCellViewController: UIViewController, Reusable {
                     with: url,
                     options: [.transition(.fade(0.25))]
                 )
+            } else {
+                avatar.image = UIImage(named: "MaleAvatar")
             }
 
             kipalogCount.text = post.map{ String($0.meta.kipalogCount) }

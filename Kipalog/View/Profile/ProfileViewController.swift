@@ -58,11 +58,12 @@ class ProfileViewController: UITableViewController, DependencyInjectable, TabCon
             avatar.kf.setImage(
                 with: url
             )
-        }
-        if let avatarUrl = user.organizations.first?.avatarUrl, let url = URL(string: avatarUrl) {
+        } else if let avatarUrl = user.organizations.first?.avatarUrl, let url = URL(string: avatarUrl) {
             orgAvatar.kf.setImage(
                 with: url
             )
+        } else {
+            avatar.image = UIImage(named: "MaleAvatar")
         }
         let profile = user.profile
         nameLabel.text = user.name
